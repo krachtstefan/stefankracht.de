@@ -24,5 +24,8 @@
     "nprogress": "^0.2.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@zeit/next-mdx": "^1.2.0"
   }
 }
