@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/krachtstefan/stefankracht.de/issues"
   },
-  "homepage": "https://github.com/krachtstefan/stefankracht.de#readme"
+  "homepage": "https://github.com/krachtstefan/stefankracht.de#readme",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
 }
