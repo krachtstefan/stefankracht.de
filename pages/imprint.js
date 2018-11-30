@@ -2,8 +2,6 @@ import { Component } from 'react';
 import Layout from '../components/layout';
 
 class Index extends Component {
-
-
   render() {
     const { schedule } = this.props;
     return (
