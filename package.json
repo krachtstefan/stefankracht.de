@@ -1,0 +1,20 @@
+{
+  "name": "stefankracht.de",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://krachtstefan@github.com/krachtstefan/stefankracht.de.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krachtstefan/stefankracht.de/issues"
+  },
+  "homepage": "https://github.com/krachtstefan/stefankracht.de#readme"
+}
