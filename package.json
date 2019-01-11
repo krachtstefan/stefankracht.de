@@ -21,6 +21,7 @@
   "homepage": "https://github.com/krachtstefan/stefankracht.de#readme",
   "dependencies": {
     "@mdx-js/mdx": "^0.16.5",
+    "babel-plugin-preval": "^3.0.1",
     "next": "^7.0.2",
     "nprogress": "^0.2.0",
     "react": "^16.6.3",
