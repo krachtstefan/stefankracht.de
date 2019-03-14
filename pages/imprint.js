@@ -6,7 +6,7 @@ class Index extends Component {
     const { schedule } = this.props;
     return (
       <Layout>
-        <h1>Imprint</h1>  
+        <h1>Imprint</h1>
       </Layout>
     );
   }

@@ -5,7 +5,7 @@ class Index extends Component {
   render() {
     return (
       <Layout>
-        <h1>About</h1>  
+        <h1>About</h1>
       </Layout>
     );
   }
