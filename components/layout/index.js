@@ -14,7 +14,6 @@ export default ({ children, title = 'Nextconf Schedule', ...props }) => (
   <div id="root">
     <Head>
       <title>{title}</title>
-      <link rel="stylesheet" href="/static/nprogress.css" />
     </Head>
     <Header {...props} />
     <main>{children}</main>
