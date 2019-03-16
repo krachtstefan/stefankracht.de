@@ -1,11 +1,16 @@
 import Layout from '../components/layout';
 import { allPosts } from '../lib/blog';
+import Link from 'next/link';
 
 export default () => (
   <Layout>
     {allPosts.map(post => (
       <>
-        <h1>{post.title}</h1>
+        <Link href={`/post?title=${post.url}`}>
+          <a>
+            <h1>{post.title}</h1>
+          </a>
+        </Link>
         <post.Component />
       </>
     ))}
