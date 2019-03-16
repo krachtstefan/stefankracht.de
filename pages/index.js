@@ -1,6 +1,5 @@
 import Layout from '../components/layout';
 import { allPosts } from '../lib/blog';
-import '../assets/styles/app.scss';
 
 export default () => (
   <Layout>
