@@ -1,6 +1,6 @@
 import Link from 'next/link';
 export default ({ user = {} }) => (
-  <header className="Header">
+  <header>
     <nav>
       <Link href="/">
         <a>Blog</a>
