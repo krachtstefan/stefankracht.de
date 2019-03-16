@@ -1,6 +1,5 @@
 import { withRouter } from 'next/router';
 import Error from 'next/error';
-
 import { findPostbyUrl } from '../lib/blog';
 import Layout from '../components/layout';
 import Link from 'next/link';
