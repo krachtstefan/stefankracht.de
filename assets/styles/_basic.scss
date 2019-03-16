@@ -28,6 +28,12 @@ strong {
   font-weight: 600;
 }
 
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid $color-grey-light;
+}
+
 a {
   color: $color-grey-dark;
 }
