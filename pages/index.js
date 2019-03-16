@@ -8,10 +8,10 @@ import Error from 'next/error';
 export default withRouter(props => {
   let { itemsPerPage } = config.blog;
   let postCount = allPosts.length;
-  let lastPage = Math.ceil(postCount / itemsPerPage) - 1;
+  let lastPage = Math.ceil(postCount / itemsPerPage);
   let page =
-    props.router.query.page && lastPage ? parseInt(props.router.query.page) : 0;
-  let offset = page * itemsPerPage;
+    props.router.query.page && lastPage ? parseInt(props.router.query.page) : 1;
+  let offset = (page - 1) * itemsPerPage;
   let nextPage = page < lastPage ? page + 1 : null;
   let prevPage = page > 0 ? page - 1 : null;
 
@@ -31,12 +31,20 @@ export default withRouter(props => {
       ))}
       <hr />
       {prevPage ? (
-        <Link href={`?page=${prevPage}`}>newer articles</Link>
+        <Link href={`?page=${prevPage}`}>
+          <a>newer articles</a>
+        </Link>
       ) : (
         ''
       )}{' '}
       page: {page} / {lastPage}{' '}
-      {nextPage ? <Link href={`?page=${nextPage}`}>older articles</Link> : ''}
+      {nextPage ? (
+        <Link href={`?page=${nextPage}`}>
+          <a>older articles</a>
+        </Link>
+      ) : (
+        ''
+      )}
     </Layout>
   );
 });
