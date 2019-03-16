@@ -4,7 +4,6 @@ import '../assets/styles/app.scss';
 
 export default () => (
   <Layout>
-    <h1>My Blog</h1>
     {allPosts.map(post => (
       <>
         <h1>{post.title}</h1>
