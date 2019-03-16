@@ -11,7 +11,7 @@ Router.onRouteChangeStart = url => {
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 export default ({ children, title = 'stefankracht.de', ...props }) => (
-  <div id="root">
+  <div id="main">
     <Head>
       <title>{title}</title>
     </Head>
