@@ -10,7 +10,7 @@ Router.onRouteChangeStart = url => {
 };
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
-export default ({ children, title = 'Nextconf Schedule', ...props }) => (
+export default ({ children, title = 'stefankracht.de', ...props }) => (
   <div id="root">
     <Head>
       <title>{title}</title>
