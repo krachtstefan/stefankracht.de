@@ -1,8 +1,8 @@
 body {
   font-family: $font-main;
   line-height: 1.8;
-  color: #252525;
-  background: #f7f7f7;
+  color: $color-grey-dark;
+  background: $color-background-main;
 }
 
 h1,
@@ -23,7 +23,13 @@ h3 {
   font-size: 1.5rem;
 }
 
+b,
+strong {
+  font-weight: 600;
+}
+
 blockquote {
   font-family: $font-serif;
   font-style: italic;
+  color: $color-grey-medium;
 }
