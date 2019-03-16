@@ -1,13 +1,12 @@
-import { Component } from 'react';
+import { withRouter } from 'next/router';
 import Layout from '../components/layout';
+import Link from 'next/link';
 
-class Index extends Component {
-  render() {
-    return (
-      <Layout>
-        <h1>post</h1>
-      </Layout>
-    );
-  }
-}
-export default Index;
+export default withRouter(props => (
+  <Layout>
+    <h1>{props.router.query.title}</h1>
+    <Link href={`/`}>
+      <a>back</a>
+    </Link>
+  </Layout>
+));
