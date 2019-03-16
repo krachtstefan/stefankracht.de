@@ -23,6 +23,7 @@
     "@mdx-js/mdx": "^0.16.8",
     "@zeit/next-sass": "^1.0.1",
     "babel-plugin-preval": "^3.0.1",
+    "express": "^4.16.4",
     "next": "^8.0.0",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.10",
