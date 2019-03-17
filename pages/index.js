@@ -4,6 +4,7 @@ import Bloglist from '../components/blog/list';
 import { allPosts } from '../lib/blog';
 import Blogpagination from '../components/blog/pagination';
 import { config } from '../config';
+import Error from 'next/error';
 
 export default withRouter(props => {
   let postCount = allPosts.length;
@@ -13,7 +14,6 @@ export default withRouter(props => {
     props.router.query.page && lastPage ? parseInt(props.router.query.page) : 1;
   let offset = (page - 1) * itemsPerPage;
   if (page > lastPage) return <Error statusCode={404} />;
-
   return (
     <Layout>
       <Bloglist limit={itemsPerPage} offset={offset} />
