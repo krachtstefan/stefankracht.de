@@ -1,5 +1,7 @@
 import Link from 'next/link';
-export default props => (
+import PropTypes from 'prop-types';
+
+const List = props => (
   <>
     {props.posts.map(post => (
       <div key={post.url}>
@@ -13,3 +15,11 @@ export default props => (
     ))}
   </>
 );
+
+List.propTypes = {
+  posts: PropTypes.array.isRequired,
+  href: PropTypes.func.isRequired,
+  as: PropTypes.func.isRequired
+};
+
+export default List;
