@@ -3,6 +3,7 @@ import Error from 'next/error';
 import { findPostbyUrl } from '../lib/blog';
 import Layout from '../components/layout';
 import Link from 'next/link';
+import Blogpost from '../components/blog/post';
 
 export default withRouter(props => {
   let post = findPostbyUrl(props.router.query.url);
@@ -14,8 +15,7 @@ export default withRouter(props => {
           <a>back</a>
         </Link>
       </p>
-      <h1>{post.title}</h1>
-      <post.Component />
+      <Blogpost post={post} />
     </Layout>
   );
 });
