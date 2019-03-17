@@ -1,4 +1,5 @@
 main {
+  max-width: $max-image-width;
   p,
   ol,
   ul,
@@ -7,11 +8,16 @@ main {
   h2,
   h3,
   h4 {
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
+    max-width: $max-container-width;
   }
 
   ol,
   ul {
     list-style: inherit;
+  }
+
+  img {
+    max-width: 100%;
   }
 }
