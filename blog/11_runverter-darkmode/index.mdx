@@ -4,12 +4,15 @@ export const meta = {
   date: new Date('2018-03-01T00:00:00'),
   images: {
     teaser: {
-      path: require('./images/iphone-mockup.gif')
+      src: require('./images/iphone-mockup.gif')
+    },
+    darkmode: {
+      src: require('./images/darkmode.gif')
     }
   }
 };
 
-<img src={meta.images.teaser.path} />
+<img {...meta.images.darkmode} />
 
 Good news for all night owls. <a href="https://runverter.io/" target="_blank">Runverter.io</a> now features a new dark mode theme which can be selected in the settings. How do you like it?
 
