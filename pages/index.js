@@ -13,7 +13,8 @@ export default withRouter(props => {
   let lastPage = Math.ceil(postCount / itemsPerPage);
   let page = query.page && lastPage ? parseInt(query.page) : 1;
   let offset = (page - 1) * itemsPerPage;
-  if (page > lastPage) return <Error statusCode={404} />;
+  if (page > lastPage || [0, 1].includes(parseInt(query.page)))
+    return <Error statusCode={404} />;
   return (
     <Layout>
       <Bloglist
@@ -24,8 +25,8 @@ export default withRouter(props => {
       <Blogpagination
         page={page}
         lastPage={lastPage}
-        href={page => `?page=${page}`}
-        as={page => `/page/${page}`}
+        href={page => (page > 1 ? `?page=${page}` : '/')}
+        as={page => (page > 1 ? `/page/${page}` : '/')}
       />
     </Layout>
   );
