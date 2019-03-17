@@ -10,7 +10,7 @@ const List = props => (
             <h1>{post.title}</h1>
           </a>
         </Link>
-        {/* <post.Component /> */}
+        <post.Component />
       </div>
     ))}
   </>
