@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 import { withRouter } from 'next/router';
 import Bloglist from '../components/blog/list';
 import { allPosts } from '../lib/blog';
-// import Blogpagination from './components/blog/pagination';
+import Blogpagination from '../components/blog/pagination';
 import { config } from '../config';
 
 export default withRouter(props => {
@@ -17,7 +17,7 @@ export default withRouter(props => {
   return (
     <Layout>
       <Bloglist limit={itemsPerPage} offset={offset} />
-      {/* <Blogpagination page={page} lastPage={lastPage} /> */}
+      <Blogpagination page={page} lastPage={lastPage} />
     </Layout>
   );
 });
