@@ -16,7 +16,11 @@ export default withRouter(props => {
   if (page > lastPage) return <Error statusCode={404} />;
   return (
     <Layout>
-      <Bloglist posts={getPostsList({ limit: itemsPerPage, offset })} />
+      <Bloglist
+        posts={getPostsList({ limit: itemsPerPage, offset })}
+        href={url => `/post?url=${url}`}
+        as={url => `/p/${url}`}
+      />
       <Blogpagination page={page} lastPage={lastPage} />
     </Layout>
   );
