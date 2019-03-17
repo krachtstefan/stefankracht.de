@@ -1,10 +1,17 @@
 export const meta = {
   title: 'Hello darkmode my old friend',
   url: 'runverter-darkmode',
-  date: new Date('2018-03-01T00:00:00')
+  date: new Date('2018-03-01T00:00:00'),
+  images: {
+    teaser: {
+      path: require('./images/iphone-mockup.gif')
+    }
+  }
 };
 
-Good news for all night owls. [Runverter.io](https://raceday.me) now features a new dark mode theme which can be selected in the settings. How do you like it?
+<img src={meta.images.teaser.path} />
+
+Good news for all night owls. <a href="https://runverter.io/" target="_blank">Runverter.io</a> now features a new dark mode theme which can be selected in the settings. How do you like it?
 
 ## Minor Changes
 
