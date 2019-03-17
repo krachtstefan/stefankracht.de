@@ -1,7 +1,6 @@
-import { withRouter } from 'next/router';
 import Link from 'next/link';
 
-export default withRouter(props => (
+export default props => (
   <>
     {props.posts.map(post => (
       <div key={post.url}>
@@ -14,4 +13,4 @@ export default withRouter(props => (
       </div>
     ))}
   </>
-));
+);
