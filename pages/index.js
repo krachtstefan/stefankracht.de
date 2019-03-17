@@ -21,7 +21,12 @@ export default withRouter(props => {
         href={url => `/post?url=${url}`}
         as={url => `/p/${url}`}
       />
-      <Blogpagination page={page} lastPage={lastPage} />
+      <Blogpagination
+        page={page}
+        lastPage={lastPage}
+        href={page => `?page=${page}`}
+        as={page => `/page/${page}`}
+      />
     </Layout>
   );
 });
