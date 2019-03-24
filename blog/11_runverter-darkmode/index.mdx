@@ -4,10 +4,14 @@ export const meta = {
   date: new Date('2018-03-01T00:00:00'),
   images: {
     teaser: {
-      src: require('./images/iphone-mockup.gif')
+      sizes: '100vw',
+      src: require('./images/iphone-darkmode-600.gif'),
+      srcSet: `${require('./images/iphone-darkmode-600.gif')} 600w, ${require('./images/iphone-darkmode-1000.gif')} 1000w, ${require('./images/iphone-darkmode-1800.gif')} 1800w`
     },
     darkmode: {
-      src: require('./images/darkmode.gif')
+      sizes: '100vw',
+      src: require('./images/darkmode-comparison-600.gif'),
+      srcSet: `${require('./images/darkmode-comparison-600.gif')} 600w, ${require('./images/darkmode-comparison-1000.gif')} 1000w, ${require('./images/darkmode-comparison-1800.gif')} 1800w`
     }
   }
 };
