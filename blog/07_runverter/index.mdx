@@ -1,7 +1,63 @@
 export const meta = {
   title: 'Introducing runverter.io',
   url: 'runverter',
-  date: new Date('2016-12-18T08:00:00')
+  date: new Date('2016-12-18T08:00:00'),
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/runverter-logo-600.png'),
+      srcSet: `${require('./images/runverter-logo-600.png')} 600w, ${require('./images/runverter-logo-1000.png')} 1000w, ${require('./images/runverter-logo-1800.png')} 1800w`,
+      alt:
+        'The Runverter logo. It shows a little running shoe icon followed by the text runverter.io'
+    },
+    design: {
+      sizes: '100vw',
+      src: require('./images/runverter-design-600.gif'),
+      srcSet: `${require('./images/runverter-design-600.gif')} 600w, ${require('./images/runverter-design-1000.gif')} 1000w, ${require('./images/runverter-design-1500.gif')} 1500w`,
+      alt:
+        'An design overview of old running calculators versus the new runverter'
+    },
+    suggestions: {
+      sizes: '100vw',
+      src: require('./images/smart-suggestions-600.gif'),
+      srcSet: `${require('./images/smart-suggestions-600.gif')} 600w, ${require('./images/smart-suggestions-1000.gif')} 1000w, ${require('./images/smart-suggestions-1500.gif')} 1500w`,
+      alt:
+        'A screen recording showing how the input fields have small arrows next to them for quickly select predefined values'
+    },
+    shortcuts: {
+      sizes: '100vw',
+      src: require('./images/keyboard-controls-600.gif'),
+      srcSet: `${require('./images/keyboard-controls-600.gif')} 600w, ${require('./images/keyboard-controls-1000.gif')} 1000w`,
+      alt: 'A screen recording showing the keyboard shortcuts in action'
+    },
+    expert: {
+      sizes: '100vw',
+      src: require('./images/expert-mode-600.gif'),
+      srcSet: `${require('./images/expert-mode-600.gif')} 600w, ${require('./images/expert-mode-1000.gif')} 1000w, ${require('./images/expert-mode-1500.gif')} 1500w`,
+      alt:
+        'Displays the difference between normal and expert mode, where in expert mode most of the input labels are hidden.'
+    },
+    decimals: {
+      sizes: '100vw',
+      src: require('./images/detailed-decimal-place-600.gif'),
+      srcSet: `${require('./images/detailed-decimal-place-600.gif')} 600w, ${require('./images/detailed-decimal-place-1000.gif')} 1000w`,
+      alt:
+        'Shows how hovering over numeric input field reveals more decimal places as a tooltip'
+    },
+    input: {
+      sizes: '100vw',
+      src: require('./images/cross-tool-input-fields-600.gif'),
+      srcSet: `${require('./images/cross-tool-input-fields-600.gif')} 600w, ${require('./images/cross-tool-input-fields-1000.gif')} 1000w`,
+      alt: 'Shows how changing the tool, will preserve the numeric input values'
+    },
+    offline: {
+      sizes: '100vw',
+      src: require('./images/offline-support-600.gif'),
+      srcSet: `${require('./images/offline-support-600.gif')} 600w, ${require('./images/offline-support-1000.gif')} 1000w, ${require('./images/offline-support-1500.gif')} 1500w`,
+      alt:
+        'Shows an animated workflow on how to add runverter to your homescreen on the iPhone'
+    }
+  }
 };
 
 ## The only running calculator you will ever need
@@ -14,7 +70,7 @@ As a passionate runner you may have asked yourself one of these questions before
 
 There are a lot of tools out there that calculate and convert running metrics back and forth. Some of them are pretty barebones, some of them are very complex. Some of them are easy to understand but hard to use, some are the other way around. And most of them look ugly.
 
-![design.gif](https://draftin.com:443/images/49142?token=NzCSlZxvSJcIMYwcVHehlQgj3JcG5MPcfOnGPZN-5HqYnnXbMobSqf0dAfhvuETmyBPe7fl4rzsqWiCLZhZoXYc)
+<img {...meta.images.design} />
 
 There is such a big potential to get the most out of it. I wanted something good looking. Something easy to understand but yet as smart and feature rich as possible.
 
@@ -48,32 +104,38 @@ There are a lot of obvious features you will easily discover by yourself but som
 
 ### Smart suggestions
 
-![smart-suggestions.gif](https://draftin.com:443/images/49145?token=iWaiDNiIL13SuPFRSep0e4YMwjQqCpmavsTakH9_x7LZTCStnLl0qoOFL7aAXD2hSKbXUo6V1EZLIKqglt5gxlQ)
+<img {...meta.images.suggestions} />
+
 You can quickly populate distance fields with one of the suggested race events. Even time suggestions are available and depend on your selected race distance.
 
 ### Keyboard controls
 
-![keyboard-controls.gif](https://draftin.com:443/images/49146?token=zQ_rRypbebOqL6RJzZ55Vf7q52MCfbeiId495oFX34qv1rOhIzj5KHe5Uv29BIWjeqK6qizCqv1wSDaVxEpKFOI)
+<img {...meta.images.suggestions} />
+
 Use the up and down keys on input fields to increase or decrease the current value by 1. Combine it with the ctrl key to change the step size to 10.
 
 ### Expert mode
 
-![expert-mode.gif](https://draftin.com:443/images/49147?token=-Ka-9iO8L2tMbzaHWs1E_iafCfkyva3lAA0aA-I9tAM0EWh-wrZVnGlkzRGmIw0vpXEJ0EO11Gq76qT9nASUumM)
+<img {...meta.images.expert} />
+
 Enable this mode if you consider yourself an expert. It will hide all labels and descriptions to go for a very minimal appearance.
 
 ### Detailed decimal place
 
-![detailed-decimal-place.gif](https://draftin.com:443/images/49148?token=ICGs_Gy7Hw0BW10uruGPKx9RiRIhAnAd84YvaAiY3gGBKNnjIzbRKlE-T4oIMp33gbl1nBGg9n8UgJQjQrZuDj8)
+<img {...meta.images.decimals} />
+
 All values are rounded to two decimals. Hovering over it will reveal more precision.
 
 ### Cross tool input fields
 
-![cross-tool-input-fields.gif](https://draftin.com:443/images/49149?token=e2Jdp7jFlbkEt8doR5DmfFlU5iaBA_txAIhfflW6cPIy02moePa6uSXUEySGjNmbRimYHzkcN_wHNdhXThSJ38Y)
+<img {...meta.images.input} />
+
 Every tool is using your most recent data, e.g. if you're using the pace calculator to calculate your marathon pace and switch to the pace converter your recently calculated marathon pace is already prefilled.
 
 ### Offline support
 
-![add-to-homescreen.gif](https://draftin.com:443/images/49150?token=4FjiZnSASVMzP8qcBU2zmGrpKqjM1mCkRz_3DmsN8KDKkCOhhqETCAwE6zv5TTK_gnc8I-xnDWuQbLGzT0ULuGw)
+<img {...meta.images.offline} />
+
 Runverter is always there for you, even if the internet is gone. It offers full offline support which is perfect for raceday when you want to recheck your pace and the mobile network is overloaded. It remembers you and your data, no account needed. Everything is stored on your device. Just add it to your homescreen and treat it like an app.
 
 ## Any Feedback?
