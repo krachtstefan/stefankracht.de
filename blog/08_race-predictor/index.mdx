@@ -1,7 +1,32 @@
 export const meta = {
   title: 'The race predictor has landed',
   url: 'runverter-race-predictor',
-  date: new Date('2017-02-22T10:00:00')
+  date: new Date('2017-02-22T10:00:00'),
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/race-predictor-600.png'),
+      srcSet: `${require('./images/race-predictor-600.png')} 600w, ${require('./images/race-predictor-1000.png')} 1000w, ${require('./images/race-predictor-1800.png')} 1800w`,
+      alt: 'A screenshot of the new splits calculator tool'
+    }
+  }
 };
 
 In the last couple of weeks I've been busy to improve the toolset of runverter.io. Here is an overview of the changes from the latest update.
+
+## New Tool: race predictor
+
+The race predictor uses a previous race result to estimate an upcomming one. It is based on the peter [riegel method](https://en.wikipedia.org/wiki/Peter_Riegel) which is suitable for runs between 3.5 minutes and 3 hours, 50 minutes. Other race prediction algorithms may be added in the future. I'm also planing to offer the possibility to provide a second reference run to make the fatigue coefficient variable.
+
+## Add homescreen support for android devices
+
+as requested by [@KenBauer](https://twitter.com/KenBauer/status/831199244027523072)
+
+TWEET
+
+## Minor changes
+
+- add flash messages to give context-sensitive user feedback
+- add possibility to delete local data on the imprint page
+- update `ember-cli` from `2.9.1` to `2.11.0`
+- minor bugfixes and structural changes behind the scenes
