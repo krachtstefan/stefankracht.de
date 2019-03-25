@@ -1,7 +1,35 @@
+import { TwitterTweetEmbed } from 'react-twitter-embed';
+
 export const meta = {
   title: 'Why run when you could walk?',
   url: 'running',
-  date: new Date('2015-01-17T15:00:00')
+  date: new Date('2015-01-17T15:00:00'),
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/running-600.png'),
+      srcSet: `${require('./images/running-600.png')} 600w, ${require('./images/running-1000.png')} 1000w, ${require('./images/running-1800.png')} 1800w`,
+      alt: ''
+    },
+    laydown: {
+      sizes: '100vw',
+      src: require('./images/raceday-laydown-600.png'),
+      srcSet: `${require('./images/raceday-laydown-600.png')} 600w, ${require('./images/raceday-laydown-1000.png')} 1000w, ${require('./images/raceday-laydown-1800.png')} 1800w`,
+      alt: ''
+    },
+    statistics: {
+      sizes: '100vw',
+      src: require('./images/running-statistics-600.png'),
+      srcSet: `${require('./images/running-statistics-600.png')} 600w, ${require('./images/running-statistics-1000.png')} 1000w, ${require('./images/running-statistics-1800.png')} 1800w`,
+      alt: ''
+    },
+    medal: {
+      sizes: '100vw',
+      src: require('./images/marathon-medal-600.png'),
+      srcSet: `${require('./images/marathon-medal-600.png')} 600w, ${require('./images/marathon-medal-1000.png')} 1000w, ${require('./images/marathon-medal-1800.png')} 1800w`,
+      alt: ''
+    }
+  }
 };
 
 I've never been the athletic type of guy when I was a kid. The biggest sports achievement in my childhood was to manage the stairs in the school building safely. A lot of things changed since then and this article should answer the question my past me may ask me today:
@@ -20,24 +48,22 @@ I belong to the “all or nothing“ type of people. I prefer to do less things,
 
 **Healthiness:** I turned 30 last year. Needless to say that you start a lot of pondering while passing that magic number. Fact is: I'm the oldest I have ever been and I'm in the best physical condition of my life.
 
-# ###IMAGE
+<img {...meta.images.laydown} />
 
 **Reaching Goals:** 3 kilometers. A distance that made me sweaty and breathless some years ago. Now a simple warm up distance. 4.6 kilometers. My first running event I proudly finished in 21:50. 10 Kilometers. I can remember reaching it the first time and how proud I was back then. 21 kilometers. I finished my first half marathon last year. A distance I never thought I could run. Last month I ran four of them – one on every sunday. Goals are very important for motivation. They give you a reason to get up early or to run a little longer or faster than you normally would. They make you proud when you reach them or make you try harder next time if you don't.
 
-# ###TWEET
+<TwitterTweetEmbed tweetId={'550249333049008129'} />
 
 **Compete:** Doing sports mostly comes with an aspect of competition, but why would you participate in race events as a hobby runner when you have no chance to get under the top ten athletes? I must admit that I needed some time to find an answer to that. But besides some thousand participants you are always running against the hardest enemy of all. You are competing against yourself. It's easy to lose against a well trained young professional. Nobody will expect otherwise since you never had a chance anyway. So why not concentrate on beating personal best times. You are your most realistic enemy. No excuses. And beating your nemesis has always felt great since Super Mario Bros.
 
 ## Conclusion
 
-# ###IMAGE
+<img {...meta.images.statistics} />
 
-# ### -> transfer below this into markdown
+In 2014 I've laced my shoes 176 times and run 1.416 km in over 5 days and 16 hours in total. So I basically ran a 8k every other day. [Statistics](https://www.strava.com/athletes/3952530) like these make me feel like I can achieve anything if I'm willing to get out of my comfort zone. I'm about to start training for my first marathon, pretty sure that this will be the hardest physically challenge I've ever made, but I have no doubt of passing the finish line.
 
-In 2014 I've laced my shoes 176 times and run 1.416 km in over 5 days and 16 hours in total. So I basically ran a 8k every other day. Statistics like these make me feel like I can achieve anything if I'm willing to get out of my comfort zone. I'm about to start training for my first marathon, pretty sure that this will be the hardest physically challenge I've ever made, but I have no doubt of passing the finish line.
-
-Update from April 30, 2015
+## Update from April 30, 2015
 
 … and yes, I did pass the finish line :)
 
-# ###IMAGE
+<img {...meta.images.medal} />
