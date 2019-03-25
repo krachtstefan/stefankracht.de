@@ -1,7 +1,33 @@
 export const meta = {
   title: 'Charity November Recap',
   url: 'charity-november-recap',
-  date: new Date('2014-12-01T09:45:00')
+  date: new Date('2014-12-01T09:45:00'),
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/charity-november-recab-600.png'),
+      srcSet: `${require('./images/charity-november-recab-600.png')} 600w, ${require('./images/charity-november-recab-1000.png')} 1000w, ${require('./images/charity-november-recab-1800.png')} 1800w`,
+      alt: '544 € will be donated'
+    },
+    letter: {
+      sizes: '100vw',
+      src: require('./images/charity-november-thank-you-letter-600.png'),
+      srcSet: `${require('./images/charity-november-thank-you-letter-600.png')} 600w, ${require('./images/charity-november-thank-you-letter-1000.png')} 1000w, ${require('./images/charity-november-thank-you-letter-1800.png')} 1800w`,
+      alt: 'A thank you letter from the children’s hospice Sternenbrücke'
+    }
+  }
 };
 
-Last month was very exciting. I decided to donate all of november's Stickerlicious income and the feedback was overwhelming. I received lots of great feedback and many people startet to share this campaign.
+Last month was very exciting. I decided to [donate all of november's Stickerlicious income](http://stefankracht.de/news/give-something-back) and the feedback was overwhelming. I received lots of great feedback and many people startet to share this campaign.
+
+I'm really proud to call the last 30 days the most successful month since I launched this project. I was able to sell 4 times as much stickers as usual. 68 MacBook stickers made **544 €** which I just forwarded to [children’s hospice Sternenbrücke](https://sternenbruecke.de/home) a minute ago.
+
+Thanks to everyone who helped and participated the last month. It wouldn't have been possible without you <3
+
+Merry Xmas
+
+## Update from December 24, 2014
+
+The donation arrived and I just received a lovely thank you letter:
+
+<img {...meta.images.letter} />
