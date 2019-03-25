@@ -1,11 +1,34 @@
 export const meta = {
   title: 'November is for charity - all Stickerlicious income will be donated.',
   url: 'give-something-back',
-  date: new Date('2014-10-31T11:00:00')
+  date: new Date('2014-10-31T11:00:00'),
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/november-is-for-charity-600.png'),
+      srcSet: `${require('./images/november-is-for-charity-600.png')} 600w, ${require('./images/november-is-for-charity-1000.png')} 1000w, ${require('./images/november-is-for-charity-1800.png')} 1800w`,
+      alt:
+        'A varitety of the stickericious sticker. The heart sticker is placed in the center and painted red'
+    },
+    macbook: {
+      sizes: '100vw',
+      src: require('./images/grab-your-macbook-sticker-600.png'),
+      srcSet: `${require('./images/grab-your-macbook-sticker-600.png')} 600w, ${require('./images/grab-your-macbook-sticker-1000.png')} 1000w, ${require('./images/grab-your-macbook-sticker-1800.png')} 1800w`,
+      alt: 'A macbook with a stickericious sticker on it'
+    }
+  }
 };
 
 This november will be a special month for Stickerlicious. 100% of november’s income will be donated to children’s hospice Sternbrücke in Hamburg.
 
-Children’s hospice Sternenbrücke is an institution for children and young people with incurable or degenerative diseases with no possibilities for curative therapies and a limited life expectancy. It's a place to support patients and families on their hard journey as fully and comfortably as possible.
+[Children’s hospice Sternenbrücke](https://sternenbruecke.de/home) is an institution for children and young people with incurable or degenerative diseases with no possibilities for curative therapies and a limited life expectancy. It's a place to support patients and families on their hard journey as fully and comfortably as possible.
 
-Every sold sticker will help raising money and you can be a part of it. Buy a sticker and/or share this post to spread the world <3
+Every sold sticker will help raising money and you can be a part of it. [Buy a sticker](http://stickerlicio.us/) and/or [share this post](https://twitter.com/intent/tweet?text=%20http%3A%2F%2Fstefankracht.de%2Fnews%2Fgive-something-back%20%23stickerlicious) to spread the word <3
+
+<img {...meta.images.macbook} />
+
+Hint: it's almost christmas and I bet you have no presents yet ;)
+
+## Update from December 1, 2014
+
+Thanks to all participants. If you wonder how it went make sure to [read the recab](http://stefankracht.de/news/charity-november-recap).
