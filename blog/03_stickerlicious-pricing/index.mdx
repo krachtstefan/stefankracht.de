@@ -1,10 +1,31 @@
 export const meta = {
   title: 'How much would you pay for a macbook sticker?',
   url: 'macbook-sticker-pricing',
-  date: new Date('2014-08-25T00:10:00')
+  date: new Date('2014-08-25T00:10:00'),
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/macbook-sticker-shipping-600.png'),
+      srcSet: `${require('./images/macbook-sticker-shipping-600.png')} 600w, ${require('./images/macbook-sticker-shipping-1000.png')} 1000w, ${require('./images/macbook-sticker-shipping-1800.png')} 1800w`,
+      alt: 'A macbook with a stickerlicious sticker on it'
+    },
+    allocation: {
+      sizes: '100vw',
+      src: require('./images/macbook-sticker-price-allocation-600.png'),
+      srcSet: `${require('./images/macbook-sticker-price-allocation-600.png')} 600w, ${require('./images/macbook-sticker-price-allocation-1000.png')} 1000w, ${require('./images/macbook-sticker-price-allocation-1800.png')} 1800w`,
+      alt:
+        'An infographic showing the allocation of the income as mentioned above'
+    },
+    shipping: {
+      sizes: '100vw',
+      src: require('./images/macbook-sticker-shipping-600.png'),
+      srcSet: `${require('./images/macbook-sticker-shipping-600.png')} 600w, ${require('./images/macbook-sticker-shipping-1000.png')} 1000w, ${require('./images/macbook-sticker-shipping-1800.png')} 1800w`,
+      alt: 'A desk full of stickers and packaging material'
+    }
+  }
 };
 
-It's been a while now since I've launched my MacBook sticker shop <a href="http://stickerlicio.us" title="Stickerlicious MacBook sticker" target="_blank">stickerlicio.us</a>. Over the last couple of years I've shipped a lot of orders from all around the world, have been featured by some awesome websites and received overwhelming feedback from many of my customers.
+It's been a while now since I've launched my MacBook sticker shop [stickerlicio.us](http://stickerlicio.us). Over the last couple of years I've shipped a lot of orders from all around the world, have been featured by some awesome websites and received overwhelming feedback from many of my customers.
 
 <!-- prettier-ignore -->
 The only kind of negative feedback that comes up every once in a while regards to pricing. I sometimes stumble upon some people wondering why they should pay 8 € (around 10.70 $) for a simple piece of vinyl decal. A good question that I asked myself too when I first thought about selling MacBook stickers. I always took the time to explain myself and thought I could just as well drop my pants entirely, provide you with an insight into the numbers to make you understand the pricing and help you decide wether you are willing to pay that much for a tiny little MacBook sticker or not.
@@ -21,7 +42,7 @@ Every order comes in a cute little **packaging** including 2 promotional sticker
 
 Doing the math, every sticker bears the cost of **1,73 €** to make it from production to your door.
 
-# ###IMAGE
+<img {...meta.images.allocation} />
 
 ## So it's 6,27 € for me. Yeah! But wait...
 
@@ -31,9 +52,9 @@ At the beginning there was quite a lot of initial work required to get everythin
 
 Besides lots of automation, there is some handwork left for each incoming order. Every shipping label needs to be created in the online system of the german post office (2014 and still no API yet. Seriously!). After the label has been printed I do the packaging and take it to the mailbox the next morning. Finally I log into my shopping system and trigger an email informing you that your sticker has hit the road.
 
-# ###IMAGE
+<img {...meta.images.shipping} />
 
-In addition to the everyday work, I try my best to keep a close relationship to my customers. Doing some social media work, answering support questions, sending replacement stickers if one got broken. I even decided to <a href="https://github.com/krachtstefan/stickerlicious-templates" title="MacBook sticker templates" target="_blank">open source all of my sticker designs</a> so you're able to reproduce or recreate all of my stickers if you are out of money or have great ideas for your own sticker design.
+In addition to the everyday work, I try my best to keep a close relationship to my customers. Doing some social media work, answering support questions, sending replacement stickers if one got broken. I even decided to [open source all of my sticker designs](https://github.com/krachtstefan/stickerlicious-templates) so you're able to reproduce or recreate all of my stickers if you are out of money or have great ideas for your own sticker design.
 
 ## Shut up and take my money
 
