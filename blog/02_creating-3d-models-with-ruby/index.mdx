@@ -1,7 +1,36 @@
 export const meta = {
   title: 'Creating 3D models with ruby',
   url: 'creating-3d-models-with-ruby',
-  date: new Date('2013-05-24T10:25:00')
+  date: new Date('2013-05-24T10:25:00'),
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/3d-models-with-ruby-600.png'),
+      srcSet: `${require('./images/3d-models-with-ruby-600.png')} 600w, ${require('./images/3d-models-with-ruby-1000.png')} 1000w, ${require('./images/3d-models-with-ruby-1800.png')} 1800w`,
+      alt:
+        'SKetch of a 3d coordinate system with the file extension *.obj on top'
+    },
+    sampleFront: {
+      sizes: '100vw',
+      src: require('./images/example-3d-project-front-600.png'),
+      srcSet: `${require('./images/example-3d-project-front-600.png')} 600w, ${require('./images/example-3d-project-front-1000.png')} 1000w, ${require('./images/example-3d-project-front-1800.png')} 1800w`,
+      alt:
+        'An 3d model of a white plate that has a matrix of squared surfaces all inclined differently. The different angles change the intensity of the light reflection which lead to a pixel effect. From far away it looks like the a black and white pixelated version of the mona lisa'
+    },
+    sampleSide: {
+      sizes: '100vw',
+      src: require('./images/example-3d-project-side-600.png'),
+      srcSet: `${require('./images/example-3d-project-side-600.png')} 600w, ${require('./images/example-3d-project-side-1000.png')} 1000w, ${require('./images/example-3d-project-side-1800.png')} 1800w`,
+      alt:
+        'The 3d model from the side, showing the different angles of the fragments'
+    },
+    sampleTop: {
+      sizes: '100vw',
+      src: require('./images/example-3d-project-top-600.png'),
+      srcSet: `${require('./images/example-3d-project-top-600.png')} 600w, ${require('./images/example-3d-project-top-1000.png')} 1000w, ${require('./images/example-3d-project-top-1800.png')} 1800w`,
+      alt: 'The 3d model from top, revealing even more details'
+    }
+  }
 };
 
 I'm not sure when or how this idea initially started, but I was so impressed by all the crazy 3D printing stuff out there, that I decided to dive into it and give it a try. I wanted to print a 3D object.
@@ -98,9 +127,12 @@ The rendered file looks like this
 
 # ###IMAGES
 
-##Example project
+## Example project
+
 The explained examples were pretty basic and for simple objects like cubes or triangles you may avoid using a separate library. It just gets handy as the model is growing in terms of complexity.
 
 Here's a sneak preview of what you can do with it, when you sent a generated .obj file to a 3D printer. A separate more detailed article on this topic will follow.
 
-# ###IMAGES
+<img {...meta.images.sampleFront} />
+<img {...meta.images.sampleSide} />
+<img {...meta.images.sampleTop} />
