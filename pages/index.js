@@ -19,14 +19,14 @@ export default withRouter(props => {
     <Layout>
       <Bloglist
         posts={getPostsList({ limit: itemsPerPage, offset })}
-        href={url => `/post?url=${url}`}
-        as={url => `/p/${url}`}
+        href={url => config.routing.blogPost.nextLink.href(url)}
+        as={url => config.routing.blogPost.nextLink.as(url)}
       />
       <Blogpagination
         page={page}
         lastPage={lastPage}
-        href={page => (page > 1 ? `?page=${page}` : '/')}
-        as={page => (page > 1 ? `/page/${page}` : '/')}
+        href={page => config.routing.blogList.nextLink.href(page)}
+        as={page => config.routing.blogList.nextLink.as(page)}
       />
     </Layout>
   );
