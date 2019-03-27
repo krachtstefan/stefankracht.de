@@ -37,12 +37,13 @@ I'm not sure when or how this idea initially started, but I was so impressed by 
 
 Since I had no clue of how to use 3D modeling software - and I was pretty sure that it's more than just a weekend project to get started - I decided to build on the knowledge and skills I already had. This is why I love to be a developer. We can built websites or robots and don't even have to switch the tools.
 
-So why not create a printable 3D object with ruby? This is why I created the <a href="https://github.com/krachtstefan/wavefront-obj" target="_blank">wavefront-obj gem</a>.
+So why not create a printable 3D object with ruby? This is why I created the [wavefront-obj](https://github.com/krachtstefan/wavefront-obj) gem.
 
-##Which file format?
+## Which file format?
+
 I did a lot of research to find a file format that fits my needs best. The requirements are actually pretty simple as I don't need complex texture or animation features by now. All I want is to create points and connect them to surfaces which form the shape of an object.
 
-The <a href="http://en.wikipedia.org/wiki/Wavefront_.obj_file" target="_blank">Wavefront .obj file</a> won with a fairly good compatibility in the 3D online printing market: it's supported by common 3D modeling software and it even opens in Photoshop (tested with CS5).
+The [Wavefront .obj file](http://en.wikipedia.org/wiki/Wavefront_.obj_file) won with a fairly good compatibility in the 3D online printing market: it's supported by common 3D modeling software and it even opens in Photoshop (tested with CS5).
 
 A lightweight file format with a simple structure and easy syntax. Here is an example of a very basic file with a triangle:
 
@@ -64,12 +65,14 @@ The rendered result looks like this:
 
 # ###IMAGES
 
-##What does the wavefront-obj ruby gem do?
+## What does the wavefront-obj ruby gem do?
+
 As you can see the structure of a .obj file is very easy to understand, but the daily routine reveals a big downside as well. You have to manage all the points and their associated reference numbers and this ends up in repeatedly upcoming thoughts like: "Did I already use that point? And if so, what was it's reference number again?" I wanted to solve this and create an interface that allows you to simply throw surfaces with points into the scene and let the library handle the point management.
 
 It will take care about file generation as well and provides access to the raw data as a string or exports it as a file to your disk.
 
-##How to use it?
+## How to use it?
+
 The installation is as easy as
 
 `gem install wavefront-obj`
@@ -125,7 +128,7 @@ cube.save "my_awesome_cube.obj"
 
 The rendered file looks like this
 
-# ###IMAGES
+# ###IMAGES TODO!!! CHECK CONSOLTE aND ADD 3d IMAGES
 
 ## Example project
 
