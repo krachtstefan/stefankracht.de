@@ -12,6 +12,10 @@ h3 {
   font-weight: 600;
 }
 
+h1 {
+  color: $color-highlight;
+}
+
 h2 {
   font-size: 2rem;
   font-weight: normal;
@@ -34,7 +38,7 @@ hr {
 }
 
 a {
-  color: $color-grey-dark;
+  color: $color-highlight;
 }
 
 blockquote {
