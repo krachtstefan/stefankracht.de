@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/krachtstefan/stefankracht.de#readme",
   "dependencies": {
-    "@mdx-js/mdx": "^0.16.8",
+    "@mdx-js/mdx": "^0.20.0",
     "@zeit/next-sass": "^1.0.1",
     "babel-plugin-preval": "^3.0.1",
     "express": "^4.16.4",
@@ -31,8 +31,8 @@
     "nodemon": "^1.18.10",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
     "react-twitter-embed": "^2.0.7",
     "react-youtube": "^7.9.0"
   },
