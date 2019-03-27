@@ -42,7 +42,18 @@ a {
 }
 
 blockquote {
+  font-size: 2rem;
+  border-left: 10px solid $color-highlight;
+  padding-left: 40px;
   font-family: $font-serif;
   font-style: italic;
   color: $color-grey-medium;
+  cite {
+    display: block;
+    font-size: 1rem;
+    color: $color-grey-light;
+    &::before {
+      content: '— ';
+    }
+  }
 }
