@@ -1,3 +1,7 @@
+:root {
+  --element-space: 30px;
+}
+
 main {
   max-width: $max-image-width;
   p,
@@ -9,10 +13,8 @@ main {
   h3,
   h4,
   iframe,
-  twitter-widget,
-  blockquote,
-  pre {
-    margin: 20px auto 0 auto;
+  twitter-widget {
+    margin: var(--element-space) auto 0 auto;
     max-width: $max-container-width;
   }
 
@@ -29,7 +31,12 @@ main {
     background: $color-code-background;
   }
 
+  blockquote {
+    margin: var(--element-space) 0 0 0;
+  }
+
   pre {
+    margin: var(--element-space) 0 0 0;
     background: $color-code-background;
     padding: 20px;
     overflow: auto;
