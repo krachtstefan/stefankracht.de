@@ -34,7 +34,8 @@
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-twitter-embed": "^2.0.7",
-    "react-youtube": "^7.9.0"
+    "react-youtube": "^7.9.0",
+    "remark-external-links": "^4.0.0"
   },
   "devDependencies": {
     "@zeit/next-mdx": "^1.2.0"
