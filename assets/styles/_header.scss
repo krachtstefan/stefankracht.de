@@ -24,10 +24,10 @@ header {
     &:hover {
       transform: perspective(150px) rotateX(-30deg) rotateY(30deg);
       path:nth-of-type(2) {
-        fill: #eb3656;
+        fill: $color-highlight;
       }
       path:nth-of-type(3) {
-        fill: #ebca36;
+        fill: $color-yellow;
         transition-delay: 0.4s;
         transform: translate(5px, 5px);
       }
