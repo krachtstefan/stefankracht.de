@@ -6,12 +6,12 @@ header {
     height: 50px;
     transition: all 0.4s ease;
     path {
-      transition: fill 0.4s ease;
+      transition: all 0.4s ease;
     }
 
     // shaddow
     path:nth-of-type(1) {
-      fill: #eb3656;
+      fill: black;
     }
     path:nth-of-type(2) {
       fill: black;
@@ -23,14 +23,13 @@ header {
 
     &:hover {
       transform: perspective(150px) rotateX(-30deg) rotateY(30deg);
-      path:nth-of-type(1) {
-        fill: black;
-      }
       path:nth-of-type(2) {
         fill: #eb3656;
       }
       path:nth-of-type(3) {
         fill: #ebca36;
+        transition-delay: 0.4s;
+        transform: translate(5px, 5px);
       }
     }
   }
