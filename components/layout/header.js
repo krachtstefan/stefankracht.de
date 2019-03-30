@@ -5,18 +5,24 @@ import Logo from './../../assets/images/logo.svg';
 const Header = () => {
   return (
     <header>
-      <Logo id="logo" />
-      {/* <nav>
+      <Link href="/">
+        <a>
+          <Logo id="logo" />
+        </a>
+      </Link>
+      <nav>
         <Link href="/">
           <a>Blog</a>
         </Link>
+        <br />
         <Link href="/about">
           <a>About</a>
         </Link>
+        <br />
         <Link href="/imprint">
-          <a>imprint</a>
+          <a>Imprint</a>
         </Link>
-      </nav> */}
+      </nav>
     </header>
   );
 };
