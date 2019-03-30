@@ -21,15 +21,20 @@ header {
     }
 
     &:hover {
-      transform: perspective(150px) rotateX(-30deg) rotateY(30deg);
-      path:nth-of-type(2) {
-        fill: $color-highlight;
-      }
-      path:nth-of-type(3) {
-        fill: $color-yellow;
-        transition-delay: 0.4s;
-        transform: translate(5px, 5px);
-      }
+    }
+  }
+}
+
+header:hover {
+  #logo {
+    transform: perspective(150px) rotateX(-30deg) rotateY(30deg);
+    path:nth-of-type(2) {
+      fill: $color-highlight;
+    }
+    path:nth-of-type(3) {
+      fill: $color-yellow;
+      transition-delay: 0.4s;
+      transform: translate(5px, 5px);
     }
   }
 }
