@@ -2,6 +2,9 @@ header {
   height: 200px;
   padding: 20px;
   #logo {
+    width: 150px;
+    height: 100px;
+    transition: all 0.4s ease;
     path {
       transition: fill 0.4s ease;
     }
@@ -19,6 +22,7 @@ header {
     }
 
     &:hover {
+      transform: perspective(150px) rotateX(-30deg) rotateY(30deg);
       path:nth-of-type(1) {
         fill: #eb3656;
       }
