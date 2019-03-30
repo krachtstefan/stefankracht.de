@@ -38,7 +38,8 @@
     "remark-external-links": "^4.0.0"
   },
   "devDependencies": {
-    "@zeit/next-mdx": "^1.2.0"
+    "@zeit/next-mdx": "^1.2.0",
+    "babel-plugin-inline-react-svg": "^1.0.1"
   },
   "prettier": {
     "singleQuote": true
