@@ -1,3 +1,4 @@
+import ActiveLink from './../../components/misc/activeLink';
 import Link from 'next/link';
 import React from 'react';
 import Logo from './../../assets/images/logo.svg';
@@ -11,15 +12,15 @@ const Header = () => {
         </a>
       </Link>
       <nav>
-        <Link href="/">
-          <a className="active">Blog</a>
-        </Link>
-        <Link href="/imprint">
+        <ActiveLink activeClassName="active" href="/">
+          <a>Blog</a>
+        </ActiveLink>
+        <ActiveLink activeClassName="active" href="/imprint">
           <a>Projects</a>
-        </Link>
-        <Link href="/about">
+        </ActiveLink>
+        <ActiveLink activeClassName="active" href="/about">
           <a>About</a>
-        </Link>
+        </ActiveLink>
       </nav>
     </header>
   );
