@@ -14,11 +14,9 @@ const Header = () => {
         <Link href="/">
           <a>Blog</a>
         </Link>
-        <br />
         <Link href="/about">
           <a>About</a>
         </Link>
-        <br />
         <Link href="/imprint">
           <a>Imprint</a>
         </Link>
