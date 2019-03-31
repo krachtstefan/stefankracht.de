@@ -7,6 +7,7 @@ import '../../assets/styles/app.scss';
 
 Router.onRouteChangeStart = url => {
   console.log(`Loading: ${url}`);
+  NProgress.configure({ showSpinner: false });
   NProgress.start();
 };
 Router.onRouteChangeComplete = () => NProgress.done();
