@@ -38,7 +38,7 @@ header {
       }
     }
   }
-  #logo {
+  a#logo svg {
     width: 75px;
     height: 50px;
     transition: all 0.2s ease;
@@ -63,13 +63,13 @@ header {
   }
 }
 
-header > a {
+header > a#logo {
   display: inline-block;
   position: relative;
   left: -20px;
   padding: 10px 20px 0 20px;
   &:hover {
-    #logo {
+    svg {
       transform: perspective(150px) rotateX(-30deg) rotateY(30deg);
       path:nth-of-type(2) {
         fill: $color-highlight;
