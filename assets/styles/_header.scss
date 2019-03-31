@@ -1,15 +1,17 @@
 header {
+  --logo-width: 75px;
+  --logo-height: 50px;
+
   padding-top: 50px;
   padding-bottom: 50px;
   display: grid;
-  grid-template-columns: 115px auto;
-
+  grid-template-columns: calc(var(--logo-width) + 40px) auto;
   nav {
     display: grid;
     justify-items: left;
     a {
       font-size: 1.3rem;
-      height: 50px;
+      height: var(--logo-height);
       display: inline-block;
       margin: 10px 45px 0 0;
       text-decoration: none;
@@ -45,8 +47,8 @@ header {
     }
   }
   a#logo svg {
-    width: 75px;
-    height: 50px;
+    width: var(--logo-width);
+    height: var(--logo-height);
     transition: all 0.2s ease;
     path {
       transition: all 0.2s ease;
