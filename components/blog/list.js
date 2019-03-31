@@ -2,7 +2,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 const List = props => (
-  <>
+  <div className="blog-list">
     {props.posts.map(post => (
       <div key={post.url}>
         <p>{new Intl.DateTimeFormat('en-US').format(post.date)}</p>
@@ -14,7 +14,7 @@ const List = props => (
         {/* <post.Component /> */}
       </div>
     ))}
-  </>
+  </div>
 );
 
 List.propTypes = {
