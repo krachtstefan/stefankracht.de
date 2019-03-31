@@ -21,14 +21,14 @@ header {
       &:hover,
       &.active {
         color: white;
-        padding: 0 5px 0 15px;
+        padding: 0 13px 0 7px;
         transition: all 0.4s ease;
       }
       &:after {
         background-color: $color-turquoise;
         bottom: 0;
         content: ' ';
-        height: 50%;
+        height: 40%;
         left: 10px;
         position: absolute;
         width: calc(100%);
@@ -41,7 +41,7 @@ header {
         height: 100%;
         transition: all 0.4s ease;
         background-color: black;
-        width: calc(100% + 40px);
+        width: calc(100% + 20px);
         left: -10px;
       }
     }
