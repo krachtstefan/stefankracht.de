@@ -2,21 +2,39 @@ header {
   padding-top: 20px;
   nav {
     a {
+      font-size: 1.5rem;
+      &.active {
+        font-weight: bold;
+      }
       display: inline-block;
       margin: 0 50px 0 0;
       text-decoration: none;
       position: relative;
+      transition: all 0.4s ease;
+      padding: 0 20px 0 0;
+      &:hover {
+        color: white;
+        padding: 0 5px 0 15px;
+        transition: all 0.4s ease;
+      }
       &:after {
         background-color: $color-yellow;
         bottom: 0;
         content: ' ';
-        display: block;
         height: 50%;
-        left: 7px;
-
+        left: 10px;
         position: absolute;
-        width: calc(100% + 30px);
+        width: calc(100%);
         z-index: -1;
+        color: white;
+        transition: all 0.4s ease;
+      }
+      &:hover:after {
+        height: 100%;
+        transition: all 0.4s ease;
+        background-color: black;
+        width: calc(100% + 40px);
+        left: -10px;
       }
     }
   }
