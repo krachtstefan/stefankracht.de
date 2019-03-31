@@ -12,13 +12,13 @@ const Header = () => {
       </Link>
       <nav>
         <Link href="/">
-          <a>Blog</a>
-        </Link>
-        <Link href="/about">
-          <a className="active">About</a>
+          <a className="active">Blog</a>
         </Link>
         <Link href="/imprint">
-          <a>Imprint</a>
+          <a>Projects</a>
+        </Link>
+        <Link href="/about">
+          <a>About</a>
         </Link>
       </nav>
     </header>
