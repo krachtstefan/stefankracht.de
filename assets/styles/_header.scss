@@ -1,27 +1,29 @@
 header {
   --logo-width: 75px;
   --logo-height: 50px;
-
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0px;
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: calc(var(--logo-width) + 40px) auto;
   nav {
     display: grid;
     justify-items: left;
+    grid-gap: 10px;
     a {
+      --border-offset: 10px;
       font-size: 1.3rem;
       height: var(--logo-height);
       display: inline-block;
-      margin: 10px 45px 0 0;
+      margin: 0 45px 0 0;
       text-decoration: none;
       position: relative;
+      left: var(--border-offset);
       transition: all 0.4s ease;
       padding: 0 20px 0 0;
       &:hover,
       &.active {
         color: white;
-        padding: 0 13px 0 7px;
+        padding: 0 10px 0 10px;
         transition: all 0.4s ease;
       }
       &:after {
@@ -29,7 +31,7 @@ header {
         bottom: 0;
         content: ' ';
         height: 40%;
-        left: 10px;
+        left: var(--border-offset);
         position: absolute;
         width: calc(100%);
         z-index: -1;
@@ -74,9 +76,9 @@ header {
 header > a#logo {
   display: flex;
   align-items: center;
-  position: relative;
-  left: -20px;
-  padding: 10px 20px 0 20px;
+  align-self: center;
+  padding: 20px 0;
+  justify-content: center;
   &:hover {
     svg {
       pointer-events: none; // no title tag on mouse hover
