@@ -17,6 +17,7 @@ export default withRouter(props => {
     return <Error statusCode={404} />;
   return (
     <Layout>
+      <h1>Blog</h1>
       <Bloglist
         posts={getPostsList({ limit: itemsPerPage, offset })}
         href={url => config.routing.blogPost.nextLink.href(url)}
