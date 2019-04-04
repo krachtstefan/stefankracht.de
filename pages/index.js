@@ -23,12 +23,12 @@ export default withRouter(props => {
         href={url => config.routing.blogPost.nextLink.href(url)}
         as={url => config.routing.blogPost.nextLink.as(url)}
       />
-      <Blogpagination
+      {/* <Blogpagination
         page={page}
         lastPage={lastPage}
         href={page => config.routing.blogList.nextLink.href(page)}
         as={page => config.routing.blogList.nextLink.as(page)}
-      />
+      /> */}
     </Layout>
   );
 });
