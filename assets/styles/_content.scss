@@ -68,6 +68,9 @@ main {
       h1 {
         color: $color-almost-black;
         font-size: 1.8rem;
+        @media only screen and (max-width: $breakpoint-tablet) {
+          font-size: 1.2rem;
+        }
         position: relative;
       }
       box-shadow: $shadow-decent;
@@ -84,6 +87,12 @@ main {
       }
       &:nth-of-type(4n + 4) {
         grid-column: 3 / 6;
+      }
+
+      @media only screen and (max-width: $breakpoint-phone) {
+        &:nth-of-type(n) {
+          grid-column: 1 / 6;
+        }
       }
     }
   }
