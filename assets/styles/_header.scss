@@ -27,7 +27,7 @@ header {
         transition: all 0.4s ease;
       }
       &:after {
-        background-color: $color-green;
+        background-color: $color-yellow;
         bottom: 0;
         content: ' ';
         height: 40%;
@@ -87,7 +87,7 @@ header > a#logo {
         fill: $color-pink;
       }
       path:nth-of-type(3) {
-        fill: $color-green;
+        fill: $color-yellow;
         transition-delay: 0.2s;
         transform: translate(5px, 5px);
       }
