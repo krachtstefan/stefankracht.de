@@ -4,14 +4,12 @@ import PropTypes from 'prop-types';
 const List = props => (
   <div className="blog-list">
     {props.posts.map(post => (
-      <div key={post.url}>
-        <Link as={props.as(post.url)} href={props.href(post.url)}>
-          <a>
-            <h1>{post.title}</h1>
-          </a>
-        </Link>
-        <img {...post.images.teaser} />
-      </div>
+      <Link as={props.as(post.url)} href={props.href(post.url)} key={post.url}>
+        <a>
+          <h1>{post.title}</h1>
+          <img {...post.images.teaser} />
+        </a>
+      </Link>
     ))}
   </div>
 );
