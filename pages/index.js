@@ -29,6 +29,7 @@ export default withRouter(props => {
         href={page => config.routing.blogList.nextLink.href(page)}
         as={page => config.routing.blogList.nextLink.as(page)}
       /> */}
+      <h1>Projects</h1>
     </Layout>
   );
 });

@@ -55,7 +55,8 @@ main {
     }
   }
 
-  .blog-list {
+  .blog-list,
+  .project-list {
     --gap: 40px;
     margin: var(--gap) 0;
     display: grid;
@@ -95,5 +96,7 @@ main {
         }
       }
     }
+  }
+  .project-list {
   }
 }
