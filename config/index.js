@@ -14,7 +14,7 @@ export const config = {
     }
   },
   blog: {
-    itemsPerPage: 3,
+    itemsPerPage: 4,
     categories: {
       raceday: 'Raceday.me',
       runverter: 'Runverter',
