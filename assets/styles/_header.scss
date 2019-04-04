@@ -71,25 +71,25 @@ header {
     &:hover {
     }
   }
-}
 
-header > a#logo {
-  display: flex;
-  align-items: center;
-  align-self: center;
-  padding: 20px 0;
-  justify-content: center;
-  &:hover {
-    svg {
-      pointer-events: none; // no title tag on mouse hover
-      transform: perspective(150px) rotateX(-30deg) rotateY(30deg);
-      path:nth-of-type(2) {
-        fill: $color-pink;
-      }
-      path:nth-of-type(3) {
-        fill: $color-yellow;
-        transition-delay: 0.2s;
-        transform: translate(5px, 5px);
+  & > a#logo {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    padding: 20px 0;
+    justify-content: center;
+    &:hover {
+      svg {
+        pointer-events: none; // no title tag on mouse hover
+        transform: perspective(150px) rotateX(-30deg) rotateY(30deg);
+        path:nth-of-type(2) {
+          fill: $color-pink;
+        }
+        path:nth-of-type(3) {
+          fill: $color-yellow;
+          transition-delay: 0.2s;
+          transform: translate(5px, 5px);
+        }
       }
     }
   }
