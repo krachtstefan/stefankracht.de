@@ -1,1 +1,1 @@
-export default () => <footer>&copy; footer ❤️</footer>;
+export default () => <footer />;
