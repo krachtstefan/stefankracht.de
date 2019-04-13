@@ -2,6 +2,7 @@ import Layout from '../components/layout';
 import { withRouter } from 'next/router';
 import Bloglist from '../components/blog/list';
 import { allPosts, getPostsList } from '../lib/blog';
+import ProjectList from '../components/projects/list';
 import Blogpagination from '../components/blog/pagination';
 import { config } from '../config';
 import Error from 'next/error';
@@ -31,6 +32,7 @@ export default withRouter(props => {
         as={page => config.routing.blogList.nextLink.as(page)}
       /> */}
       <h1>Projects</h1>
+      <ProjectList />
     </Layout>
   );
 });
