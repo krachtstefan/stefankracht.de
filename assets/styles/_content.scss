@@ -3,6 +3,7 @@
 }
 
 main {
+  --grid-gap: 40px;
   max-width: $max-image-width;
   .blog-post {
     p,
@@ -57,11 +58,10 @@ main {
 
   .blog-list,
   .project-list {
-    --gap: 40px;
-    margin: var(--gap) 0;
+    margin: var(--grid-gap) 0;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: var(--gap);
+    grid-gap: var(--grid-gap);
     a {
       padding: 20px;
       text-decoration: none;
