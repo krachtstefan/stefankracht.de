@@ -70,7 +70,6 @@ main {
   .project-list {
     margin: var(--grid-gap) 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     grid-gap: var(--grid-gap);
     a {
       padding: 20px;
@@ -85,14 +84,14 @@ main {
         }
         position: relative;
       }
-
-      img {
-        justify-self: center;
-      }
-
       box-shadow: $shadow-decent;
       display: grid;
       grid-gap: 20px;
+    }
+  }
+  .blog-list {
+    grid-template-columns: repeat(5, 1fr);
+    a {
       &:nth-of-type(4n + 1) {
         grid-column: 1 / 4;
       }
@@ -113,6 +112,28 @@ main {
       }
     }
   }
+
   .project-list {
+    grid-template-columns: repeat(2, 1fr);
+    @media only screen and (max-width: $breakpoint-phone) {
+      grid-template-columns: 1fr;
+    }
+    a {
+      display: grid;
+      grid-template-rows: 200px auto;
+      h1 {
+        font-size: 1.5rem;
+      }
+      img {
+        align-self: center;
+        justify-self: center;
+        margin: 40px 0;
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
   }
 }
