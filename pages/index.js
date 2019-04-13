@@ -23,6 +23,7 @@ export default withRouter(props => {
         href={url => config.routing.blogPost.nextLink.href(url)}
         as={url => config.routing.blogPost.nextLink.as(url)}
       />
+      <a className="more">give me more</a>
       {/* <Blogpagination
         page={page}
         lastPage={lastPage}

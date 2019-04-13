@@ -5,6 +5,16 @@
 main {
   --grid-gap: 40px;
   max-width: $max-image-width;
+
+  a.more {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: var(--grid-gap);
+    text-decoration: none;
+    background: $color-item-background;
+    box-shadow: $shadow-decent;
+  }
+
   .blog-post {
     p,
     ol,
