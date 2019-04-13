@@ -6,7 +6,7 @@ const ProjectList = () => {
           src={require('./../../assets/images/projects/raceday-me-logo.svg')}
           width="90%"
         />
-        <h1>Personalized race day livetracking for runners</h1>
+        <h1>Personalized race day live tracking for runners</h1>
       </a>
       <a>
         <img
