@@ -12,7 +12,7 @@ const Header = () => {
         </a>
       </Link>
       <nav>
-        <ActiveLink activeClassName="active" href="/">
+        <ActiveLink activeClassName="active" href="/blog">
           <a>Blog</a>
         </ActiveLink>
         <ActiveLink activeClassName="active" href="/imprint">
