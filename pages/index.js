@@ -33,6 +33,7 @@ export default withRouter(props => {
       /> */}
       <h1>Projects</h1>
       <ProjectList />
+      <a className="more">give me more</a>
     </Layout>
   );
 });
