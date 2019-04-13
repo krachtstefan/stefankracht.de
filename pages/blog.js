@@ -21,7 +21,6 @@ export default withRouter(props => {
       <h1>Blog</h1>
       <Bloglist
         posts={getPostsList({ limit: itemsPerPage, offset })}
-        posts={getPostsList({ limit: itemsPerPage })}
         href={url => config.routing.blogPost.nextLink.href(url)}
         as={url => config.routing.blogPost.nextLink.as(url)}
       />
