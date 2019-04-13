@@ -14,10 +14,14 @@ export default withRouter(props => {
         href={url => config.routing.blogPost.nextLink.href(url)}
         as={url => config.routing.blogPost.nextLink.as(url)}
       />
-      <a className="more">read more articles</a>
+      <p className="pagination">
+        <a>read more articles</a>
+      </p>
       <h1>Projects</h1>
       <ProjectList />
-      <a className="more">explore more projects</a>
+      <p className="pagination">
+        <a className="first">explore more projects</a>
+      </p>
     </Layout>
   );
 });

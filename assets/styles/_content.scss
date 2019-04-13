@@ -5,14 +5,43 @@
 main {
   --grid-gap: 40px;
   max-width: $max-image-width;
-
-  a.more {
-    display: inline-block;
-    padding: 20px;
+  .pagination {
+    display: grid;
+    grid-gap: var(--grid-gap);
     margin-bottom: var(--grid-gap);
-    text-decoration: none;
-    background: $color-item-background;
-    box-shadow: $shadow-decent;
+    grid-template-columns: repeat(3, 1fr);
+    @media only screen and (max-width: $breakpoint-phone) {
+      grid-template-columns: 1fr;
+    }
+
+    & * {
+      display: inline-block;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      background: $color-item-background;
+      box-shadow: $shadow-decent;
+    }
+
+    .first {
+      grid-column: 1 / 2;
+    }
+
+    .middle {
+      grid-column: 2 / 3;
+    }
+
+    .last {
+      grid-column: 3 / 4;
+    }
+
+    @media only screen and (max-width: $breakpoint-phone) {
+      .first,
+      .middle,
+      .last {
+        grid-column: inherit;
+      }
+    }
   }
 
   .blog-post {

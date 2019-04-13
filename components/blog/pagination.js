@@ -6,24 +6,25 @@ const Pagination = props => {
   let nextPage = page < lastPage ? page + 1 : null;
   let prevPage = page > 0 ? page - 1 : null;
   return (
-    <>
-      <hr />
+    <p className="pagination">
       {prevPage ? (
         <Link as={props.as(prevPage)} href={props.href(prevPage)}>
-          <a>newer articles</a>
+          <a className="first">newer articles</a>
         </Link>
       ) : (
-        ''
-      )}{' '}
-      page: {page} / {lastPage}{' '}
+        <span className="first" />
+      )}
+      <span className="middle">
+        page {page} of {lastPage}
+      </span>
       {nextPage ? (
         <Link as={props.as(nextPage)} href={props.href(nextPage)}>
-          <a>older articles</a>
+          <a className="last">older articles</a>
         </Link>
       ) : (
-        ''
+        <span className="last" />
       )}
-    </>
+    </p>
   );
 };
 
