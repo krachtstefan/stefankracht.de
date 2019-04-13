@@ -8,8 +8,8 @@ export const config = {
     },
     blogList: {
       nextLink: {
-        href: page => (page > 1 ? `?page=${page}` : '/'),
-        as: page => (page > 1 ? `/page/${page}` : '/')
+        href: page => (page > 1 ? `?page=${page}` : '/blog'),
+        as: page => (page > 1 ? `/page/${page}` : '/blog')
       }
     }
   },

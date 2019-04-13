@@ -17,7 +17,7 @@ app
     });
 
     server.get('/page/:page', (req, res) => {
-      const actualPage = '/';
+      const actualPage = '/blog';
       const queryParams = { page: req.params.page };
       app.render(req, res, actualPage, queryParams);
     });
