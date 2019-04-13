@@ -1,6 +1,7 @@
 import { withRouter } from 'next/router';
 import { getPostsList } from '../lib/blog';
 import { config } from '../config';
+import Link from 'next/link';
 import Layout from '../components/layout';
 import ProjectList from '../components/projects/list';
 import Bloglist from '../components/blog/list';
@@ -15,7 +16,9 @@ export default withRouter(props => {
         as={url => config.routing.blogPost.nextLink.as(url)}
       />
       <p className="pagination">
-        <a>read more articles</a>
+        <Link as="/page/2" href={config.routing.blogList.nextLink.href(2)}>
+          <a className="first">read more articles</a>
+        </Link>
       </p>
       <h1>Projects</h1>
       <ProjectList />
