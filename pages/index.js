@@ -17,13 +17,13 @@ export default withRouter(props => {
       />
       <p className="pagination">
         <Link as="/page/2" href={config.routing.blogList.nextLink.href(2)}>
-          <a className="first">read more articles</a>
+          <a className="first only">read more articles</a>
         </Link>
       </p>
       <h1>Projects</h1>
       <ProjectList />
       <p className="pagination">
-        <a className="first">explore more projects</a>
+        <a className="first only">explore more projects</a>
       </p>
     </Layout>
   );
