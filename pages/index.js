@@ -23,7 +23,9 @@ export default withRouter(props => {
       <h1>Projects</h1>
       <ProjectList />
       <p className="pagination">
-        <a className="first only">explore more projects</a>
+        <Link href="/projects">
+          <a className="first only">explore more projects</a>
+        </Link>
       </p>
     </Layout>
   );
