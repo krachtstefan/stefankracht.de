@@ -1,3 +1,64 @@
 export default () => {
-  return <div>List</div>;
+  return (
+    <div className="project-list">
+      <a>
+        <img
+          src={require('./../../assets/images/projects/raceday-me-logo.svg')}
+          width="90%"
+        />
+        <h1>Personalized race day live tracking for runners</h1>
+      </a>
+      <a>
+        <img
+          src={require('./../../assets/images/projects/runverter-io-logo.svg')}
+          width="90%"
+        />
+        <h1>A minimal and powerful calculator for runners</h1>
+        <p>
+          I like running and playing with data and numbers but I was never
+          satisfied with the state of running calculators out there. So I
+          decided to build my own state of the art swiss army knife for runners.
+          <a href="https://runverter.io" target="_blank">
+            Runverter.io
+          </a>{' '}
+          was born.
+        </p>
+      </a>
+      <a>
+        <img
+          src={require('./../../assets/images/projects/stickerlicious-logo.svg')}
+          width="90%"
+        />
+        <h1>Pixel MacBook sticker</h1>
+        <p>
+          Stickerlicious was a small online shop for pixel style MacBook
+          stickers. The minimalistic stickers are designed to cover the apple
+          logo and change the light to a completely new - and mostly pretty
+          nerdy - shape. It just got started out of curiosity and ended up in a
+          pretty nice project with loads of kind feedback. I shut down this shop
+          early 2019 because of the lack of glowing apples on macbooks but all
+          the desings have always been{' '}
+          <a href="https://github.com/krachtstefan/stickerlicious-templates">
+            available at github
+          </a>
+          .
+        </p>
+      </a>
+      <a>
+        <img
+          src={require('./../../assets/images/projects/skycheck-logo.svg')}
+          width="90%"
+        />
+        <h1>Finding flights. Simple.</h1>
+        <p>
+          Skycheck.com was the awesome startup I've been working at since the
+          last couple of years. I had the great chance to join the development
+          team in the early days and be a part of a growing and exciting
+          project. SKYCHECK aims to provide the easiest way to find the best
+          flights out there in the cluttered internet and also acts as a flight
+          search technology provider for large travel websites.
+        </p>
+      </a>
+    </div>
+  );
 };
