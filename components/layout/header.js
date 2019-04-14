@@ -15,7 +15,7 @@ const Header = () => {
         <ActiveLink activeClassName="active" href="/blog">
           <a>Blog</a>
         </ActiveLink>
-        <ActiveLink activeClassName="active" href="/imprint">
+        <ActiveLink activeClassName="active" href="/projects">
           <a>Projects</a>
         </ActiveLink>
         <ActiveLink activeClassName="active" href="/about">
