@@ -3,7 +3,7 @@ import { getPostsList } from '../lib/blog';
 import { config } from '../config';
 import Link from 'next/link';
 import Layout from '../components/layout';
-import ProjectList from '../components/projects/list';
+import ProjectTeaser from '../components/projects/teaser';
 import Bloglist from '../components/blog/list';
 
 export default withRouter(props => {
@@ -21,7 +21,7 @@ export default withRouter(props => {
         </Link>
       </p>
       <h1>Projects</h1>
-      <ProjectList />
+      <ProjectTeaser />
       <p className="pagination">
         <Link href="/projects">
           <a className="first only">explore more projects</a>

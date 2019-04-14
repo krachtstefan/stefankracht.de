@@ -1,4 +1,4 @@
-const ProjectList = () => {
+export default () => {
   return (
     <div className="project-list">
       <a>
@@ -18,5 +18,3 @@ const ProjectList = () => {
     </div>
   );
 };
-
-export default ProjectList;
