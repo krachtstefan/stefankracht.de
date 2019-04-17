@@ -3,7 +3,7 @@ export default () => {
     <div className="project-list">
       <div>
         <img
-          src={require('./../../assets/images/projects/raceday-me-logo.svg')}
+          src={require('./../../assets/images/projects/raceday-me/raceday-me-logo.svg')}
           width="90%"
         />
         <h1>Personalized race day live tracking for runners</h1>
@@ -19,7 +19,7 @@ export default () => {
       </div>
       <div>
         <img
-          src={require('./../../assets/images/projects/runverter-io-logo.svg')}
+          src={require('./../../assets/images/projects/runverter-io/runverter-io-logo.svg')}
           width="90%"
         />
         <h1>A minimal and powerful calculator for runners</h1>
@@ -35,7 +35,7 @@ export default () => {
       </div>
       <div>
         <img
-          src={require('./../../assets/images/projects/stickerlicious-logo.svg')}
+          src={require('./../../assets/images/projects/stickerlicious/stickerlicious-logo.svg')}
           width="90%"
         />
         <h1>Pixel MacBook sticker</h1>
@@ -55,7 +55,7 @@ export default () => {
       </div>
       <div>
         <img
-          src={require('./../../assets/images/projects/skycheck-logo.svg')}
+          src={require('./../../assets/images/projects/skycheck/skycheck-logo.svg')}
           width="90%"
         />
         <h1>Finding flights. Simple.</h1>
