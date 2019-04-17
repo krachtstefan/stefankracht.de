@@ -27,10 +27,10 @@ export default () => {
           <a href="https://raceday.me" target="_blank">
             Raceday.me
           </a>{' '}
-          is the world's first personalized race day live tracking that
-          considers your very own time goal and calculates progression and
-          predictions while you're running and lets your friend watch your
-          progress. Check out the{' '}
+          is my biggest side project so far. It is the world's first
+          personalized race day live tracking that considers your very own time
+          goal and calculates progression and predictions while you're running
+          and lets your friend watch your progress. Check out the{' '}
           <Link
             as={config.routing.blogPost.nextLink.as(racedayArticle.url)}
             href={config.routing.blogPost.nextLink.href(racedayArticle.url)}
@@ -96,7 +96,7 @@ export default () => {
           early 2019 because of the lack of glowing apples on macbooks but all
           the desings have always been{' '}
           <a href="https://github.com/krachtstefan/stickerlicious-templates">
-            available at github
+            available as open source at GitHub
           </a>
           .
         </p>
@@ -120,9 +120,11 @@ export default () => {
           Skycheck.com was the awesome startup I've been working at since the
           last couple of years. I had the great chance to join the development
           team in the early days and be a part of a growing and exciting
-          project. SKYCHECK aims to provide the easiest way to find the best
+          project. Skycheck aims to provide the easiest way to find the best
           flights out there in the cluttered internet and also acts as a flight
-          search technology provider for large travel websites.
+          search technology provider for large travel websites. It shut down in
+          2018 but I will still list it here since it shaped me as a developer
+          and deserves to be mentioned.
         </p>
       </div>
     </div>
