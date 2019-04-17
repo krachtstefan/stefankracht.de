@@ -98,6 +98,13 @@ main {
     img {
       max-width: 100%;
     }
+
+    .update {
+      margin: var(--element-space) 0 0 0;
+      padding: 0 var(--element-space) var(--element-space) var(--element-space);
+      border: 5px solid $color-pink;
+      background: $color-code-background;
+    }
   }
 
   .blog-list,
