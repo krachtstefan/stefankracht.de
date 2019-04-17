@@ -1,14 +1,23 @@
 export default () => {
   return (
     <div className="project-list">
-      <a>
+      <div>
         <img
           src={require('./../../assets/images/projects/raceday-me-logo.svg')}
           width="90%"
         />
         <h1>Personalized race day live tracking for runners</h1>
-      </a>
-      <a>
+        <p>
+          <a href="https://raceday.me" target="_blank">
+            Raceday.me
+          </a>{' '}
+          is the world's first personalized race day live tracking that
+          considers your very own time goal and calculates progression and
+          predictions while you're running and lets your friend watch your
+          progress.
+        </p>
+      </div>
+      <div>
         <img
           src={require('./../../assets/images/projects/runverter-io-logo.svg')}
           width="90%"
@@ -17,14 +26,14 @@ export default () => {
         <p>
           I like running and playing with data and numbers but I was never
           satisfied with the state of running calculators out there. So I
-          decided to build my own state of the art swiss army knife for runners.
+          decided to build my own state of the art swiss army knife for runners.{' '}
           <a href="https://runverter.io" target="_blank">
             Runverter.io
           </a>{' '}
           was born.
         </p>
-      </a>
-      <a>
+      </div>
+      <div>
         <img
           src={require('./../../assets/images/projects/stickerlicious-logo.svg')}
           width="90%"
@@ -43,8 +52,8 @@ export default () => {
           </a>
           .
         </p>
-      </a>
-      <a>
+      </div>
+      <div>
         <img
           src={require('./../../assets/images/projects/skycheck-logo.svg')}
           width="90%"
@@ -58,7 +67,7 @@ export default () => {
           flights out there in the cluttered internet and also acts as a flight
           search technology provider for large travel websites.
         </p>
-      </a>
+      </div>
     </div>
   );
 };
