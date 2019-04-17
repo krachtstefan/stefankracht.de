@@ -178,7 +178,7 @@ main {
       grid-template-columns: 1fr;
     }
     > div {
-      grid-template-rows: 200px auto;
+      grid-template-rows: 200px auto auto 1fr;
       h1 {
         font-size: 1.5rem;
       }
