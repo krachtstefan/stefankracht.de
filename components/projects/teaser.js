@@ -1,6 +1,6 @@
 export default () => {
   return (
-    <div className="project-list">
+    <div className="project-teaser-list">
       <a>
         <img
           src={require('./../../assets/images/projects/raceday-me-logo.svg')}

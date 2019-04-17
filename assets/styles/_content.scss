@@ -101,7 +101,7 @@ main {
   }
 
   .blog-list,
-  .project-list {
+  .project-teaser-list {
     margin: var(--grid-gap) 0;
     display: grid;
     grid-gap: var(--grid-gap);
@@ -147,7 +147,7 @@ main {
     }
   }
 
-  .project-list {
+  .project-teaser-list {
     grid-template-columns: repeat(2, 1fr);
     @media only screen and (max-width: $breakpoint-phone) {
       grid-template-columns: 1fr;
