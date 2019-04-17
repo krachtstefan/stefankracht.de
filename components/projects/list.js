@@ -1,3 +1,9 @@
+import Link from 'next/link';
+import { config } from './../../config';
+import { findPostbyId } from './../../lib/blog';
+let racedayArticle = findPostbyId(1);
+let runverterArticle = findPostbyId(7);
+
 export default () => {
   return (
     <div className="project-list">
@@ -24,7 +30,14 @@ export default () => {
           is the world's first personalized race day live tracking that
           considers your very own time goal and calculates progression and
           predictions while you're running and lets your friend watch your
-          progress.
+          progress. Check out the{' '}
+          <Link
+            as={config.routing.blogPost.nextLink.as(racedayArticle.url)}
+            href={config.routing.blogPost.nextLink.href(racedayArticle.url)}
+          >
+            <a>blog post about the initial idea</a>
+          </Link>
+          .
         </p>
       </div>
       <div>
@@ -49,7 +62,14 @@ export default () => {
           <a href="https://runverter.io" target="_blank">
             Runverter.io
           </a>{' '}
-          was born.
+          was born. Read the{' '}
+          <Link
+            as={config.routing.blogPost.nextLink.as(runverterArticle.url)}
+            href={config.routing.blogPost.nextLink.href(runverterArticle.url)}
+          >
+            <a>release article</a>
+          </Link>{' '}
+          for a deep dive into all the features.
         </p>
       </div>
       <div>
