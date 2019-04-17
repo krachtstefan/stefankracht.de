@@ -43,7 +43,7 @@ export default () => {
       <div>
         <img
           src={require('./../../assets/images/projects/stickerlicious/stickerlicious-logo.svg')}
-          width="90%"
+          width="80%"
         />
         <h1>Pixel MacBook sticker</h1>
         <img
@@ -66,7 +66,7 @@ export default () => {
       <div>
         <img
           src={require('./../../assets/images/projects/skycheck/skycheck-logo.svg')}
-          width="90%"
+          width="80%"
         />
         <h1>Finding flights. Simple.</h1>
         <img
