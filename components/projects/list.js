@@ -9,7 +9,13 @@ export default () => {
 
         <h1>Personalized race day live tracking for runners</h1>
         <img
-          src={require('./../../assets/images/projects/raceday-me/raceday-me-screen.png')}
+          sizes="100vw"
+          src={require('./../../assets/images/projects/raceday-me/raceday-me-screen-600.png')}
+          srcSet={`
+            ${require('./../../assets/images/projects/raceday-me/raceday-me-screen-600.png')} 600w, 
+            ${require('./../../assets/images/projects/raceday-me/raceday-me-screen-1000.png')} 1000w,
+            ${require('./../../assets/images/projects/raceday-me/raceday-me-screen-1800.png')} 1800w`}
+          alt=""
         />
         <p>
           <a href="https://raceday.me" target="_blank">
@@ -28,7 +34,13 @@ export default () => {
         />
         <h1>A minimal and powerful calculator for runners</h1>
         <img
-          src={require('./../../assets/images/projects/runverter-io/runverter-io-screen.png')}
+          sizes="100vw"
+          src={require('./../../assets/images/projects/runverter-io/runverter-io-screen-600.png')}
+          srcSet={`
+            ${require('./../../assets/images/projects/runverter-io/runverter-io-screen-600.png')} 600w, 
+            ${require('./../../assets/images/projects/runverter-io/runverter-io-screen-1000.png')} 1000w,
+            ${require('./../../assets/images/projects/runverter-io/runverter-io-screen-1800.png')} 1800w`}
+          alt=""
         />
         <p>
           I like running and playing with data and numbers but I was never
@@ -47,7 +59,13 @@ export default () => {
         />
         <h1>Pixel MacBook sticker</h1>
         <img
-          src={require('./../../assets/images/projects/stickerlicious/stickerlicious-screen.png')}
+          sizes="100vw"
+          src={require('./../../assets/images/projects/stickerlicious/stickerlicious-screen-600.png')}
+          srcSet={`
+            ${require('./../../assets/images/projects/stickerlicious/stickerlicious-screen-600.png')} 600w, 
+            ${require('./../../assets/images/projects/stickerlicious/stickerlicious-screen-1000.png')} 1000w,
+            ${require('./../../assets/images/projects/stickerlicious/stickerlicious-screen-1800.png')} 1800w`}
+          alt=""
         />
         <p>
           Stickerlicious was a small online shop for pixel style MacBook
@@ -70,7 +88,13 @@ export default () => {
         />
         <h1>Finding flights. Simple.</h1>
         <img
-          src={require('./../../assets/images/projects/skycheck/skycheck-screen.png')}
+          sizes="100vw"
+          src={require('./../../assets/images/projects/skycheck/skycheck-screen-600.png')}
+          srcSet={`
+            ${require('./../../assets/images/projects/skycheck/skycheck-screen-600.png')} 600w, 
+            ${require('./../../assets/images/projects/skycheck/skycheck-screen-1000.png')} 1000w,
+            ${require('./../../assets/images/projects/skycheck/skycheck-screen-1800.png')} 1800w`}
+          alt=""
         />
         <p>
           Skycheck.com was the awesome startup I've been working at since the
