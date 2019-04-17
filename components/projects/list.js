@@ -15,7 +15,7 @@ export default () => {
             ${require('./../../assets/images/projects/raceday-me/raceday-me-screen-600.png')} 600w, 
             ${require('./../../assets/images/projects/raceday-me/raceday-me-screen-1000.png')} 1000w,
             ${require('./../../assets/images/projects/raceday-me/raceday-me-screen-1800.png')} 1800w`}
-          alt=""
+          alt="screenshot of the racerday.me website that shows a demo of a marathon live tracking"
         />
         <p>
           <a href="https://raceday.me" target="_blank">
@@ -40,7 +40,7 @@ export default () => {
             ${require('./../../assets/images/projects/runverter-io/runverter-io-screen-600.png')} 600w, 
             ${require('./../../assets/images/projects/runverter-io/runverter-io-screen-1000.png')} 1000w,
             ${require('./../../assets/images/projects/runverter-io/runverter-io-screen-1800.png')} 1800w`}
-          alt=""
+          alt="screenshot of the runverter.io website that shows a pace calculator"
         />
         <p>
           I like running and playing with data and numbers but I was never
@@ -65,7 +65,7 @@ export default () => {
             ${require('./../../assets/images/projects/stickerlicious/stickerlicious-screen-600.png')} 600w, 
             ${require('./../../assets/images/projects/stickerlicious/stickerlicious-screen-1000.png')} 1000w,
             ${require('./../../assets/images/projects/stickerlicious/stickerlicious-screen-1800.png')} 1800w`}
-          alt=""
+          alt="screenshot of the stickerlicious online shop for macbook stickers"
         />
         <p>
           Stickerlicious was a small online shop for pixel style MacBook
@@ -94,7 +94,7 @@ export default () => {
             ${require('./../../assets/images/projects/skycheck/skycheck-screen-600.png')} 600w, 
             ${require('./../../assets/images/projects/skycheck/skycheck-screen-1000.png')} 1000w,
             ${require('./../../assets/images/projects/skycheck/skycheck-screen-1800.png')} 1800w`}
-          alt=""
+          alt="screenshot of the skycheck flight search website"
         />
         <p>
           Skycheck.com was the awesome startup I've been working at since the
