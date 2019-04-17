@@ -6,7 +6,11 @@ export default () => {
           src={require('./../../assets/images/projects/raceday-me/raceday-me-logo.svg')}
           width="90%"
         />
+
         <h1>Personalized race day live tracking for runners</h1>
+        <img
+          src={require('./../../assets/images/projects/raceday-me/raceday-me-screen.png')}
+        />
         <p>
           <a href="https://raceday.me" target="_blank">
             Raceday.me
@@ -23,6 +27,9 @@ export default () => {
           width="90%"
         />
         <h1>A minimal and powerful calculator for runners</h1>
+        <img
+          src={require('./../../assets/images/projects/runverter-io/runverter-io-screen.png')}
+        />
         <p>
           I like running and playing with data and numbers but I was never
           satisfied with the state of running calculators out there. So I
@@ -39,6 +46,9 @@ export default () => {
           width="90%"
         />
         <h1>Pixel MacBook sticker</h1>
+        <img
+          src={require('./../../assets/images/projects/stickerlicious/stickerlicious-screen.png')}
+        />
         <p>
           Stickerlicious was a small online shop for pixel style MacBook
           stickers. The minimalistic stickers are designed to cover the apple
@@ -59,6 +69,9 @@ export default () => {
           width="90%"
         />
         <h1>Finding flights. Simple.</h1>
+        <img
+          src={require('./../../assets/images/projects/skycheck/skycheck-screen.png')}
+        />
         <p>
           Skycheck.com was the awesome startup I've been working at since the
           last couple of years. I had the great chance to join the development

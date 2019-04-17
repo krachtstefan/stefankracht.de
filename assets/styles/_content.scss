@@ -101,7 +101,8 @@ main {
   }
 
   .blog-list,
-  .project-teaser-list {
+  .project-teaser-list,
+  .project-list {
     margin: var(--grid-gap) 0;
     display: grid;
     grid-gap: var(--grid-gap);
@@ -167,6 +168,23 @@ main {
       p {
         font-size: 1.5rem;
         font-weight: bold;
+      }
+    }
+  }
+
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+    @media only screen and (max-width: $breakpoint-phone) {
+      grid-template-columns: 1fr;
+    }
+    > div {
+      grid-template-rows: 200px auto;
+      h1 {
+        font-size: 1.5rem;
+      }
+      img {
+        align-self: center;
+        justify-self: center;
       }
     }
   }
