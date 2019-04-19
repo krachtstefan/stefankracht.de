@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { config } from './../../config';
 import { findPostbyId } from './../../lib/blog';
-let racedayArticle = findPostbyId(1);
+let racedayArticle = findPostbyId(10);
 let runverterArticle = findPostbyId(7);
 
 export default () => {
