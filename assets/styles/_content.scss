@@ -51,6 +51,9 @@ main {
 
   .blog-post {
     margin: 0 0 40px 0;
+    padding: 0;
+    background: $color-item-background;
+    box-shadow: $shadow-decent;
     p,
     ol,
     ul,
@@ -61,8 +64,19 @@ main {
     h4,
     iframe,
     twitter-widget {
-      margin: var(--element-space) auto 0 auto !important;
+      margin: var(--element-space) auto 0 auto;
       max-width: $max-container-width;
+      @media only screen and (max-width: $breakpoint-phone) {
+        &:not(img) {
+          padding: 0 var(--element-space);
+        }
+      }
+    }
+
+    twitter-widget {
+      margin-top: var(
+        --element-space
+      ) !important; // must be set again with !important to overwrite inline css
     }
 
     ol,
@@ -100,9 +114,13 @@ main {
       max-width: 100%;
     }
 
+    .teaser {
+      margin: 0;
+    }
+
     .update {
-      margin: var(--element-space) 0 0 0;
-      padding: 0 var(--element-space) var(--element-space) var(--element-space);
+      margin: var(--element-space) var(--element-space) 0 var(--element-space);
+      padding-bottom: var(--element-space);
       border: 5px solid $color-pink;
       background: $color-code-background;
       transform: rotate(-1.5deg);

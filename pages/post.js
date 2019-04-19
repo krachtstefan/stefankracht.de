@@ -10,12 +10,12 @@ export default withRouter(props => {
   if (!post) return <Error statusCode={404} />;
   return (
     <Layout>
-      <p>
+      <Blogpost post={post} />
+      <p className="pagination">
         <Link href={`/`}>
-          <a>back</a>
+          <a className="first only">back</a>
         </Link>
       </p>
-      <Blogpost post={post} />
     </Layout>
   );
 });
