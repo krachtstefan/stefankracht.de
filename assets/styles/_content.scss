@@ -51,7 +51,7 @@ main {
 
   .blog-post {
     margin: 0 0 var(--element-space) 0;
-    padding: var(--element-space) 0;
+    padding: 1px 0 var(--element-space) 0;
     background: $color-item-background;
     box-shadow: $shadow-decent;
     p,
@@ -70,6 +70,22 @@ main {
         &:not(img) {
           padding: 0 var(--element-space);
         }
+      }
+    }
+
+    p.blog-date {
+      text-align: center;
+      padding-top: var(--element-space);
+      font-size: 0.8rem;
+      color: $color-grey-medium;
+      &::before,
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        border-bottom: 1px solid $color-grey-medium;
+        margin: 0 10px;
+        vertical-align: middle;
       }
     }
 
