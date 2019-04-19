@@ -21,25 +21,25 @@
   },
   "homepage": "https://github.com/krachtstefan/stefankracht.de#readme",
   "dependencies": {
-    "@mdx-js/mdx": "^0.20.0",
+    "@mdx-js/mdx": "^1.0.10",
     "@zeit/next-sass": "^1.0.1",
     "babel-plugin-preval": "^3.0.1",
     "express": "^4.16.4",
-    "next": "^8.0.0",
+    "next": "^8.1.0",
     "next-images": "^1.1.1",
     "node-sass": "^4.11.0",
-    "nodemon": "^1.18.10",
+    "nodemon": "^1.18.11",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-twitter-embed": "^2.0.7",
     "react-youtube": "^7.9.0",
     "remark-external-links": "^4.0.0"
   },
   "devDependencies": {
     "@zeit/next-mdx": "^1.2.0",
-    "babel-plugin-inline-react-svg": "^1.0.1"
+    "babel-plugin-inline-react-svg": "^1.1.0"
   },
   "prettier": {
     "singleQuote": true
