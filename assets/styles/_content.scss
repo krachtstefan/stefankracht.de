@@ -50,8 +50,8 @@ main {
   }
 
   .blog-post {
-    margin: 0 0 40px 0;
-    padding: 0;
+    margin: 0 0 var(--element-space) 0;
+    padding: var(--element-space) 0;
     background: $color-item-background;
     box-shadow: $shadow-decent;
     p,
@@ -112,10 +112,6 @@ main {
 
     img {
       max-width: 100%;
-    }
-
-    .teaser {
-      margin: 0;
     }
 
     .update {
