@@ -32,7 +32,7 @@ export default () => {
             as={config.routing.blogPost.nextLink.as(racedayArticle.url)}
             href={config.routing.blogPost.nextLink.href(racedayArticle.url)}
           >
-            the world's first personalized race day live tracking
+            <a>the world's first personalized race day live tracking</a>
           </Link>{' '}
           that considers your very own time goal and calculates progression and
           predictions while you're running and lets your friend watch your
