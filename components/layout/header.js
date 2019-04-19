@@ -12,7 +12,11 @@ const Header = () => {
         </a>
       </Link>
       <nav>
-        <ActiveLink activeClassName="active" href="/blog">
+        <ActiveLink
+          activeClassName="active"
+          href="/blog"
+          highlightOn={['/post']}
+        >
           <a>Blog</a>
         </ActiveLink>
         <ActiveLink activeClassName="active" href="/projects">

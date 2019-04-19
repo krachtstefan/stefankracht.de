@@ -12,7 +12,6 @@ const ActiveLink = ({
 }) => {
   const child = Children.only(children);
   let className = child.props.className || '';
-  console.log(router.pathname);
   if (
     activeClassName &&
     (router.pathname === props.href || highlightOn.includes(router.pathname))
