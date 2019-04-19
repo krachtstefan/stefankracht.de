@@ -27,17 +27,17 @@ export default () => {
           <a href="https://raceday.me" target="_blank">
             Raceday.me
           </a>{' '}
-          is my biggest side project so far. It is the world's first
-          personalized race day live tracking that considers your very own time
-          goal and calculates progression and predictions while you're running
-          and lets your friend watch your progress. Check out the{' '}
+          is my biggest side project so far. It's{' '}
           <Link
             as={config.routing.blogPost.nextLink.as(racedayArticle.url)}
             href={config.routing.blogPost.nextLink.href(racedayArticle.url)}
           >
-            <a>blog post about the initial idea</a>
-          </Link>
-          .
+            the world's first personalized race day live tracking
+          </Link>{' '}
+          that considers your very own time goal and calculates progression and
+          predictions while you're running and lets your friend watch your
+          progress. It uses your phone and is independet from the organizers
+          tracking so it works on any race.
         </p>
       </div>
       <div>
