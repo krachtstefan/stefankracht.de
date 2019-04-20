@@ -52,6 +52,11 @@ const Layout = ({
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@stefan_kracht" />
+      <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        href="/static/favicon.ico"
+      />
     </Head>
     <Header {...props} />
     <main>{children}</main>
