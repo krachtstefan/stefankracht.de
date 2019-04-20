@@ -2,6 +2,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import { config } from './../../config';
 import Header from './header';
 import Footer from './footer';
 import '../../assets/styles/app.scss';
@@ -30,7 +31,7 @@ const Layout = ({
       <meta name="author" content="Stefan Kracht" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="robots" content="index, follow, archive" />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={`${config.routing.baseUrl}${image}`} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
