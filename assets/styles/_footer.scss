@@ -1,3 +1,11 @@
 footer {
   margin-top: 200px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  grid-gap: 20px;
+  #me {
+    align-self: flex-end;
+    image-rendering: crisp-edges;
+  }
 }
