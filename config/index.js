@@ -1,4 +1,7 @@
 export const config = {
+  googleAnalytics: {
+    trackingId: 'UA-748711-5'
+  },
   routing: {
     baseUrl: 'https://stefankracht.now.sh',
     blogPost: {
