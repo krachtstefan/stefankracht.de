@@ -9,7 +9,11 @@ export default withRouter(props => {
   let post = findPostbyUrl(props.router.query.url);
   if (!post) return <Error statusCode={404} />;
   return (
-    <Layout>
+    <Layout
+      title={post.title}
+      image={post.images.teaser.src}
+      description={post.description}
+    >
       <Blogpost post={post} />
       <p className="pagination">
         <Link href={`/`}>
