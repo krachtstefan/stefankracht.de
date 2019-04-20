@@ -13,9 +13,24 @@ Router.onRouteChangeStart = url => {
   NProgress.start();
 };
 
-Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeComplete = url => {
+  trackPageView(url);
+  NProgress.done();
+};
 
 Router.onRouteChangeError = () => NProgress.done();
+
+let trackPageView = url => {
+  if (window.gtag) {
+    try {
+      window.gtag('config', config.googleAnalytics.trackingId, {
+        page_location: url
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+};
 
 const Layout = ({
   children,
