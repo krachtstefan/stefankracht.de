@@ -33,6 +33,7 @@ const Layout = ({
       <meta property="og:image" content={image} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@stefan_kracht" />
     </Head>
