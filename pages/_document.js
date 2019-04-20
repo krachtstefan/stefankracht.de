@@ -31,7 +31,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
           {isProduction && (
-            <Fragment>
+            <>
               <script
                 async
                 src={`https://www.googletagmanager.com/gtag/js?id=${
@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
               />
               {/* We call the function above to inject the contents of the script tag */}
               <script dangerouslySetInnerHTML={this.setGoogleTags()} />
-            </Fragment>
+            </>
           )}
         </body>
       </html>
