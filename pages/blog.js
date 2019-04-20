@@ -17,7 +17,10 @@ export default withRouter(props => {
   if (page > lastPage || [0, 1].includes(parseInt(query.page)))
     return <Error statusCode={404} />;
   return (
-    <Layout>
+    <Layout
+      title="Blog"
+      description="A mixed collection of articles about development, running and new releases of my current side projects."
+    >
       <h1>Blog</h1>
       <Bloglist
         posts={getPostsList({ limit: itemsPerPage, offset })}

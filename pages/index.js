@@ -6,9 +6,12 @@ import Layout from '../components/layout';
 import ProjectTeaser from '../components/projects/teaser';
 import Bloglist from '../components/blog/list';
 
-export default withRouter(props => {
+export default withRouter(() => {
   return (
-    <Layout>
+    <Layout
+      title="Stefan Kracht"
+      description="Hello, my name is Stefan Kracht, I'm an developer and passionate runner living in hamburg."
+    >
       <h1>Blog</h1>
       <Bloglist
         posts={getPostsList({ limit: config.blog.itemsPerPage })}
