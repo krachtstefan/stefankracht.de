@@ -1,5 +1,6 @@
 export const config = {
   routing: {
+    baseUrl: 'https://stefankracht.now.sh',
     blogPost: {
       nextLink: {
         href: url => `/post?url=${url}`,
