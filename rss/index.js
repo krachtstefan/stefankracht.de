@@ -3,7 +3,8 @@ const mdx = require('@mdx-js/mdx');
 const babel = require('@babel/core');
 const fs = require('fs');
 const RSS = require('rss');
-const blogFolder = './blog/';
+const path = require('path');
+const blogFolder = './../blog/';
 
 const requireFromStringSync = (src, filename) => {
   const Module = module.constructor;
@@ -53,9 +54,13 @@ module.exports = (req, res) => {
     ttl: '60'
   });
 
-  let posts = (fs.readdirSync(`${blogFolder}`) || [])
+  let posts = (fs.readdirSync(path.resolve(__dirname, `${blogFolder}`)) || [])
     .filter(folderNames => folderNames[0] !== '.') // remove hidden folders
-    .map(postFolder => readPostMetadata(`./blog/${postFolder}/index.mdx`));
+    .map(postFolder =>
+      readPostMetadata(
+        `${path.resolve(__dirname, `${blogFolder}`)}/${postFolder}/index.mdx`
+      )
+    );
   posts.map(post => {
     feed.item({
       title: post.title,
@@ -64,7 +69,6 @@ module.exports = (req, res) => {
       date: post.date
     });
   });
-
   res.statusCode = 200;
   res.setHeader('Content-Type', 'application/rss+xml; charset=UTF-8');
   res.end(feed.xml({ indent: true }));
