@@ -6,8 +6,6 @@
   "scripts": {
     "dev": "node ./rss/generate && node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "now-build": "next build",
     "deploy": "now && now alias"
   },
   "repository": {
