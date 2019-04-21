@@ -17,7 +17,13 @@ function requireFromStringSync(src, filename) {
 }
 
 function requireMDXSync(mdxSrc, filename) {
-  const jsx = mdx.sync(mdxSrc);
+  let jsx = mdx
+    .sync(mdxSrc)
+    .split('\n')
+    .filter(
+      line => !line.includes("require('./images") && !line.includes('import')
+    )
+    .join('\n');
   const babelOptions = babel.loadOptions({
     babelrc: false,
     presets: [
@@ -46,7 +52,6 @@ function requireMDXFileSync(path) {
 }
 
 function readPostMetadata(postPath) {
-  console.log(postPath);
   const mod = requireMDXFileSync(postPath);
   const { meta } = mod;
   return {
