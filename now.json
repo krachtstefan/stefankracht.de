@@ -1,9 +1,17 @@
 {
   "version": 2,
   "alias": "stefankracht.now.sh",
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" },
+    {
+      "src": "rss/*.js",
+      "use": "@now/node",
+      "config": { "maxLambdaSize": "50mb" }
+    }
+  ],
   "routes": [
     { "src": "/page/(?<page>[^/]+)$", "dest": "/blog?page=$page" },
-    { "src": "/p/(?<url>[^/]+)$", "dest": "/post?url=$url" }
+    { "src": "/p/(?<url>[^/]+)$", "dest": "/post?url=$url" },
+    { "src": "/rss(.*)", "dest": "/rss/$1" }
   ]
 }
