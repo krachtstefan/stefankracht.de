@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node ./rss/generate && node server.js",
+    "rss-generate": "node ./rss/generate",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "now-build": "next build",
-    "deploy": "now && now alias"
+    "deploy": "node ./rss/generate && now && now alias"
   },
   "repository": {
     "type": "git",
@@ -36,7 +35,8 @@
     "react-dom": "^16.8.6",
     "react-twitter-embed": "^2.0.7",
     "react-youtube": "^7.9.0",
-    "remark-external-links": "^4.0.0"
+    "remark-external-links": "^4.0.0",
+    "rss": "^1.2.2"
   },
   "devDependencies": {
     "@zeit/next-mdx": "^1.2.0",

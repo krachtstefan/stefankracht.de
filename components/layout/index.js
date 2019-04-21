@@ -57,6 +57,12 @@ const Layout = ({
         type="image/x-icon"
         href="/static/favicon.ico"
       />
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="Stefan Kracht Blog Feed"
+        href={`${config.routing.baseUrl}/static/rss.xml`}
+      />
     </Head>
     <Header {...props} />
     <main>{children}</main>
