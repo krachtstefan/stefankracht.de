@@ -43,7 +43,7 @@ const readPostMetadata = postPath => {
   return meta;
 };
 
-module.exports = (req, res) => {
+const generateRSS = () => {
   var feed = new RSS({
     title: 'Stefan Kracht Blog',
     description:
@@ -69,7 +69,7 @@ module.exports = (req, res) => {
       date: post.date
     });
   });
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'application/rss+xml; charset=UTF-8');
-  res.end(feed.xml({ indent: true }));
+  fs.writeFileSync('static/rss.xml', feed.xml({ indent: true }));
 };
+
+generateRSS();
