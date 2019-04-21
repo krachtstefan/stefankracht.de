@@ -47,7 +47,7 @@ module.exports = (req, res) => {
     title: 'Stefan Kracht Blog',
     description:
       'A mixed collection of articles about development, running and new releases of my current side projects.',
-    feed_url: `${baseUrl}/rss.xml`,
+    feed_url: `${baseUrl}/rss`,
     site_url: baseUrl,
     language: 'en',
     ttl: '60'
