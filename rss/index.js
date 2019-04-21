@@ -9,15 +9,15 @@ let posts = (fs.readdirSync(`${blogFolder}`) || [])
   .map(postFolder => readPostMetadata(`./blog/${postFolder}/index.mdx`));
 // .map(postFolder => require(`../blog/${postFolder}/index.mdx`));
 
-function requireFromStringSync(src, filename) {
+const requireFromStringSync = (src, filename) => {
   const Module = module.constructor;
   const m = new Module();
   m._compile(src, filename);
   return m.exports;
-}
+};
 
-function requireMDXSync(mdxSrc, filename) {
-  let jsx = mdx
+const requireMDXSync = (mdxSrc, filename) => {
+  const jsx = mdx
     .sync(mdxSrc)
     .split('\n')
     .filter(
@@ -28,32 +28,19 @@ function requireMDXSync(mdxSrc, filename) {
     .join('\n');
   const babelOptions = babel.loadOptions({
     babelrc: false,
-    presets: [
-      '@babel/preset-react'
-      // ^^^ mitigates error:
-      // SyntaxError: unknown: Unexpected token (6:33)
-      // > 6 | export default ({components}) => <MDXTag name="wrapper">{`
-      //     |                                  ^
-    ],
-    plugins: [
-      '@babel/plugin-transform-modules-commonjs'
-      // ^^^ mitigages error:
-      // hello.mdx:1
-      // (function (exports, require, module, __filename, __dirname) { export const meta = {
-      //                                                               ^^^^^^
-      //      SyntaxError: Unexpected token export
-    ]
+    presets: ['@babel/preset-react'],
+    plugins: ['@babel/plugin-transform-modules-commonjs']
   });
   const transformed = babel.transformSync(jsx, babelOptions);
   return requireFromStringSync(transformed.code, filename);
-}
+};
 
-function requireMDXFileSync(path) {
+const requireMDXFileSync = path => {
   const mdxSrc = fs.readFileSync(path, { encoding: 'utf-8' });
   return requireMDXSync(mdxSrc, path);
-}
+};
 
-function readPostMetadata(postPath) {
+const readPostMetadata = postPath => {
   const mod = requireMDXFileSync(postPath);
   const { meta } = mod;
   return {
@@ -65,7 +52,7 @@ function readPostMetadata(postPath) {
     // title: meta.title || path.basename(postPath),
     // publishDate: new Date(meta.publishDate)
   };
-}
+};
 
 // function generateRSS(posts) {
 //   const siteUrl = 'https://nextjs-mdx-blog-example.now.sh';
