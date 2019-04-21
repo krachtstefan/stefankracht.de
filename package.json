@@ -7,7 +7,7 @@
     "dev": "node ./rss/generate && node server.js",
     "rss-generate": "node ./rss/generate",
     "build": "next build",
-    "deploy": "now && now alias"
+    "deploy": "node ./rss/generate && now && now alias"
   },
   "repository": {
     "type": "git",
