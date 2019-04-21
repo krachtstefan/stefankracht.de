@@ -69,7 +69,7 @@ const generateRSS = () => {
       date: post.date
     });
   });
-  fs.writeFileSync('static/rss.xml', feed.xml({ indent: true }));
+  fs.writeFileSync('static/rss.xml', feed.xml());
 };
 
 generateRSS();
