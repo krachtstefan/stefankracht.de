@@ -21,7 +21,9 @@ function requireMDXSync(mdxSrc, filename) {
     .sync(mdxSrc)
     .split('\n')
     .filter(
-      line => !line.includes("require('./images") && !line.includes('import')
+      line =>
+        !line.match(new RegExp('(require).*(.png|.jpg|.gif)')) && // line contains a require(...).jpg|.png|.gif
+        !line.match(new RegExp('(^import).*(;+$)')) // line starts with import and ends with ;
     )
     .join('\n');
   const babelOptions = babel.loadOptions({
