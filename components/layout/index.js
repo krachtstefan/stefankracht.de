@@ -61,7 +61,7 @@ const Layout = ({
         rel="alternate"
         type="application/rss+xml"
         title="Stefan Kracht Blog Feed"
-        href={`${config.routing.baseUrl}/rss`}
+        href={`${config.routing.baseUrl}/static/rss.xml`}
       />
     </Head>
     <Header {...props} />
