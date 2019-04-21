@@ -1,5 +1,6 @@
 const express = require('express');
 const next = require('next');
+const rss = require('./rss/index.js');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -9,6 +10,10 @@ app
   .prepare()
   .then(() => {
     const server = express();
+
+    server.get('/rss/', (req, res) => {
+      return rss(req, res);
+    });
 
     server.get('/p/:id', (req, res) => {
       const actualPage = '/post';
