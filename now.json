@@ -4,6 +4,31 @@
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "routes": [
     { "src": "/page/(?<page>[^/]+)$", "dest": "/blog?page=$page" },
-    { "src": "/p/(?<url>[^/]+)$", "dest": "/post?url=$url" }
+    { "src": "/p/(?<url>[^/]+)$", "dest": "/post?url=$url" },
+    {
+      "src": "/contact",
+      "status": 301,
+      "headers": { "Location": "/about" }
+    },
+    {
+      "src": "/about-me|/about-me/",
+      "status": 301,
+      "headers": { "Location": "/about" }
+    },
+    {
+      "src": "/news/(?<url>[^/]+)$",
+      "status": 301,
+      "headers": { "Location": "/p/$url" }
+    },
+    {
+      "src": "/news|/news/",
+      "status": 301,
+      "headers": { "Location": "/blog" }
+    },
+    {
+      "src": "/site-search|/site-search/",
+      "status": 301,
+      "headers": { "Location": "/" }
+    }
   ]
 }
