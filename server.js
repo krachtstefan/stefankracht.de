@@ -29,8 +29,7 @@ app
           ['/contact', '/contact/', '/about-me', '/about-me/'].includes(url)
             ? '/about'
             : null,
-        url => (['/site-search', '/site-search/'].includes(url) ? '/' : null),
-        url => (url === '/news?format=rss' ? '/static/rss.xml' : null),
+        url => (['/site-search', '/site-search/'].includes(url) ? '/' : null)
         url => {
           let newUrl = url.replace(new RegExp('^/news/(?=.)'), '/p/');
           return newUrl === url ? null : newUrl;
