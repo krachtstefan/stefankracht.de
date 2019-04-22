@@ -19,13 +19,12 @@ header {
       text-decoration: none;
       position: relative;
       left: var(--border-offset);
-      transition: all 0.4s ease;
+      transition: padding 0.4s ease, color 0.4s ease;
       padding: 0 20px 0 0;
       &:hover,
       &.active {
         color: white;
         padding: 0 11px 0 9px;
-        transition: all 0.4s ease;
       }
       &:after {
         background-color: $color-yellow;
@@ -37,12 +36,12 @@ header {
         width: calc(100%);
         z-index: -1;
         color: white;
-        transition: all 0.4s ease;
+        transition: background-color 0.4s ease, width 0.4s ease,
+          height 0.4s ease, left 0.4s ease;
       }
       &:hover:after,
       &.active:after {
         height: 100%;
-        transition: all 0.4s ease;
         background-color: black;
         width: calc(100% + 20px);
         left: -10px;
@@ -59,9 +58,9 @@ header {
     svg {
       width: var(--logo-width);
       height: var(--logo-height);
-      transition: all 0.2s ease;
+      transition: transform 0.2s ease;
       path {
-        transition: all 0.2s ease;
+        transition: fill 0.2s ease, transform 0.2s ease;
       }
       // shaddow
       path:nth-of-type(1) {
