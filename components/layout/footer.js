@@ -37,6 +37,7 @@ export default () => (
     <img
       id="me"
       src={require('./../../assets/images/stefan-kracht-pixelart.png')}
+      alt="pixelated portrait of Stefan Kracht"
     />
   </footer>
 );

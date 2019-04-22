@@ -11,6 +11,7 @@ export default () => {
         <img
           src={require('./../../assets/images/projects/raceday-me/raceday-me-logo.svg')}
           width="90%"
+          alt="raceday.me logo"
         />
 
         <h1>Personalized race day live tracking for runners</h1>
@@ -44,6 +45,7 @@ export default () => {
         <img
           src={require('./../../assets/images/projects/runverter-io/runverter-io-logo.svg')}
           width="90%"
+          alt="runverter.io logo"
         />
         <h1>A minimal and powerful calculator for runners</h1>
         <img
@@ -76,6 +78,7 @@ export default () => {
         <img
           src={require('./../../assets/images/projects/stickerlicious/stickerlicious-logo.svg')}
           width="80%"
+          alt="stickerlicious logo"
         />
         <h1>Pixel MacBook sticker</h1>
         <img
@@ -105,6 +108,7 @@ export default () => {
         <img
           src={require('./../../assets/images/projects/skycheck/skycheck-logo.svg')}
           width="80%"
+          alt="skycheck logo"
         />
         <h1>Finding flights. Simple.</h1>
         <img
