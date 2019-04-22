@@ -84,7 +84,7 @@ header {
         pointer-events: none; // no title tag on mouse hover
         transform: perspective(150px) rotateX(-30deg) rotateY(30deg);
         path:nth-of-type(2) {
-          fill: $color-pink;
+          fill: $color-red;
         }
         path:nth-of-type(3) {
           fill: $color-yellow;

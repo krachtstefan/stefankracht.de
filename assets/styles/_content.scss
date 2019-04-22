@@ -133,7 +133,7 @@ main {
     .update {
       margin: var(--element-space) var(--element-space) 0 var(--element-space);
       padding-bottom: var(--element-space);
-      border: 5px solid $color-pink;
+      border: 5px solid $color-red;
       transform: rotate(-1.5deg);
     }
   }
@@ -174,7 +174,7 @@ main {
       }
       &:hover {
         h1 {
-          color: $color-pink;
+          color: $color-red;
         }
         img {
           transform: scale(1.1);
