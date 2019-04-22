@@ -16,6 +16,11 @@
       "headers": { "Location": "/about" }
     },
     {
+      "src": "/site-search|/site-search/",
+      "status": 301,
+      "headers": { "Location": "/" }
+    },
+    {
       "src": "/news/(?<url>[^/]+)$",
       "status": 301,
       "headers": { "Location": "/p/$url" }
@@ -24,11 +29,6 @@
       "src": "/news|/news/",
       "status": 301,
       "headers": { "Location": "/blog" }
-    },
-    {
-      "src": "/site-search|/site-search/",
-      "status": 301,
-      "headers": { "Location": "/" }
     }
   ]
 }
