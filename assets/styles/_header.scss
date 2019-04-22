@@ -24,6 +24,8 @@ header {
       &:hover,
       &.active {
         color: white;
+        background: black; // not actually vissible, but needed to not apear to have white text on white bg
+        transition: padding 0.4s ease, color 0.4s ease, background 0s 1s;
         padding: 0 11px 0 9px;
       }
       &:after {
