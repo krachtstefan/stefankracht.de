@@ -23,6 +23,28 @@ app
     });
 
     server.get('*', (req, res) => {
+      redirectRules = [
+        url => (['/news', '/news/'].includes(url) ? '/blog' : null),
+        url =>
+          ['/contact', '/contact/', '/about-me', '/about-me/'].includes(url)
+            ? '/about'
+            : null,
+        url => (['/site-search', '/site-search/'].includes(url) ? '/' : null),
+        url => (url === '/news?format=rss' ? '/static/rss.xml' : null),
+        url => {
+          let newUrl = url.replace(new RegExp('^/news/(?=.)'), '/p/');
+          return newUrl === url ? null : newUrl;
+        }
+      ];
+
+      let redirectTarget = redirectRules
+        .map(rule => rule(req.url))
+        .find(rule => rule);
+
+      if (redirectTarget) {
+        res.redirect(301, redirectTarget);
+      }
+
       return handle(req, res);
     });
 
