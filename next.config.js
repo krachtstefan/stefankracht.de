@@ -4,7 +4,7 @@ const externalLinks = require('remark-external-links');
 const withMDX = require('@zeit/next-mdx')({
   extension: /\.mdx?$/,
   options: {
-    mdPlugins: [externalLinks]
+    mdPlugins: [[externalLinks, { rel: ['noopener'] }]]
   }
 });
 

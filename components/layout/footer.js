@@ -6,6 +6,7 @@ export default () => (
         href="https://twitter.com/stefan_kracht"
         target="_blank"
         className="twitter"
+        rel="noopener"
       >
         Twitter
       </a>
@@ -14,6 +15,7 @@ export default () => (
         href="https://www.strava.com/athletes/3952530"
         target="_blank"
         className="strava"
+        rel="noopener"
       >
         Strava
       </a>
@@ -22,6 +24,7 @@ export default () => (
         href="https://www.instagram.com/stefan_kracht/"
         target="_blank"
         className="instagram"
+        rel="noopener"
       >
         Instagram
       </a>{' '}
@@ -30,6 +33,7 @@ export default () => (
         href="https://github.com/krachtstefan"
         target="_blank"
         className="github"
+        rel="noopener"
       >
         Github
       </a>

@@ -25,7 +25,7 @@ export default () => {
           alt="screenshot of the racerday.me website that shows a demo of a marathon live tracking"
         />
         <p>
-          <a href="https://raceday.me" target="_blank">
+          <a href="https://raceday.me" target="_blank" rel="noopener">
             Raceday.me
           </a>{' '}
           is my biggest side project so far. It's{' '}
@@ -61,7 +61,7 @@ export default () => {
           I like running and playing with data and numbers but I was never
           satisfied with the state of running calculators out there. So I
           decided to build my own state of the art swiss army knife for runners.{' '}
-          <a href="https://runverter.io" target="_blank">
+          <a href="https://runverter.io" target="_blank" rel="noopener">
             Runverter.io
           </a>{' '}
           was born. Read the{' '}
