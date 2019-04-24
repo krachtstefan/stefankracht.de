@@ -1,5 +1,5 @@
 import { withRouter } from 'next/router';
-import { allPosts, getPostsList } from '../lib/blog';
+import { getPostsList } from '../lib/blog';
 import { config } from '../config';
 import Error from 'next/error';
 
@@ -9,7 +9,7 @@ import Blogpagination from '../components/blog/pagination';
 
 export default withRouter(props => {
   let { query } = props.router;
-  let postCount = allPosts.length;
+  let postCount = getPostsList.length;
   let itemsPerPage = config.blog.itemsPerPage;
   let lastPage = Math.ceil(postCount / itemsPerPage);
   let page = query.page && lastPage ? parseInt(query.page) : 1;
