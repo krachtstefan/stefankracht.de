@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Blogpost = props => (
-  <div className="blog-post">
+  <div className="content-container">
     <h1 className="blog-headline">{props.post.title}</h1>
     <img {...props.post.images.teaser} />
     <props.post.Component />
