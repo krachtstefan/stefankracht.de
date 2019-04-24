@@ -10,6 +10,21 @@ app
   .then(() => {
     const server = express();
 
+    server.get('/blog/:category/', (req, res) => {
+      const actualPage = '/blog-category';
+      const queryParams = { category: req.params.category };
+      app.render(req, res, actualPage, queryParams);
+    });
+
+    server.get('/blog/:category/:page', (req, res) => {
+      const actualPage = '/blog-category';
+      const queryParams = {
+        category: req.params.category,
+        page: req.params.page
+      };
+      app.render(req, res, actualPage, queryParams);
+    });
+
     server.get('/p/:id', (req, res) => {
       const actualPage = '/post';
       const queryParams = { url: req.params.id };
