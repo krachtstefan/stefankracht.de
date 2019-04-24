@@ -9,7 +9,7 @@ import Blogpagination from '../components/blog/pagination';
 
 export default withRouter(props => {
   let { query } = props.router;
-  let postCount = getPostsList.length;
+  let postCount = getPostsList().length;
   let itemsPerPage = config.blog.itemsPerPage;
   let lastPage = Math.ceil(postCount / itemsPerPage);
   let page = query.page && lastPage ? parseInt(query.page) : 1;
