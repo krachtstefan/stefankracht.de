@@ -15,6 +15,16 @@ export const config = {
         href: page => (page > 1 ? `/blog?page=${page}` : '/blog'),
         as: page => (page > 1 ? `/page/${page}` : '/blog')
       }
+    },
+    blogCategory: {
+      nextLink: {
+        href: (category, page) =>
+          page > 1
+            ? `/blog-category?category${category}&page=${page}`
+            : `/blog-category?category${category}`,
+        as: (category, page) =>
+          page > 1 ? `/blog/${category}/${page}` : `/blog/${category}`
+      }
     }
   },
   blog: {
