@@ -7,14 +7,14 @@ const ActiveLink = ({
   router,
   children,
   activeClassName = null,
-  highlightOn = [],
+  highlightOn = () => false,
   ...props
 }) => {
   const child = Children.only(children);
   let className = child.props.className || '';
   if (
     activeClassName &&
-    (router.pathname === props.href || highlightOn.includes(router.pathname))
+    (router.pathname === props.href || highlightOn(router.pathname))
   ) {
     className = `${className} ${activeClassName}`.trim();
   }
@@ -23,7 +23,7 @@ const ActiveLink = ({
 
 ActiveLink.propTypes = {
   activeClassName: PropTypes.string,
-  highlightOn: PropTypes.array
+  highlightOn: PropTypes.func
 };
 
 export default withRouter(ActiveLink);

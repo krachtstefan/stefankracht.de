@@ -15,7 +15,9 @@ const Header = () => {
         <ActiveLink
           activeClassName="active"
           href="/blog"
-          highlightOn={['/post']}
+          highlightOn={pathname =>
+            pathname === '/post' || pathname === '/blog-category'
+          }
         >
           <a>Blog</a>
         </ActiveLink>
