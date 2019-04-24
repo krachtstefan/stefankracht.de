@@ -1,6 +1,6 @@
 import YouTube from 'react-youtube';
 import Updated from './../../components/blog/updated';
-
+import { config } from './../../config';
 export const meta = {
   id: 10,
   title: 'Race day live tracking for runners',
@@ -8,6 +8,7 @@ export const meta = {
   date: new Date('2018-01-14T00:00:00'),
   description:
     'The first draft of an idea about race day live tracking for runners that became my side project raceday.me.',
+  categories: [config.blog.categories.raceday],
   images: {
     teaser: {
       sizes: '100vw',

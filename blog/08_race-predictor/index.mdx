@@ -1,5 +1,5 @@
 import { TwitterTweetEmbed } from 'react-twitter-embed';
-
+import { config } from './../../config';
 export const meta = {
   id: 8,
   title: 'The race predictor has landed',
@@ -7,6 +7,7 @@ export const meta = {
   date: new Date('2017-02-22T10:00:00'),
   description:
     'Runverter.io now features a race predictor that uses a previous race result to estimate an upcomming one',
+  categories: [config.blog.categories.runverter],
   images: {
     teaser: {
       sizes: '100vw',

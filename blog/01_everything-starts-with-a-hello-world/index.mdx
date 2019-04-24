@@ -1,9 +1,11 @@
+import { config } from './../../config';
 export const meta = {
   id: 1,
   title: 'everything starts with a "hello world"',
   url: 'everything-starts-with-a-hello-world',
   date: new Date('2013-03-22T10:18:00'),
   description: 'My first blog (post), ever.',
+  categories: [config.blog.categories.general],
   images: {
     teaser: {
       sizes: '100vw',
