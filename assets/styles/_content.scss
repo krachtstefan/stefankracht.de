@@ -49,7 +49,8 @@ main {
     }
   }
 
-  .blog-post {
+  .blog-post,
+  .content-container {
     margin: 0 0 var(--element-space) 0;
     padding: 1px 0 var(--element-space) 0;
     background: $color-item-background;
