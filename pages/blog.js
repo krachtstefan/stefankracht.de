@@ -14,7 +14,7 @@ export default withRouter(props => {
   let lastPage = Math.ceil(postCount / itemsPerPage);
   let page = query.page && lastPage ? parseInt(query.page) : 1;
   let offset = (page - 1) * itemsPerPage;
-  if (page > lastPage || [0, 1].includes(parseInt(query.page)))
+  if (isNaN(page) || page > lastPage || [0, 1].includes(parseInt(query.page)))
     return <Error statusCode={404} />;
   return (
     <Layout
