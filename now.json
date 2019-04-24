@@ -5,8 +5,8 @@
   "routes": [
     { "src": "/page/(?<page>[^/]+)$", "dest": "/blog?page=$page" },
     {
-      "src": "/blog/(?<category>[^/]+)$",
-      "dest": "/blog-category?category=$category"
+      "src": "/blog/(?<category>[^/]+)(?<page>/\\d)?$",
+      "dest": "/blog-category?category=$category&page=$page"
     },
     { "src": "/p/(?<url>[^/]+)$", "dest": "/post?url=$url" },
     {
