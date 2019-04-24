@@ -7,9 +7,9 @@ export default () => {
         <h1 className="blog-headline">Hi! I'm Stefan 👋</h1>
         <img src={require('./../assets/images/stefan-kracht.jpg')} />
         <p>
-          My name is Stefan Kracht and I live and work as a full stack
-          developer. I ❤️ JavaScript, new technology and I'm totally obsessed
-          with running. Feel free to look around a bit.
+          My name is Stefan Kracht and I live in hamburg and work as a full
+          stack developer. I ❤️ JavaScript, new technology and I'm totally
+          obsessed with running. Feel free to look around a bit.
         </p>
       </div>
       <div className="content-container">
