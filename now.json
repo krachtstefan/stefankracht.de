@@ -4,6 +4,10 @@
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "routes": [
     { "src": "/page/(?<page>[^/]+)$", "dest": "/blog?page=$page" },
+    {
+      "src": "/blog/(?<category>[^/]+)$",
+      "dest": "/blog-category?category=$category"
+    },
     { "src": "/p/(?<url>[^/]+)$", "dest": "/post?url=$url" },
     {
       "src": "/contact",
