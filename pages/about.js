@@ -19,8 +19,6 @@ export default () => {
           <br />
           Hasencleverstraße 1<br />
           22111 Hamburg
-          <br />
-          stefankracht
         </p>
         <p>I assume no liability or responsibility to any linked websites.</p>
         <p>
