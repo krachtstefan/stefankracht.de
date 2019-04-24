@@ -21,7 +21,7 @@ export const config = {
     itemsPerPage: 4,
     categories: {
       raceday: 'Raceday.me',
-      runverter: 'Runverter',
+      runverter: 'Runverter.io',
       stickerlicious: 'Stickerlicious',
       programming: 'Programming',
       general: 'General'
