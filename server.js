@@ -10,9 +10,13 @@ app
   .then(() => {
     const server = express();
 
-    server.get('/blog/:category/', (req, res) => {
-      const actualPage = '/blog-category';
-      const queryParams = { category: req.params.category };
+    // this could be a page from the blog (/blog/2) or a category page (/blog/runverter)
+    server.get('/blog/:page_or_category', (req, res) => {
+      let isPage = parseInt(req.params.page_or_category);
+      const actualPage = isPage ? '/blog' : '/blog-category';
+      const queryParams = isPage
+        ? { page: req.params.page_or_category }
+        : { category: req.params.page_or_category };
       app.render(req, res, actualPage, queryParams);
     });
 
@@ -28,12 +32,6 @@ app
     server.get('/p/:id', (req, res) => {
       const actualPage = '/post';
       const queryParams = { url: req.params.id };
-      app.render(req, res, actualPage, queryParams);
-    });
-
-    server.get('/page/:page', (req, res) => {
-      const actualPage = '/blog';
-      const queryParams = { page: req.params.page };
       app.render(req, res, actualPage, queryParams);
     });
 

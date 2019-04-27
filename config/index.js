@@ -13,7 +13,7 @@ export const config = {
     blogList: {
       nextLink: {
         href: page => (page > 1 ? `/blog?page=${page}` : '/blog'),
-        as: page => (page > 1 ? `/page/${page}` : '/blog')
+        as: page => (page > 1 ? `/blog/${page}` : '/blog')
       }
     },
     blogCategory: {
