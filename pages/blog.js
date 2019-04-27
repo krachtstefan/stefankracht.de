@@ -65,8 +65,8 @@ export default withRouter(props => {
             }
             highlightOn={
               category === 'all'
-                ? router => router.asPath === `/blog/`
-                : router => router.asPath === `/blog/${category}`
+                ? () => !categoryMode
+                : () => categoryMode && category === query.category
             }
           >
             <a>{categories[category]}</a>

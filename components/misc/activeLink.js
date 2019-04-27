@@ -7,14 +7,15 @@ const ActiveLink = ({
   router,
   children,
   activeClassName = null,
-  highlightOn = () => false,
+  highlightOn = null,
   ...props
 }) => {
   const child = Children.only(children);
   let className = child.props.className || '';
   if (
     activeClassName &&
-    (router.pathname === props.href || highlightOn(router))
+    ((!highlightOn && router.pathname === props.href) || // use normal page path matching
+      (highlightOn && highlightOn(router))) // use highlightOn function if provided
   ) {
     className = `${className} ${activeClassName}`.trim();
   }
