@@ -19,7 +19,10 @@ export default withRouter(() => {
         as={url => config.routing.blogPost.nextLink.as(url)}
       />
       <p className="pagination">
-        <Link as="/page/2" href={config.routing.blogList.nextLink.href(2)}>
+        <Link
+          as={config.routing.blogList.nextLink.as(2)}
+          href={config.routing.blogList.nextLink.href(2)}
+        >
           <a className="first only">read more articles</a>
         </Link>
       </p>
