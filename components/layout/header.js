@@ -17,7 +17,8 @@ const Header = () => {
         <ActiveLink
           activeClassName="active"
           href={config.routing.blogList.nextLink.href(0)}
-          highlightOn={pathname => pathname === '/post'}
+          as={config.routing.blogList.nextLink.as(0)}
+          highlightOn={router => router.pathname === '/post'}
         >
           <a>Blog</a>
         </ActiveLink>

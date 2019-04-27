@@ -14,7 +14,7 @@ const ActiveLink = ({
   let className = child.props.className || '';
   if (
     activeClassName &&
-    (router.pathname === props.href || highlightOn(router.pathname))
+    (router.pathname === props.href || highlightOn(router))
   ) {
     className = `${className} ${activeClassName}`.trim();
   }
