@@ -3,7 +3,7 @@
   "alias": "stefankracht.now.sh",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "routes": [
-    { "src": "/page/(?<page>[^/]+)$", "dest": "/blog?page=$page" },
+    { "src": "/blog/(?<page>[\\d]+)$", "dest": "/blog?page=$page" },
     {
       "src": "/blog/(?<category>[^/]+)/?(?<page>\\d)?$",
       "dest": "/blog-category?category=$category&page=$page"
