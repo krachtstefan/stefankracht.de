@@ -20,8 +20,8 @@ export const config = {
       nextLink: {
         href: (category, page) =>
           page > 1
-            ? `/blog-category?category=${category}&page=${page}`
-            : `/blog-category?category=${category}`,
+            ? `/blog?category=${category}&page=${page}`
+            : `/blog?category=${category}`,
         as: (category, page) =>
           page > 1 ? `/blog/${category}/${page}` : `/blog/${category}`
       }

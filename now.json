@@ -6,7 +6,7 @@
     { "src": "/blog/(?<page>[\\d]+)$", "dest": "/blog?page=$page" },
     {
       "src": "/blog/(?<category>[^/]+)/?(?<page>\\d)?$",
-      "dest": "/blog-category?category=$category&page=$page"
+      "dest": "/blog/?category=$category&page=$page"
     },
     { "src": "/p/(?<url>[^/]+)$", "dest": "/post?url=$url" },
     {
