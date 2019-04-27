@@ -1,7 +1,9 @@
-import ActiveLink from './../../components/misc/activeLink';
 import Link from 'next/link';
 import React from 'react';
 import Logo from './../../assets/images/logo.svg';
+
+import ActiveLink from './../../components/misc/activeLink';
+import { config } from '../../config';
 
 const Header = () => {
   return (
@@ -14,7 +16,7 @@ const Header = () => {
       <nav>
         <ActiveLink
           activeClassName="active"
-          href="/blog"
+          href={config.routing.blogList.nextLink.href(0)}
           highlightOn={pathname => pathname === '/post'}
         >
           <a>Blog</a>
