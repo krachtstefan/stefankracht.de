@@ -3,6 +3,7 @@ import { getPostsList } from '../lib/blog';
 import { config } from '../config';
 import Error from 'next/error';
 
+import ActiveLink from '../components/misc/activeLink';
 import Layout from '../components/layout';
 import Bloglist from '../components/blog/list';
 import Blogpagination from '../components/blog/pagination';
@@ -12,6 +13,7 @@ export default withRouter(props => {
 
   let categoryMode = query.category ? true : false;
   let categoryName = null;
+  let categories = { all: 'All', ...config.blog.categories }; // add "all" as pseudo category
   if (categoryMode) {
     if (!Object.keys(config.blog.categories).includes(query.category))
       return <Error statusCode={404} />;
@@ -46,6 +48,31 @@ export default withRouter(props => {
       }
     >
       {categoryMode ? <h1>{categoryName} Blog</h1> : <h1>Blog</h1>}
+      {Object.keys(categories).map(category => {
+        return (
+          <ActiveLink
+            key={category}
+            activeClassName="active"
+            href={
+              category === 'all'
+                ? config.routing.blogList.nextLink.href(0)
+                : config.routing.blogCategory.nextLink.href(category, 0)
+            }
+            as={
+              category === 'all'
+                ? config.routing.blogList.nextLink.as(0)
+                : config.routing.blogCategory.nextLink.as(category, 0)
+            }
+            highlightOn={
+              category === 'all'
+                ? router => router.asPath === `/blog/`
+                : router => router.asPath === `/blog/${category}`
+            }
+          >
+            <a>{categories[category]}</a>
+          </ActiveLink>
+        );
+      })}
       <Bloglist
         posts={posts}
         href={url => config.routing.blogPost.nextLink.href(url)}
