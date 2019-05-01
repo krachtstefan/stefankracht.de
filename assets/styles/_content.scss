@@ -52,12 +52,12 @@ main {
     }
   }
 
-  .content-container,
   .content-container {
     margin: 0 0 var(--element-space) 0;
     padding: 1px 0 var(--element-space) 0;
     background: $color-item-background;
     box-shadow: $shadow-decent;
+    display: grid;
     p,
     ol,
     ul,
@@ -167,6 +167,9 @@ main {
         }
         position: relative;
       }
+    }
+    img {
+      justify-self: center;
     }
   }
 
@@ -298,7 +301,6 @@ main {
       }
       img {
         align-self: center;
-        justify-self: center;
         margin: 40px 0;
       }
     }
@@ -316,7 +318,6 @@ main {
       }
       img {
         align-self: center;
-        justify-self: center;
       }
     }
   }
