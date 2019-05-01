@@ -4,7 +4,7 @@ export default () => {
   return (
     <Layout title="About" description="">
       <div className="content-container">
-        <h1 className="blog-headline">Hi! I'm Stefan 👋</h1>
+        <h1>Hi! I'm Stefan 👋</h1>
         <img src={require('./../assets/images/stefan-kracht.jpg')} />
         <p>
           My name is Stefan Kracht and I live in hamburg and work as a full

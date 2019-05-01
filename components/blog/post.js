@@ -4,7 +4,7 @@ import { config } from './../../config';
 
 const Blogpost = props => (
   <div className="content-container">
-    <h1 className="blog-headline">{props.post.title}</h1>
+    <h1>{props.post.title}</h1>
     <img {...props.post.images.teaser} />
     <props.post.Component />
     <p className="blog-date">
