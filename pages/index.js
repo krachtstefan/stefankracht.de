@@ -23,14 +23,14 @@ export default withRouter(() => {
           as={config.routing.blogList.nextLink.as(2)}
           href={config.routing.blogList.nextLink.href(2)}
         >
-          <a className="first only">read more articles</a>
+          <a className="first wide">read more articles</a>
         </Link>
       </p>
       <h1>Projects</h1>
       <ProjectTeaser />
       <p className="pagination">
         <Link href="/projects">
-          <a className="first only">explore more projects</a>
+          <a className="first wide">explore more projects</a>
         </Link>
       </p>
     </Layout>

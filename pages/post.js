@@ -23,13 +23,13 @@ export default withRouter(props => {
           as={config.routing.blogList.nextLink.as()}
           href={config.routing.blogList.nextLink.href()}
         >
-          <a className="first only">read more articles</a>
+          <a className="first wide">read more articles</a>
         </Link>
         <Link
           as={config.routing.blogCategory.nextLink.as(blogCategory)}
           href={config.routing.blogCategory.nextLink.href(blogCategory)}
         >
-          <a className="last only">read more from this category</a>
+          <a className="last wide">read more from this category</a>
         </Link>
       </p>
     </Layout>
