@@ -221,9 +221,11 @@ main {
       grid-row-gap: var(--grid-gap);
     }
   }
+
   nav.cat-menu {
     align-self: flex-end;
     --background-space: 10px;
+    margin-bottom: 10px;
     ul {
       background: url('/static/images/dropdown.svg') center right
         var(--background-space) no-repeat;
