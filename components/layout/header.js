@@ -13,7 +13,7 @@ const Header = () => {
           <Logo />
         </a>
       </Link>
-      <nav>
+      <nav role="navigation" aria-label="Main navigation">
         <ActiveLink
           activeClassName="active"
           href={config.routing.blogList.nextLink.href(0)}
