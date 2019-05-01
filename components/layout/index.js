@@ -39,7 +39,9 @@ const Layout = ({
   image = require('./../../assets/images/stefan-kracht.jpg'),
   ...props
 }) => (
-  <div id="main">
+  // the onlick function is required to make the blog category hover menu
+  // work on ios. Otherwise clicking somewhere else would not close the menu
+  <div id="main" onClick={() => true}>
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
