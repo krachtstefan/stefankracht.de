@@ -96,9 +96,9 @@ main {
     }
 
     twitter-widget {
-      margin-top: var(
-        --element-space
-      ) !important; // must be set again with !important to overwrite inline css
+      max-width: 500px !important;
+      width: 80vw !important;
+      margin: var(--element-space) auto 0 auto !important; // must be set again with !important to overwrite inline css
     }
 
     ol,
