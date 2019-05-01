@@ -253,16 +253,15 @@ main {
       padding: 0rem 1rem;
     }
 
-    li li:hover,
-    li li:focus-within {
-      > a {
-        color: white;
-        background: black !important;
-      }
+    li li:hover > a,
+    li li:focus-within > a,
+    li li > a.active {
+      color: white;
+      background: black;
     }
 
     li:focus-within a {
-      // outline: none;
+      outline: none;
     }
 
     ul li ul {
@@ -282,19 +281,6 @@ main {
       visibility: visible;
       opacity: 1;
       display: block;
-    }
-
-    ul li:hover > ul {
-      background: red;
-    }
-    ul li:focus-within > ul {
-      background: green;
-    }
-    ul li ul:hover {
-      background: yellow;
-    }
-    ul li ul:focus {
-      background: blue;
     }
   }
 
