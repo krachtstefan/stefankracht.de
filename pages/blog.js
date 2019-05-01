@@ -18,6 +18,8 @@ export default withRouter(props => {
     if (!Object.keys(config.blog.categories).includes(query.category))
       return <Error statusCode={404} />;
     categoryName = config.blog.categories[query.category];
+  } else {
+    categoryName = categories['all'];
   }
 
   let postCount = categoryMode
