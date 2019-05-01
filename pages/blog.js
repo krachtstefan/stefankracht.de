@@ -49,32 +49,56 @@ export default withRouter(props => {
           : 'A mixed collection of articles about development, running and new releases of my current side projects.'
       }
     >
-      {categoryMode ? <h1>{categoryName} Blog</h1> : <h1>Blog</h1>}
-      {Object.keys(categories).map(category => {
-        return (
-          <ActiveLink
-            key={category}
-            activeClassName="active"
-            href={
-              category === 'all'
-                ? config.routing.blogList.nextLink.href(0)
-                : config.routing.blogCategory.nextLink.href(category, 0)
-            }
-            as={
-              category === 'all'
-                ? config.routing.blogList.nextLink.as(0)
-                : config.routing.blogCategory.nextLink.as(category, 0)
-            }
-            highlightOn={
-              category === 'all'
-                ? () => !categoryMode
-                : () => categoryMode && category === query.category
-            }
-          >
-            <a>{categories[category]}</a>
-          </ActiveLink>
-        );
-      })}
+      <div className="blog-heading-container">
+        <h1>Blog</h1>
+        <nav
+          role="navigation"
+          aria-label="category navigation"
+          className="cat-menu"
+        >
+          <ul class="dropdown">
+            <li>
+              {categoryName}
+              <ul class="dropdown">
+                {Object.keys(categories).map(category => {
+                  return (
+                    <li>
+                      <ActiveLink
+                        key={category}
+                        activeClassName="active"
+                        href={
+                          category === 'all'
+                            ? config.routing.blogList.nextLink.href(0)
+                            : config.routing.blogCategory.nextLink.href(
+                                category,
+                                0
+                              )
+                        }
+                        as={
+                          category === 'all'
+                            ? config.routing.blogList.nextLink.as(0)
+                            : config.routing.blogCategory.nextLink.as(
+                                category,
+                                0
+                              )
+                        }
+                        highlightOn={
+                          category === 'all'
+                            ? () => !categoryMode
+                            : () => categoryMode && category === query.category
+                        }
+                      >
+                        <a>{categories[category]}</a>
+                      </ActiveLink>
+                    </li>
+                  );
+                })}
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <Bloglist
         posts={posts}
         href={url => config.routing.blogPost.nextLink.href(url)}
