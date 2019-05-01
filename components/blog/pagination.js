@@ -12,7 +12,7 @@ const Pagination = props => {
           <a className="first">newer articles</a>
         </Link>
       ) : (
-        <span className="first" />
+        <span className="first empty" />
       )}
       <span className="middle">
         page {page} of {lastPage}
@@ -22,7 +22,7 @@ const Pagination = props => {
           <a className="last">older articles</a>
         </Link>
       ) : (
-        <span className="last" />
+        <span className="last empty" />
       )}
     </p>
   );

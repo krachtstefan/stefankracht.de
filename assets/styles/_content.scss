@@ -45,6 +45,9 @@ main {
       .middle,
       .last {
         grid-column: inherit;
+        &.empty {
+          display: none;
+        }
       }
     }
   }
