@@ -7,6 +7,7 @@ import ActiveLink from '../components/misc/activeLink';
 import Layout from '../components/layout';
 import Bloglist from '../components/blog/list';
 import Blogpagination from '../components/blog/pagination';
+import CategoryMenu from '../components/blog/category-menu';
 
 export default withRouter(props => {
   let { query } = props.router;
@@ -51,51 +52,25 @@ export default withRouter(props => {
     >
       <div className="blog-heading-container">
         <h1>Blog</h1>
-        <nav
-          role="navigation"
-          aria-label="category navigation"
-          className="cat-menu"
-        >
-          <ul>
-            <li>
-              <a href="#">{categoryName}</a>
-              <ul>
-                {Object.keys(categories).map(category => {
-                  return (
-                    <li key={category}>
-                      <ActiveLink
-                        activeClassName="active"
-                        href={
-                          category === 'all'
-                            ? config.routing.blogList.nextLink.href(0)
-                            : config.routing.blogCategory.nextLink.href(
-                                category,
-                                0
-                              )
-                        }
-                        as={
-                          category === 'all'
-                            ? config.routing.blogList.nextLink.as(0)
-                            : config.routing.blogCategory.nextLink.as(
-                                category,
-                                0
-                              )
-                        }
-                        highlightOn={
-                          category === 'all'
-                            ? () => !categoryMode
-                            : () => categoryMode && category === query.category
-                        }
-                      >
-                        <a>{categories[category]}</a>
-                      </ActiveLink>
-                    </li>
-                  );
-                })}
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        <CategoryMenu
+          href={category => {
+            return category === 'all'
+              ? config.routing.blogList.nextLink.href(0)
+              : config.routing.blogCategory.nextLink.href(category, 0);
+          }}
+          as={category => {
+            return category === 'all'
+              ? config.routing.blogList.nextLink.as(0)
+              : config.routing.blogCategory.nextLink.as(category, 0);
+          }}
+          highlightOn={category => {
+            return category === 'all'
+              ? () => !categoryMode
+              : () => categoryMode && category === query.category;
+          }}
+          categories={categories}
+          categoryName={categoryName}
+        />
       </div>
 
       <Bloglist
