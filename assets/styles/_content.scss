@@ -286,7 +286,8 @@ main {
     }
 
     ul li:hover > ul,
-    ul li:focus-within > ul,
+    // this line would keep the cat menu open until clicked elsewhere (only desktop)
+    // ul li:focus-within > ul,
     ul li ul:hover,
     ul li ul:focus {
       visibility: visible;
