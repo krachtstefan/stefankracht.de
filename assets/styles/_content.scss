@@ -213,6 +213,91 @@ main {
     }
   }
 
+  .blog-heading-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    @media only screen and (max-width: 340px) {
+      grid-template-columns: 1fr;
+      grid-row-gap: var(--grid-gap);
+    }
+  }
+  nav.cat-menu {
+    align-self: flex-end;
+    --background-space: 10px;
+    ul {
+      background: url('/static/images/dropdown.svg') center right
+        var(--background-space) no-repeat;
+      background-size: 0.5rem;
+      background-color: $color-item-background;
+      box-shadow: $shadow-decent;
+      list-style: none;
+    }
+
+    li {
+      padding: 0 calc(1rem + var(--background-space)) 0 1rem;
+      li {
+        padding: 0;
+      }
+      color: $color-grey-medium;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    li a {
+      text-decoration: none;
+      display: block;
+    }
+
+    li li a {
+      padding: 0rem 1rem;
+    }
+
+    li li:hover,
+    li li:focus-within {
+      > a {
+        color: white;
+        background: black !important;
+      }
+    }
+
+    li:focus-within a {
+      // outline: none;
+    }
+
+    ul li ul {
+      background: $color-item-background;
+      box-shadow: $shadow-decent;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      display: none;
+    }
+
+    ul li:hover > ul,
+    ul li:focus-within > ul,
+    ul li ul:hover,
+    ul li ul:focus {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+
+    ul li:hover > ul {
+      background: red;
+    }
+    ul li:focus-within > ul {
+      background: green;
+    }
+    ul li ul:hover {
+      background: yellow;
+    }
+    ul li ul:focus {
+      background: blue;
+    }
+  }
+
   .project-teaser-list {
     grid-template-columns: repeat(2, 1fr);
     @media only screen and (max-width: $breakpoint-phone) {

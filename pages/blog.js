@@ -56,15 +56,14 @@ export default withRouter(props => {
           aria-label="category navigation"
           className="cat-menu"
         >
-          <ul class="dropdown">
+          <ul>
             <li>
-              {categoryName}
-              <ul class="dropdown">
+              <a href="#">{categoryName}</a>
+              <ul>
                 {Object.keys(categories).map(category => {
                   return (
-                    <li>
+                    <li key={category}>
                       <ActiveLink
-                        key={category}
                         activeClassName="active"
                         href={
                           category === 'all'
