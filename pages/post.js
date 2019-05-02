@@ -1,12 +1,16 @@
 import { withRouter } from 'next/router';
 import Error from 'next/error';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
 import { config } from './../config';
 import { findPostbyUrl } from '../lib/blog';
 import Layout from '../components/layout';
 import Blogpost from '../components/blog/post';
-import Scrollprogress from '../components/misc/scrollprogress';
+const Scrollprogress = dynamic(
+  () => import('../components/misc/scrollprogress'),
+  { ssr: false }
+);
 
 export default withRouter(props => {
   let post = findPostbyUrl(props.router.query.url);
