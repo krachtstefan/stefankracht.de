@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-export default ({ selector = null }) => {
+const Scrollprogress = ({ selector = null }) => {
   const root = document.body.style;
 
   // returns number between 0 and 1, 1 means it has reached the element/end of the document
@@ -28,6 +28,8 @@ export default ({ selector = null }) => {
   return <div className="progress" />;
 };
 
-List.propTypes = {
+Scrollprogress.propTypes = {
   selector: PropTypes.string
 };
+
+export default Scrollprogress;
