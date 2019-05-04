@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import React, { Component } from 'react';
+import dynamic from 'next/dynamic';
 import Logo from './../../assets/images/logo.svg';
+const LogoAnimation = dynamic(
+  () => import('../../components/misc/logoAnimation'),
+  { ssr: false }
+);
 
 import ActiveLink from './../../components/misc/activeLink';
 import { config } from '../../config';
@@ -26,6 +31,7 @@ export default class Header extends Component {
   render() {
     return (
       <header>
+        <LogoAnimation selector={'#logo'} />
         <Link href="/">
           <a id="logo">
             <Logo />
