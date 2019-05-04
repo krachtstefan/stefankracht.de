@@ -1,11 +1,11 @@
 import { useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-const Scrollprogress = ({ selector = null }) => {
+const scrollProgress = ({ selector = null }) => {
   const root = document.body.style;
 
   // returns number between 0 and 1, 1 means it has reached the element/end of the document
-  const scrollProgress = useCallback(() => {
+  const ScrollProgress = useCallback(() => {
     let element = selector ? document.querySelector(selector) : null;
     let distanceFromViewportTop = element
       ? element.getBoundingClientRect().top + window.pageYOffset
@@ -28,8 +28,8 @@ const Scrollprogress = ({ selector = null }) => {
   return <div className="progress" />;
 };
 
-Scrollprogress.propTypes = {
+ScrollProgress.propTypes = {
   selector: PropTypes.string
 };
 
-export default Scrollprogress;
+export default ScrollProgress;

@@ -7,7 +7,7 @@ import { config } from './../config';
 import { findPostbyUrl } from '../lib/blog';
 import Layout from '../components/layout';
 import Blogpost from '../components/blog/post';
-const Scrollprogress = dynamic(
+const ScrollProgress = dynamic(
   () => import('../components/misc/scrollprogress'),
   { ssr: false }
 );
@@ -22,7 +22,7 @@ export default withRouter(props => {
       image={post.images.teaser.src}
       description={post.description}
     >
-      <Scrollprogress selector={'.blog-date'} />
+      <ScrollProgress selector={'.blog-date'} />
       <Blogpost post={post} />
       <p className="pagination">
         <Link
