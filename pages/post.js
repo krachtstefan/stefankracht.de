@@ -22,7 +22,7 @@ export default withRouter(props => {
       image={post.images.teaser.src}
       description={post.description}
     >
-      <Scrollprogress />
+      <Scrollprogress selector={'.blog-date'} />
       <Blogpost post={post} />
       <p className="pagination">
         <Link
