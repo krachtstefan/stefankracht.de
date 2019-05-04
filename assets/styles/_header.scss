@@ -57,12 +57,16 @@ header {
     align-self: center;
     padding: 20px 0;
     justify-content: center;
+    --logoRotateX: 30deg;
+    --logoRotateY: -30deg;
+    --innerMoveX: 5px;
+    --innerMoveY: 5px;
     svg {
       width: var(--logo-width);
       height: var(--logo-height);
       transition: transform 0.2s ease;
       path {
-        transition: fill 0.2s ease, transform 0.2s ease;
+        transition: fill 0.2s linear, transform 0.2s linear;
       }
       // shaddow
       path:nth-of-type(1) {
@@ -79,14 +83,17 @@ header {
     &:hover {
       svg {
         pointer-events: none; // no title tag on mouse hover
-        transform: perspective(150px) rotateX(-30deg) rotateY(30deg);
+        transform: perspective(150px) rotateX(var(--logoRotateY))
+          rotateY(var(--logoRotateX));
         path:nth-of-type(2) {
           fill: $color-red;
         }
         path:nth-of-type(3) {
           fill: $color-yellow;
-          transition-delay: 0.2s;
-          transform: translate(5px, 5px);
+          @media not (hover: none) {
+            transition-delay: 0.2s;
+          }
+          transform: translate(var(--innerMoveX), var(--innerMoveY));
         }
       }
     }
