@@ -1,4 +1,6 @@
 import { useCallback } from 'react';
+import PropTypes from 'prop-types';
+
 export default ({ selector = null }) => {
   const root = document.body.style;
 
@@ -24,4 +26,8 @@ export default ({ selector = null }) => {
   }
 
   return <div className="progress" />;
+};
+
+List.propTypes = {
+  selector: PropTypes.string
 };
