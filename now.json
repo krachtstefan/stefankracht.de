@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "alias": "stefankracht.now.sh",
+  "alias": "stefankracht.de",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "routes": [
     { "src": "/blog/(?<page>[\\d]+)$", "dest": "/blog?page=$page" },
