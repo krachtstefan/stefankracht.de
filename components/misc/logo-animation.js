@@ -2,9 +2,7 @@ import { useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 const LogoAnimation = ({ selector = null }) => {
-  const element = document.querySelector(selector);
-
-  const mouseMove = useCallback(e => {
+  const mouseMove = useCallback((e, element) => {
     let {
       width: elemenWidth,
       height: elementHeigh
@@ -17,7 +15,16 @@ const LogoAnimation = ({ selector = null }) => {
     element.style.setProperty('--innerMoveY', `${posY * 10}px`);
   });
 
-  element.addEventListener('mousemove', mouseMove);
+  const init = useCallback(e => {
+    const element = document.querySelector(selector);
+    element.addEventListener('mousemove', e => {
+      mouseMove(e, element);
+    });
+  });
+
+  // requestAnimationFrame is required to work after route change. otherwise
+  // the query selector would access an old instance of the element
+  window.requestAnimationFrame(init);
 
   return <React.Fragment />;
 };
