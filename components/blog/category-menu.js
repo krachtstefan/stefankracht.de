@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import ActiveLink from './../../components/misc/activeLink';
+import ActiveLink from './../../components/misc/active-link';
 
 const CategoryMenu = props => {
   let { categoryName, categories } = props;

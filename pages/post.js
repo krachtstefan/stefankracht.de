@@ -8,7 +8,7 @@ import { findPostbyUrl } from '../lib/blog';
 import Layout from '../components/layout';
 import Blogpost from '../components/blog/post';
 const ScrollProgress = dynamic(
-  () => import('../components/misc/scrollprogress'),
+  () => import('../components/misc/scroll-progress'),
   { ssr: false }
 );
 

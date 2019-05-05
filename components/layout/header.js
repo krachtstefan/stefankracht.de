@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import dynamic from 'next/dynamic';
 import Logo from './../../assets/images/logo.svg';
 const LogoAnimation = dynamic(
-  () => import('../../components/misc/logoAnimation'),
+  () => import('../../components/misc/logo-animation'),
   { ssr: false }
 );
-import ActiveLink from './../../components/misc/activeLink';
+import ActiveLink from './../../components/misc/active-link';
 import { config } from '../../config';
 
 const Header = () => {

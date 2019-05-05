@@ -3,7 +3,6 @@ import { getPostsList } from '../lib/blog';
 import { config } from '../config';
 import Error from 'next/error';
 
-import ActiveLink from '../components/misc/activeLink';
 import Layout from '../components/layout';
 import Bloglist from '../components/blog/list';
 import Blogpagination from '../components/blog/pagination';
