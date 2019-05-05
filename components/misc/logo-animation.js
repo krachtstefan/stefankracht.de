@@ -17,7 +17,7 @@ const LogoAnimation = ({ selector = null }) => {
     element.style.setProperty('--innerMoveY', `${posY * 10}px`);
   });
 
-  document.querySelector('#logo').addEventListener('mousemove', mouseMove);
+  element.addEventListener('mousemove', mouseMove);
 
   return <React.Fragment />;
 };
