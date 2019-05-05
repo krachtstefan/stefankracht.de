@@ -8,5 +8,6 @@
 
 - use `npm run rss-generate` to update the static rss feed
 - the `now` command will deploy to a remote server and provide a subdomain to preview the result
-- `now alias` will make the last preview visible on the public url
-- `npm run deploy` combine all three commands
+  - `now --target production` will do the same thing and also alias to the production domain -
+  - `now alias stefankracht.de` will alias the last `now`
+- `npm run deploy` chain `npm run rss-generate` and `now --target production`
