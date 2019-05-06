@@ -3,7 +3,7 @@ export const config = {
     trackingId: 'UA-748711-5'
   },
   routing: {
-    baseUrl: 'https://stefankracht.now.sh',
+    baseUrl: 'https://stefankracht.de',
     blogPost: {
       nextLink: {
         href: url => `/post?url=${url}`,

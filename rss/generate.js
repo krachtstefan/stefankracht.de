@@ -1,4 +1,4 @@
-const baseUrl = 'https://stefankracht.now.sh';
+const baseUrl = 'https://stefankracht.de';
 const mdx = require('@mdx-js/mdx');
 const babel = require('@babel/core');
 const fs = require('fs');
