@@ -1,3 +1,8 @@
+import dynamic from 'next/dynamic';
+const LocationConcept = dynamic(() => import('./components/Location-concept'), {
+  ssr: false
+});
+
 export const meta = {
   id: 12,
   title: 'Introducing Raceday.me',
@@ -63,7 +68,7 @@ I have to admit that uploading the race track in forehand seems a bit of a downs
 
 Knowing the track allows to have very accurate calculations with very little updates from the athlete because when you know the track, you can make accurate assumptions on what happened between the datapoints. Even more, you can also make predictions on what may happen in the upcoming parts since the planned course is exactly known.
 
-###INTERACTIVE WIDGET###
+<LocationConcept />
 
 **This technology makes it possible to let the app work even with very little location updates from the athlete.** Which has a lot of benefits:
 
