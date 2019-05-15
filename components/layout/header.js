@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { Component } from 'react';
+import React from 'react';
 import dynamic from 'next/dynamic';
 import Logo from './../../assets/images/logo.svg';
 const LogoAnimation = dynamic(
