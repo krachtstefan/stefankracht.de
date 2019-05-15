@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./rss/generate && node server.js",
+    "dev": "npm run clear:babel-cache && node ./rss/generate && node server.js",
     "rss-generate": "node ./rss/generate",
     "build": "next build",
-    "deploy": "node ./rss/generate && now --target production"
+    "deploy": "node ./rss/generate && now --target production",
+    "clear:babel-cache": "rimraf -rf ./node_modules/.cache/babel-loader/*"
   },
   "repository": {
     "type": "git",
