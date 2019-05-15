@@ -1,7 +1,4 @@
-import dynamic from 'next/dynamic';
-const LocationConcept = dynamic(() => import('./components/Location-concept'), {
-  ssr: false
-});
+import LocationConcept from './components/location-concept';
 
 export const meta = {
   id: 12,
