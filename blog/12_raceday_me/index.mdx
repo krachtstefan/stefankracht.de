@@ -13,6 +13,13 @@ export const meta = {
       srcSet: `${require('./images/raceday-teaser-600.png')} 600w, ${require('./images/raceday-teaser-1000.png')} 1000w, ${require('./images/raceday-teaser-1800.png')} 1800w`,
       alt: 'Running gear prepared for race day'
     },
+    mockup: {
+      sizes: '100vw',
+      src: require('./images/raceday-mockup-1000.png'),
+      srcSet: `${require('./images/raceday-mockup-600.png')} 600w, ${require('./images/raceday-mockup-1000.png')} 1000w, ${require('./images/raceday-mockup-1400.png')} 1400w`,
+      alt:
+        'A notebook, iPhone and iPad showing the raceday.me website on screen'
+    },
     screenshot: {
       sizes: '100vw',
       src: require('./images/raceday-screenshot-1000.png'),
@@ -32,7 +39,7 @@ Quite some time ago I wrote about [how I would like to change race day live trac
 
 I finally released [raceday.me](https://raceday.me) a couple of months ago and this is a little article about the key features of the app and who it all works.
 
-<img {...meta.images.screenshot} />
+<img {...meta.images.mockup} />
 
 ## How do I use the app?
 
@@ -44,11 +51,9 @@ Let's say you are a runner and attempt to run a marathon and want to let your fr
 - Share the generated link with your friend, family, followers, trainer or even your dog. They can follow you along and don't even need to download any app to do so.
 - Open the app just before the race and keep it running during the run to share your live progress with all the viewers. The app is designed to be very battery efficient. So don't worry about a draining battery.
 
-###ANIMATED MAP IMAGE###
+<img {...meta.images.screenshot} />
 
 The viewers can see the real time position on the map which is predicted by past location data and recalculated every 20 seconds when new live informations are available.
-
-###WIDGETS IMAGE###
 
 There a couple of other configurable widgets to monitor the athletes pace, progress and detailed splits. All designed to keep track of the athletes race goal.
 
