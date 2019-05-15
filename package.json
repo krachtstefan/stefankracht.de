@@ -38,7 +38,8 @@
     "react-youtube": "^7.9.0",
     "remark-external-links": "^4.0.0",
     "rimraf": "^2.6.3",
-    "rss": "^1.2.2"
+    "rss": "^1.2.2",
+    "svg.js": "^2.7.1"
   },
   "devDependencies": {
     "@zeit/next-mdx": "^1.2.0",
