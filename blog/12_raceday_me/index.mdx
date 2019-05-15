@@ -1,0 +1,17 @@
+export const meta = {
+  id: 12,
+  title: 'Introducing Raceday.me',
+  url: 'raceday-me',
+  date: new Date('2018-05-15T00:00:00'),
+  description:
+    "Raceday.me is the the world's first personalized race day live tracking",
+  categories: ['raceday'],
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/raceday-teaser-1000.png'),
+      srcSet: `${require('./images/raceday-teaser-600.png')} 600w, ${require('./images/raceday-teaser-1000.png')} 1000w, ${require('./images/raceday-teaser-1800.png')} 1800w`,
+      alt: 'Running gear prepared for race day'
+    }
+  }
+};
