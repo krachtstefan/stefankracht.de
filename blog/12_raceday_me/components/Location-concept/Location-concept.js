@@ -1,5 +1,12 @@
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
+import styled from '@emotion/styled';
 import { useEffect } from 'react';
 import SVG from 'svg.js';
+
+const Wrapper = styled.div`
+  background: pink;
+`;
 
 let LocationConcept = () => {
   useEffect(() => {
@@ -10,7 +17,13 @@ let LocationConcept = () => {
       .move(20, 20);
   }, []);
 
-  return <div id="svg" />;
+  const color = 'white';
+
+  return (
+    <Wrapper>
+      <div id="svg" />
+    </Wrapper>
+  );
 };
 
 export default LocationConcept;
