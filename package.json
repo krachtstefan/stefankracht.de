@@ -22,9 +22,12 @@
   },
   "homepage": "https://github.com/krachtstefan/stefankracht.de#readme",
   "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.11",
     "@mdx-js/mdx": "^1.0.10",
     "@zeit/next-sass": "^1.0.1",
     "babel-plugin-preval": "^3.0.1",
+    "emotion": "^10.0.9",
     "express": "^4.16.4",
     "next": "^8.1.0",
     "next-images": "^1.1.1",
