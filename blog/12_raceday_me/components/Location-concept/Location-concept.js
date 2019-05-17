@@ -2,7 +2,6 @@
 import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { useEffect, useState, useRef } from 'react';
-import SVG from 'svg.js';
 
 const Wrapper = styled.div`
   border: 1px solid pink;
