@@ -15,15 +15,42 @@ let LocationConceptTest = () => {
     minAccuracy = 3,
     maxAccuracy = 20,
     defaultAccuracy = 16,
-    [accuracy, setAccuracy] = useState(defaultAccuracy);
+    [accuracy, setAccuracy] = useState(defaultAccuracy),
+    ballRefs = Array.from({ length: maxAccuracy });
 
   const drawCircles = items => {
     if (canvas) {
-      Array.from({ length: items + 1 }).forEach((x, i) => {
-        var ball = canvas.circle(10).fill('#00ff00');
-        let center = track.pointAt((track.length() / items - 1) * i);
+      ballRefs.forEach((ball, index) => {
+        if (!ball) {
+          console.log('init ' + index);
+          ball = canvas.circle(10).fill('#00ff00');
+          ballRefs[index] = ball;
+        } else {
+          console.log('already there ' + index);
+        }
+
+        let visible = index <= items;
+        let center = visible
+          ? track.pointAt((track.length() / items - 1) * index)
+          : {
+              x: Math.floor(Math.random() * 100),
+              y: Math.floor(Math.random() * 100)
+            };
+
+        if (visible) {
+          ball.fill('#0000ff');
+        } else {
+          ball.fill('#00ff00');
+        }
         ball.cx(center.x).cy(center.y);
       });
+      // Array.from({ length: items + 1 }).forEach((x, i) => {
+      //   var ball = canvas.circle(10).fill('#00ff00');
+      //   let center = track.pointAt((track.length() / items - 1) * i);
+      //   ball.cx(center.x).cy(center.y);
+      // });
+    } else {
+      console.log('no canvas :(');
     }
   };
 
@@ -48,7 +75,7 @@ let LocationConceptTest = () => {
   };
   return (
     <Wrapper>
-      <p id="svg" />
+      <div id="svg" />
       <input
         type="range"
         min={minAccuracy}
