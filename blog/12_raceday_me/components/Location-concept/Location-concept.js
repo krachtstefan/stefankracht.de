@@ -9,17 +9,21 @@ const Wrapper = styled.div`
 `;
 
 const Interactive = styled.svg`
-  padding: 20px;
+  background: #f3f3f3;
+  path {
+    stroke: #ff0000;
+    fill: none;
+  }
   circle {
     transition: all 0.5s ease;
-    fill: pink;
+    fill: black;
   }
 `;
 
 let LocationConceptTest = () => {
   let minAccuracy = 2,
-    maxAccuracy = 10,
-    defaultAccuracy = 5,
+    maxAccuracy = 100,
+    defaultAccuracy = 10,
     [accuracy, setAccuracy] = useState(defaultAccuracy),
     [pathLength, setPathLength] = useState(null),
     path = useRef(null);
@@ -33,12 +37,10 @@ let LocationConceptTest = () => {
   };
   return (
     <Wrapper>
-      <Interactive width="100%" height="100" viewBox="0 0 800 100">
+      <Interactive width="500" height="500" viewBox="-20 -20 460 460">
         <path
           ref={path}
           d="M-1,1.499h83c0,0,10.5,1,10.5,11.25s-10.25,12.25-10.25,12.25h-43.5c0,0-10.75,0.75-11.75,11.5s9.75,12.25,9.75,12.25H343.5"
-          fill="none"
-          stroke="#ff0000"
           strokeWidth="3"
         />
 
@@ -50,7 +52,7 @@ let LocationConceptTest = () => {
                   (pathLength / accuracy + 1) * index
                 )
               : { x: 0, y: 0 };
-            return <circle key={index} r="10" cx={center.x} cy={center.y} />;
+            return <circle key={index} r="3" cx={center.x} cy={center.y} />;
           })}
       </Interactive>
       <input
