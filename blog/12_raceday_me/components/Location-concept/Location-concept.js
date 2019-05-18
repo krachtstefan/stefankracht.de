@@ -58,12 +58,20 @@ let LocationConceptTest = () => {
           d="M-1,1.499h83c0,0,10.5,1,10.5,11.25s-10.25,12.25-10.25,12.25h-43.5c0,0-10.75,0.75-11.75,11.5s9.75,12.25,9.75,12.25H343.5"
           strokeWidth="3"
         />
-
         {chordsArr.map((choordinate, index) => {
           return (
             <circle key={index} r="3" cx={choordinate.x} cy={choordinate.y} />
           );
         })}
+
+        {chordsArr.length > 0 && (
+          <path
+            d={`M${chordsArr.map(
+              choordinate => `${choordinate.x},${choordinate.y}`
+            )}`}
+            strokeWidth="1"
+          />
+        )}
       </Interactive>
       <input
         type="range"
