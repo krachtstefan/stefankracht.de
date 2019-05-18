@@ -51,12 +51,10 @@ let LocationConceptTest = () => {
 
         {path.current &&
           Array.from({ length: maxAccuracy + 1 }).map((item, index) => {
-            let visible = index < accuracy + 1;
-            let center = visible
-              ? path.current.getPointAtLength(
-                  (pathLength / accuracy + 1) * index
-                )
-              : { x: 0, y: 0 };
+            let center = path.current.getPointAtLength(
+              (pathLength / accuracy + 1) * index
+            );
+
             return <circle key={index} r="3" cx={center.x} cy={center.y} />;
           })}
       </Interactive>
