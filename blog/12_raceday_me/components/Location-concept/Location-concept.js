@@ -9,6 +9,10 @@ const Wrapper = styled.div`
 
 const Interactive = styled.svg`
   width: 100%;
+  #parks,
+  #lake {
+    opacity: 0;
+  }
   path#run-track {
     fill: none;
     stroke: #ff0000;
@@ -18,8 +22,8 @@ const Interactive = styled.svg`
   path#link {
     fill: none;
     stroke: #000;
-    stroke-width: 1;
-    stroke-dasharray: 5;
+    stroke-width: 0.5;
+    stroke-dasharray: 2;
     transition: all 0.5s ease;
   }
   circle.choordinate {
@@ -122,7 +126,7 @@ let LocationConceptTest = () => {
               <circle
                 className="choordinate"
                 key={index}
-                r="3"
+                r="2"
                 cx={choordinate.x}
                 cy={choordinate.y}
               />
@@ -135,7 +139,6 @@ let LocationConceptTest = () => {
               d={`M${chordsArr.map(
                 choordinate => `${choordinate.x},${choordinate.y}`
               )}`}
-              strokeWidth="1"
             />
           )}
         </g>
