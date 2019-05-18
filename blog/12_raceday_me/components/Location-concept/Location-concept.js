@@ -30,7 +30,7 @@ let LocationConceptTest = () => {
 
   useEffect(() => {
     setPathLength(path.current.getTotalLength());
-  }, [useEffect]);
+  });
 
   const onSliderChange = (e, x) => {
     setAccuracy(e.target.value);
