@@ -34,7 +34,9 @@ let LocationConceptTest = () => {
     maxAccuracy = 100,
     defaultAccuracy = 10,
     [accuracy, setAccuracy] = useState(defaultAccuracy),
+    [LengthAccuracy, setLengthAccuracy] = useState(0),
     [trackLength, setTrackLength] = useState(null),
+    [linkLength, setLinkLength] = useState(null),
     [chordsArr, setChordsArr] = useState([]),
     track = useRef(null),
     link = useRef(null);
@@ -42,6 +44,16 @@ let LocationConceptTest = () => {
   useEffect(() => {
     setTrackLength(track.current.getTotalLength());
   }, []);
+
+  useEffect(() => {
+    if (link.current) {
+      setLinkLength(link.current.getTotalLength());
+    }
+  }, [chordsArr]);
+
+  useEffect(() => {
+    setLengthAccuracy((linkLength / trackLength) * 100);
+  }, [trackLength, linkLength]);
 
   useEffect(() => {
     if (!trackLength) {
@@ -82,6 +94,7 @@ let LocationConceptTest = () => {
 
         {chordsArr.length > 0 && (
           <path
+            ref={link}
             className="link"
             d={`M${chordsArr.map(
               choordinate => `${choordinate.x},${choordinate.y}`
@@ -100,6 +113,10 @@ let LocationConceptTest = () => {
       {accuracy}
       <br />
       trackLength: {trackLength}
+      <br />
+      linkLength: {linkLength}
+      <br />
+      LengthAccuracy: {LengthAccuracy}
     </Wrapper>
   );
 };
