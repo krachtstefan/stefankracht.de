@@ -26,6 +26,7 @@ let LocationConceptTest = () => {
     defaultAccuracy = 10,
     [accuracy, setAccuracy] = useState(defaultAccuracy),
     [pathLength, setPathLength] = useState(null),
+    [chordsArr, setChordsArr] = useState([]),
     path = useRef(null);
 
   useEffect(() => {
@@ -33,8 +34,17 @@ let LocationConceptTest = () => {
   }, []);
 
   useEffect(() => {
-    console.log(accuracy);
-  }, [accuracy]);
+    if (!pathLength) {
+      return;
+    }
+    let newChordsArr = [];
+    Array.from({ length: maxAccuracy + 1 }).map((item, index) => {
+      newChordsArr.push(
+        path.current.getPointAtLength((pathLength / accuracy + 1) * index)
+      );
+    });
+    setChordsArr(newChordsArr);
+  }, [pathLength, accuracy]);
 
   const onSliderChange = (e, x) => {
     setAccuracy(parseInt(e.target.value));
@@ -49,14 +59,11 @@ let LocationConceptTest = () => {
           strokeWidth="3"
         />
 
-        {path.current &&
-          Array.from({ length: maxAccuracy + 1 }).map((item, index) => {
-            let center = path.current.getPointAtLength(
-              (pathLength / accuracy + 1) * index
-            );
-
-            return <circle key={index} r="3" cx={center.x} cy={center.y} />;
-          })}
+        {chordsArr.map((choordinate, index) => {
+          return (
+            <circle key={index} r="3" cx={choordinate.x} cy={choordinate.y} />
+          );
+        })}
       </Interactive>
       <input
         type="range"
