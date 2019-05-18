@@ -34,26 +34,27 @@ let LocationConceptTest = () => {
     maxAccuracy = 100,
     defaultAccuracy = 10,
     [accuracy, setAccuracy] = useState(defaultAccuracy),
-    [pathLength, setPathLength] = useState(null),
+    [trackLength, setTrackLength] = useState(null),
     [chordsArr, setChordsArr] = useState([]),
-    path = useRef(null);
+    track = useRef(null),
+    link = useRef(null);
 
   useEffect(() => {
-    setPathLength(path.current.getTotalLength());
+    setTrackLength(track.current.getTotalLength());
   }, []);
 
   useEffect(() => {
-    if (!pathLength) {
+    if (!trackLength) {
       return;
     }
     let newChordsArr = [];
     Array.from({ length: maxAccuracy + 1 }).map((item, index) => {
       newChordsArr.push(
-        path.current.getPointAtLength((pathLength / accuracy + 1) * index)
+        track.current.getPointAtLength((trackLength / accuracy + 1) * index)
       );
     });
     setChordsArr(newChordsArr);
-  }, [pathLength, accuracy]);
+  }, [trackLength, accuracy]);
 
   const onSliderChange = (e, x) => {
     setAccuracy(parseInt(e.target.value));
@@ -63,7 +64,7 @@ let LocationConceptTest = () => {
     <Wrapper>
       <Interactive width="500" height="500" viewBox="-20 -20 460 460">
         <path
-          ref={path}
+          ref={track}
           className="track"
           d="M-1,1.499h83c0,0,10.5,1,10.5,11.25s-10.25,12.25-10.25,12.25h-43.5c0,0-10.75,0.75-11.75,11.5s9.75,12.25,9.75,12.25H343.5"
         />
@@ -98,7 +99,7 @@ let LocationConceptTest = () => {
       />
       {accuracy}
       <br />
-      pathLength: {pathLength}
+      trackLength: {trackLength}
     </Wrapper>
   );
 };
