@@ -11,10 +11,19 @@ const Wrapper = styled.div`
 const Interactive = styled.svg`
   background: #f3f3f3;
   path {
-    stroke: #ff0000;
     fill: none;
   }
-  circle {
+  path.track {
+    stroke: #ff0000;
+    stroke-width: 3;
+  }
+  path.link {
+    stroke: #000;
+    stroke-width: 1;
+    stroke-dasharray: 5;
+    transition: all 0.5s ease;
+  }
+  circle.choordinate {
     transition: all 0.5s ease;
     fill: black;
   }
@@ -55,17 +64,24 @@ let LocationConceptTest = () => {
       <Interactive width="500" height="500" viewBox="-20 -20 460 460">
         <path
           ref={path}
+          className="track"
           d="M-1,1.499h83c0,0,10.5,1,10.5,11.25s-10.25,12.25-10.25,12.25h-43.5c0,0-10.75,0.75-11.75,11.5s9.75,12.25,9.75,12.25H343.5"
-          strokeWidth="3"
         />
         {chordsArr.map((choordinate, index) => {
           return (
-            <circle key={index} r="3" cx={choordinate.x} cy={choordinate.y} />
+            <circle
+              className="choordinate"
+              key={index}
+              r="3"
+              cx={choordinate.x}
+              cy={choordinate.y}
+            />
           );
         })}
 
         {chordsArr.length > 0 && (
           <path
+            className="link"
             d={`M${chordsArr.map(
               choordinate => `${choordinate.x},${choordinate.y}`
             )}`}
