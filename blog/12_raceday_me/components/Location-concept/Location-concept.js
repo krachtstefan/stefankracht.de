@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useLayoutEffect, useState, useRef } from 'react';
 
 const Wrapper = styled.div`
   border: 1px solid pink;
@@ -45,11 +45,13 @@ let LocationConceptTest = () => {
     setTrackLength(track.current.getTotalLength());
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (link.current) {
-      setLinkLength(link.current.getTotalLength());
+      window.requestAnimationFrame(() => {
+        setLinkLength(link.current.getTotalLength());
+      });
     }
-  }, [chordsArr]);
+  });
 
   useEffect(() => {
     setLengthAccuracy((linkLength / trackLength) * 100);
