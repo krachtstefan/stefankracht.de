@@ -30,11 +30,16 @@ let LocationConceptTest = () => {
 
   useEffect(() => {
     setPathLength(path.current.getTotalLength());
-  });
+  }, []);
+
+  useEffect(() => {
+    console.log(accuracy);
+  }, [accuracy]);
 
   const onSliderChange = (e, x) => {
-    setAccuracy(e.target.value);
+    setAccuracy(parseInt(e.target.value));
   };
+
   return (
     <Wrapper>
       <Interactive width="500" height="500" viewBox="-20 -20 460 460">
