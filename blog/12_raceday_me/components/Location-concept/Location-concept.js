@@ -74,6 +74,7 @@ let LocationConceptTest = () => {
     [chordsArr, setChordsArr] = useState([]),
     [showGpx, setShowGpx] = useState(false),
     [showNonGpx, setShowNonGpx] = useState(true),
+    [battery, setBattery] = useState(100),
     track = useRef(null),
     link = useRef(null);
 
@@ -96,6 +97,10 @@ let LocationConceptTest = () => {
       setLengthAccuracy((linkLength / trackLength) * 100);
     }
   }, [trackLength, linkLength]);
+
+  useEffect(() => {
+    setBattery((accuracy / maxAccuracy) * 100);
+  }, [accuracy, maxAccuracy]);
 
   const toggleGpxMode = () => {
     toggleShowGpx();
@@ -211,10 +216,10 @@ let LocationConceptTest = () => {
         </div>
         <div>Battery</div>
         <div>
-          <ProgressBar dataWidth={100 - lengthAccuracy} />
+          <ProgressBar dataWidth={battery} />
         </div>
         <div>
-          <ProgressBar dataWidth={100 - lengthAccuracy} />
+          <ProgressBar dataWidth={battery} />
         </div>
         <div>Accuracy</div>
         <div>
@@ -223,19 +228,19 @@ let LocationConceptTest = () => {
         <div>
           <ProgressBar dataWidth={100} />
         </div>
-        <div>Accuracy</div>
-        <div>1</div>
-        <div>2</div>
+        <div>Datapoints</div>
+        <div>
+          <input
+            type="range"
+            min={minAccuracy}
+            max={maxAccuracy}
+            value={accuracy}
+            onChange={onSliderChange}
+          />
+        </div>
+        <div>{accuracy}</div>
+        <br />
       </Controls>
-      <input
-        type="range"
-        min={minAccuracy}
-        max={maxAccuracy}
-        value={accuracy}
-        onChange={onSliderChange}
-      />
-      {accuracy}
-      <br />
     </Wrapper>
   );
 };
