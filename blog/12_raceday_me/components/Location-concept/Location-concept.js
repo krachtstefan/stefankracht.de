@@ -54,7 +54,7 @@ let LocationConceptTest = () => {
     maxAccuracy = 100,
     defaultAccuracy = 10,
     [accuracy, setAccuracy] = useState(defaultAccuracy),
-    [LengthAccuracy, setLengthAccuracy] = useState(0),
+    [lengthAccuracy, setLengthAccuracy] = useState(0),
     [trackLength, setTrackLength] = useState(null),
     [linkLength, setLinkLength] = useState(null),
     [chordsArr, setChordsArr] = useState([]),
@@ -178,7 +178,7 @@ let LocationConceptTest = () => {
       <br />
       linkLength: {linkLength}
       <br />
-      LengthAccuracy: {LengthAccuracy}
+      lengthAccuracy: {lengthAccuracy}
       <br />
       showGpx: {showGpx ? '👍' : '👎'}
       <br />
