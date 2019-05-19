@@ -18,7 +18,7 @@ const Interactive = styled.svg`
     stroke-dasharray: 4;
     stroke-linecap: round;
     transition: all 0.4s ease;
-    animation: dash 8s linear infinite;
+    animation: dash 50s linear infinite;
   }
   path#link {
     stroke: #f26662;
@@ -44,7 +44,7 @@ const Interactive = styled.svg`
 
   @keyframes dash {
     from {
-      stroke-dashoffset: 50;
+      stroke-dashoffset: 500;
     }
   }
 `;
