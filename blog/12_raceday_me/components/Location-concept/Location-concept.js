@@ -53,7 +53,8 @@ const Controls = styled.div`
   display: grid;
   grid-gap: 10px;
   align-items: center;
-  grid-template-columns: auto 1fr 1fr;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
 `;
 
 const ProgressBar = styled.div`
@@ -66,7 +67,6 @@ const ProgressBar = styled.div`
 const Battery = styled.div`
   width: 35px;
   height: 16px;
-
   box-sizing: content-box;
   border: 3px #000 solid;
   position: relative;
@@ -225,15 +225,6 @@ let LocationConceptTest = () => {
         <div>
           <a
             onClick={() => {
-              toggleGpxMode();
-            }}
-          >
-            toggle GPX mode
-          </a>
-        </div>
-        <div>
-          <a
-            onClick={() => {
               toggleShowNonGpx();
             }}
           >
@@ -249,21 +240,25 @@ let LocationConceptTest = () => {
             {showGpx ? 'hide' : 'show'}
           </a>
         </div>
-        <div>Battery</div>
+
         <div>
           <Battery dataWidth={battery} />
         </div>
         <div>
           <Battery dataWidth={100} />
         </div>
-        <div>Accuracy</div>
+
         <div>
+          accuracy
+          <br />
           <ProgressBar dataWidth={lengthAccuracy} />
         </div>
         <div>
+          accuracy
+          <br />
           <ProgressBar dataWidth={100} />
         </div>
-        <div>Datapoints</div>
+
         <div>
           <input
             type="range"
@@ -274,9 +269,7 @@ let LocationConceptTest = () => {
           />
         </div>
         <div>{accuracy}</div>
-        <br />
       </Controls>
-      <Battery />
     </Wrapper>
   );
 };
