@@ -58,10 +58,28 @@ const Controls = styled.div`
 `;
 
 const ProgressBar = styled.div`
-  transition: all 0.4s ease;
-  background: grey;
-  width: ${props => (props.dataWidth ? `${props.dataWidth}%` : '0%')};
-  height: 10px;
+  border: 1px #000 solid;
+  padding: 1px;
+  width: 300px;
+  div {
+    transition: all 0.4s ease;
+    height: 10px;
+    width: ${props => (props.dataWidth ? `${props.dataWidth}%` : '0%')};
+    animation: percent 10s linear;
+    animation-play-state: paused;
+    animation-delay: ${props =>
+      props.dataWidth ? `calc( ${props.dataWidth * 0.01} * -10s)` : '0%'};
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    @keyframes percent {
+      0% {
+        background: #f26662;
+      }
+      100% {
+        background: #10cf6b;
+      }
+    }
+  }
 `;
 
 const Battery = styled.div`
@@ -251,12 +269,16 @@ let LocationConceptTest = () => {
         <div>
           accuracy
           <br />
-          <ProgressBar dataWidth={lengthAccuracy} />
+          <ProgressBar dataWidth={lengthAccuracy}>
+            <div />
+          </ProgressBar>
         </div>
         <div>
           accuracy
           <br />
-          <ProgressBar dataWidth={100} />
+          <ProgressBar dataWidth={100}>
+            <div />
+          </ProgressBar>
         </div>
 
         <div>
