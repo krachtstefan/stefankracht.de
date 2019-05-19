@@ -52,6 +52,7 @@ const Interactive = styled.svg`
 const Controls = styled.div`
   display: grid;
   grid-gap: 10px;
+  align-items: center;
   grid-template-columns: auto 1fr 1fr;
 `;
 
