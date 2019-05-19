@@ -16,22 +16,29 @@ const Interactive = styled.svg`
     stroke: #000;
     stroke-width: 0.5;
     stroke-dasharray: 2;
-    transition: all 0.4s ease;
+    transition: all 0.4s in;
+    animation: dash 8s linear infinite;
   }
-  path#link {
-    opacity: 1;
-  }
+
   circle.choordinate {
     transition: all 0.4s ease;
     fill: black;
   }
 
-  &.gpx-mode {
+  &.show-non-gpx {
     path#link {
-      opacity: 0;
+      opacity: 1;
     }
+  }
+  &.show-gpx {
     path#run-track {
       opacity: 1;
+    }
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 50;
     }
   }
 `;
@@ -45,7 +52,8 @@ let LocationConceptTest = () => {
     [trackLength, setTrackLength] = useState(null),
     [linkLength, setLinkLength] = useState(null),
     [chordsArr, setChordsArr] = useState([]),
-    [gpxMode, setGpxMode] = useState(false),
+    [showGpx, setShowGpx] = useState(false),
+    [showNonGpx, setShowNonGpx] = useState(true),
     track = useRef(null),
     link = useRef(null);
 
@@ -68,7 +76,8 @@ let LocationConceptTest = () => {
   }, [trackLength, linkLength]);
 
   const toggleGpxMode = () => {
-    setGpxMode(!gpxMode);
+    setShowGpx(!showGpx);
+    setShowNonGpx(!showNonGpx);
   };
 
   useEffect(() => {
@@ -94,7 +103,9 @@ let LocationConceptTest = () => {
         viewBox="0 0 420 267"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
-        className={gpxMode ? 'gpx-mode' : ''}
+        className={
+          showGpx ? 'show-gpx' : null || showNonGpx ? 'show-non-gpx' : null
+        }
       >
         <g
           id="race-track"
@@ -160,7 +171,9 @@ let LocationConceptTest = () => {
       <br />
       LengthAccuracy: {LengthAccuracy}
       <br />
-      gpxMode: {gpxMode ? '👍' : '👎'}
+      showGpx: {showGpx ? '👍' : '👎'}
+      <br />
+      showNonGpx: {showNonGpx ? '👍' : '👎'}
     </Wrapper>
   );
 };
