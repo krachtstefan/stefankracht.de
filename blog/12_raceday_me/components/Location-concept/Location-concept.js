@@ -49,6 +49,18 @@ const Interactive = styled.svg`
   }
 `;
 
+const Controls = styled.div`
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto 1fr 1fr;
+`;
+
+const ProgressBar = styled.div`
+  background: grey;
+  width: ${props => (props.dataWidth ? `${props.dataWidth}%` : '100%')};
+  height: 10px;
+`;
+
 let LocationConceptTest = () => {
   const minAccuracy = 2,
     maxAccuracy = 100,
@@ -157,6 +169,21 @@ let LocationConceptTest = () => {
           })}
         </g>
       </Interactive>
+      <Controls>
+        <div>Battery</div>
+        <div>1</div>
+        <div>2</div>
+        <div>Accuracy</div>
+        <div>
+          <ProgressBar dataWidth={lengthAccuracy} />
+        </div>
+        <div>
+          <ProgressBar dataWidth={lengthAccuracy} />
+        </div>
+        <div>Accuracy</div>
+        <div>1</div>
+        <div>2</div>
+      </Controls>
       <input
         type="range"
         min={minAccuracy}
