@@ -13,11 +13,15 @@ const Interactive = styled.svg`
   path#link {
     opacity: 0;
     fill: none;
-    stroke: #000;
-    stroke-width: 0.5;
-    stroke-dasharray: 2;
-    transition: all 0.4s in;
+    stroke: #10cf6b;
+    stroke-width: 2;
+    stroke-dasharray: 4;
+    stroke-linecap: round;
+    transition: all 0.4s ease;
     animation: dash 8s linear infinite;
+  }
+  path#link {
+    stroke: #f26662;
   }
 
   circle.choordinate {
@@ -27,11 +31,13 @@ const Interactive = styled.svg`
 
   &.show-non-gpx {
     path#link {
+      transition: all 0.4s ease;
       opacity: 1;
     }
   }
   &.show-gpx {
     path#run-track {
+      transition: all 0.4s ease;
       opacity: 1;
     }
   }
@@ -126,17 +132,6 @@ let LocationConceptTest = () => {
             id="run-track"
             ref={track}
           />
-          {chordsArr.map((choordinate, index) => {
-            return (
-              <circle
-                className="choordinate"
-                key={index}
-                r="2"
-                cx={choordinate.x}
-                cy={choordinate.y}
-              />
-            );
-          })}
           {chordsArr.length > 0 && (
             <path
               ref={link}
@@ -146,6 +141,17 @@ let LocationConceptTest = () => {
               )}`}
             />
           )}
+          {chordsArr.map((choordinate, index) => {
+            return (
+              <circle
+                className="choordinate"
+                key={index}
+                r="3"
+                cx={choordinate.x}
+                cy={choordinate.y}
+              />
+            );
+          })}
         </g>
       </Interactive>
       <input
