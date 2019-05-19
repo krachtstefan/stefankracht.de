@@ -9,28 +9,35 @@ const Wrapper = styled.div`
 
 const Interactive = styled.svg`
   width: 100%;
-  path#run-track {
-    fill: none;
-    stroke: #ff0000;
-    stroke-width: 2;
-    stroke-linecap: round;
-    transition: all 0.4s ease;
-  }
+  path#run-track,
   path#link {
+    opacity: 0;
     fill: none;
     stroke: #000;
     stroke-width: 0.5;
     stroke-dasharray: 2;
     transition: all 0.4s ease;
   }
+  path#link {
+    opacity: 1;
+  }
   circle.choordinate {
     transition: all 0.4s ease;
     fill: black;
   }
+
+  &.gpx-mode {
+    path#link {
+      opacity: 0;
+    }
+    path#run-track {
+      opacity: 1;
+    }
+  }
 `;
 
 let LocationConceptTest = () => {
-  let minAccuracy = 2,
+  const minAccuracy = 2,
     maxAccuracy = 100,
     defaultAccuracy = 10,
     [accuracy, setAccuracy] = useState(defaultAccuracy),
@@ -38,6 +45,7 @@ let LocationConceptTest = () => {
     [trackLength, setTrackLength] = useState(null),
     [linkLength, setLinkLength] = useState(null),
     [chordsArr, setChordsArr] = useState([]),
+    [gpxMode, setGpxMode] = useState(false),
     track = useRef(null),
     link = useRef(null);
 
@@ -58,6 +66,10 @@ let LocationConceptTest = () => {
   useEffect(() => {
     setLengthAccuracy((linkLength / trackLength) * 100);
   }, [trackLength, linkLength]);
+
+  const toggleGpxMode = () => {
+    setGpxMode(!gpxMode);
+  };
 
   useEffect(() => {
     if (!trackLength) {
@@ -82,6 +94,7 @@ let LocationConceptTest = () => {
         viewBox="0 0 420 267"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
+        className={gpxMode ? 'gpx-mode' : ''}
       >
         <g
           id="race-track"
@@ -133,11 +146,21 @@ let LocationConceptTest = () => {
       />
       {accuracy}
       <br />
+      <a
+        onClick={() => {
+          toggleGpxMode();
+        }}
+      >
+        toggle GPX mode
+      </a>
+      <br />
       trackLength: {trackLength}
       <br />
       linkLength: {linkLength}
       <br />
       LengthAccuracy: {LengthAccuracy}
+      <br />
+      gpxMode: {gpxMode ? '👍' : '👎'}
     </Wrapper>
   );
 };
