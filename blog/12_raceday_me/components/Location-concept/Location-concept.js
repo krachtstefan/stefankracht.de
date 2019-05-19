@@ -103,15 +103,18 @@ let LocationConceptTest = () => {
     setAccuracy(parseInt(e.target.value));
   };
 
+  let classNames = showGpx ? 'show-gpx' : null;
+  if (showNonGpx) {
+    classNames = `${classNames} show-non-gpx`;
+  }
+
   return (
     <Wrapper>
       <Interactive
         viewBox="0 0 420 267"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
-        className={
-          showGpx ? 'show-gpx' : null || showNonGpx ? 'show-non-gpx' : null
-        }
+        className={classNames}
       >
         <g
           id="race-track"
