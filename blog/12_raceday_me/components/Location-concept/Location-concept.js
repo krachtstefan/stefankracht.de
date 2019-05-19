@@ -63,6 +63,41 @@ const ProgressBar = styled.div`
   height: 10px;
 `;
 
+const Battery = styled.div`
+  width: 35px;
+  height: 16px;
+
+  box-sizing: content-box;
+  border: 3px #000 solid;
+  position: relative;
+  margin: 0 auto;
+  animation: charge 10s linear;
+  animation-play-state: paused;
+  animation-delay: ${props =>
+    props.dataWidth ? `calc( ${props.dataWidth * 0.01} * -10s)` : '0%'};
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  &:after {
+    width: 5px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 0 2px 2px 0;
+    position: absolute;
+    content: '';
+    top: 3px;
+    right: -7px;
+  }
+
+  @keyframes charge {
+    0% {
+      box-shadow: inset 5px 0 0 #f26662;
+    }
+    100% {
+      box-shadow: inset 37px 0 0 #10cf6b;
+    }
+  }
+`;
+
 let LocationConceptTest = () => {
   const minAccuracy = 2,
     maxAccuracy = 100,
@@ -99,7 +134,7 @@ let LocationConceptTest = () => {
   }, [trackLength, linkLength]);
 
   useEffect(() => {
-    setBattery((accuracy / maxAccuracy) * 100);
+    setBattery((accuracy / (maxAccuracy - minAccuracy)) * 100 * -1 + 100);
   }, [accuracy, maxAccuracy]);
 
   const toggleGpxMode = () => {
@@ -216,10 +251,10 @@ let LocationConceptTest = () => {
         </div>
         <div>Battery</div>
         <div>
-          <ProgressBar dataWidth={battery} />
+          <Battery dataWidth={battery} />
         </div>
         <div>
-          <ProgressBar dataWidth={battery} />
+          <Battery dataWidth={100} />
         </div>
         <div>Accuracy</div>
         <div>
@@ -241,6 +276,7 @@ let LocationConceptTest = () => {
         <div>{accuracy}</div>
         <br />
       </Controls>
+      <Battery />
     </Wrapper>
   );
 };
