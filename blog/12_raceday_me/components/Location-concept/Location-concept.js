@@ -57,8 +57,9 @@ const Controls = styled.div`
 `;
 
 const ProgressBar = styled.div`
+  transition: all 0.4s ease;
   background: grey;
-  width: ${props => (props.dataWidth ? `${props.dataWidth}%` : '100%')};
+  width: ${props => (props.dataWidth ? `${props.dataWidth}%` : '0%')};
   height: 10px;
 `;
 
@@ -84,14 +85,16 @@ let LocationConceptTest = () => {
 
   useLayoutEffect(() => {
     if (link.current) {
-      window.requestAnimationFrame(() => {
+      window.setTimeout(() => {
         setLinkLength(link.current.getTotalLength());
-      });
+      }, 500);
     }
   });
 
   useEffect(() => {
-    setLengthAccuracy((linkLength / trackLength) * 100);
+    if (linkLength && trackLength) {
+      setLengthAccuracy((linkLength / trackLength) * 100);
+    }
   }, [trackLength, linkLength]);
 
   const toggleGpxMode = () => {
