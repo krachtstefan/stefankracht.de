@@ -98,7 +98,15 @@ let LocationConceptTest = () => {
   }, [trackLength, linkLength]);
 
   const toggleGpxMode = () => {
+    toggleShowGpx();
+    toggleShowNonGpx();
+  };
+
+  const toggleShowGpx = () => {
     setShowGpx(!showGpx);
+  };
+
+  const toggleShowNonGpx = () => {
     setShowNonGpx(!showNonGpx);
   };
 
@@ -174,15 +182,46 @@ let LocationConceptTest = () => {
         </g>
       </Interactive>
       <Controls>
+        <div>
+          <a
+            onClick={() => {
+              toggleGpxMode();
+            }}
+          >
+            toggle GPX mode
+          </a>
+        </div>
+        <div>
+          <a
+            onClick={() => {
+              toggleShowNonGpx();
+            }}
+          >
+            {showNonGpx ? 'hide' : 'show'}
+          </a>
+        </div>
+        <div>
+          <a
+            onClick={() => {
+              toggleShowGpx();
+            }}
+          >
+            {showGpx ? 'hide' : 'show'}
+          </a>
+        </div>
         <div>Battery</div>
-        <div>1</div>
-        <div>2</div>
+        <div>
+          <ProgressBar dataWidth={100 - lengthAccuracy} />
+        </div>
+        <div>
+          <ProgressBar dataWidth={100 - lengthAccuracy} />
+        </div>
         <div>Accuracy</div>
         <div>
           <ProgressBar dataWidth={lengthAccuracy} />
         </div>
         <div>
-          <ProgressBar dataWidth={lengthAccuracy} />
+          <ProgressBar dataWidth={100} />
         </div>
         <div>Accuracy</div>
         <div>1</div>
@@ -197,23 +236,6 @@ let LocationConceptTest = () => {
       />
       {accuracy}
       <br />
-      <a
-        onClick={() => {
-          toggleGpxMode();
-        }}
-      >
-        toggle GPX mode
-      </a>
-      <br />
-      trackLength: {trackLength}
-      <br />
-      linkLength: {linkLength}
-      <br />
-      lengthAccuracy: {lengthAccuracy}
-      <br />
-      showGpx: {showGpx ? '👍' : '👎'}
-      <br />
-      showNonGpx: {showNonGpx ? '👍' : '👎'}
     </Wrapper>
   );
 };
