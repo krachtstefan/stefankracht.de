@@ -84,13 +84,13 @@ input[type='range']::-webkit-slider-runnable-track {
 }
 input[type='range']::-webkit-slider-thumb {
   border: 1px solid $color-almost-black;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
   background: white;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -14px;
+  margin-top: -10px;
 }
 input[type='range']:focus::-webkit-slider-runnable-track {
   background: $color-almost-black;
@@ -105,9 +105,9 @@ input[type='range']::-moz-range-track {
 }
 input[type='range']::-moz-range-thumb {
   border: 1px solid $color-almost-black;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
   background: white;
   cursor: pointer;
 }
@@ -131,9 +131,9 @@ input[type='range']::-ms-fill-upper {
 }
 input[type='range']::-ms-thumb {
   border: 1px solid $color-almost-black;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
   background: white;
   cursor: pointer;
 }
