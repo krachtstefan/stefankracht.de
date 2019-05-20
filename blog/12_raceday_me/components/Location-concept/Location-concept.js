@@ -132,9 +132,9 @@ const Battery = styled.div`
 `;
 
 let LocationConceptTest = () => {
-  const minAccuracy = 2,
-    maxAccuracy = 100,
-    defaultAccuracy = 10,
+  const minAccuracy = 5,
+    maxAccuracy = 50,
+    defaultAccuracy = 15,
     [accuracy, setAccuracy] = useState(defaultAccuracy),
     [lengthAccuracy, setLengthAccuracy] = useState(0),
     [trackLength, setTrackLength] = useState(null),
@@ -274,7 +274,7 @@ let LocationConceptTest = () => {
         </div>
 
         <div>
-          <Battery dataWidth={showGpx ? 100 : battery} />
+          <Battery dataWidth={battery} />
         </div>
 
         <div>
