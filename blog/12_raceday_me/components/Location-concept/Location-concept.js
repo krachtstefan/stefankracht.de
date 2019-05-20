@@ -89,6 +89,7 @@ const Battery = styled.div`
   border: 3px #000 solid;
   position: relative;
   margin: 0 auto;
+  transition: all 0.4s ease;
   animation: charge 10s linear;
   animation-play-state: paused;
   animation-delay: ${props =>
@@ -108,10 +109,24 @@ const Battery = styled.div`
 
   @keyframes charge {
     0% {
-      box-shadow: inset 5px 0 0 #f26662;
+      box-shadow: inset 5px 0 0 var(--box-shadow-color);
     }
     100% {
-      box-shadow: inset 37px 0 0 #10cf6b;
+      box-shadow: inset 37px 0 0 var(--box-shadow-color);
+    }
+    0%,
+    25% {
+      --box-shadow-color: #f26662;
+    }
+
+    25%,
+    35% {
+      --box-shadow-color: #f9bf00;
+    }
+
+    50%,
+    100% {
+      --box-shadow-color: #10cf6b;
     }
   }
 `;
