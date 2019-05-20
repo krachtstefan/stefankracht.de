@@ -5,9 +5,11 @@ import { useEffect, useLayoutEffect, useState, useRef } from 'react';
 
 const Wrapper = styled.div`
   padding: 20px;
+  display: grid;
+  grid-gap: 20px;
 `;
 
-const Interactive = styled.svg`
+const Svg = styled.svg`
   width: 100%;
   path#run-track,
   path#link {
@@ -53,6 +55,13 @@ const Interactive = styled.svg`
       stroke-dashoffset: 500;
     }
   }
+`;
+
+const Legend = styled.div`
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto minmax(160px, 1fr);
+  justify-self: center;
 `;
 
 const Controls = styled.div`
@@ -208,7 +217,14 @@ let LocationConceptTest = () => {
 
   return (
     <Wrapper>
-      <Interactive
+      <Legend>
+        <Battery dataWidth={battery} />
+        <ProgressBar dataWidth={showGpx ? 100 : lengthAccuracy}>
+          accuracy
+          <div />
+        </ProgressBar>
+      </Legend>
+      <Svg
         viewBox="0 0 420 267"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -253,7 +269,8 @@ let LocationConceptTest = () => {
             );
           })}
         </g>
-      </Interactive>
+      </Svg>
+
       <Controls>
         <div>
           Number of data points: {accuracy}
@@ -284,18 +301,6 @@ let LocationConceptTest = () => {
               {showGpx ? 'with gpx file' : 'without gpx file'}
             </div>
           </label>
-        </div>
-
-        <div>
-          <Battery dataWidth={battery} />
-        </div>
-
-        <div>
-          <br />
-          <ProgressBar dataWidth={showGpx ? 100 : lengthAccuracy}>
-            accuracy
-            <div />
-          </ProgressBar>
         </div>
       </Controls>
     </Wrapper>
