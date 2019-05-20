@@ -60,7 +60,7 @@ const Svg = styled.svg`
 const Legend = styled.div`
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: auto minmax(160px, 1fr);
+  grid-template-columns: minmax(160px, 1fr) auto;
   justify-self: center;
 `;
 
@@ -218,11 +218,11 @@ let LocationConceptTest = () => {
   return (
     <Wrapper>
       <Legend>
-        <Battery dataWidth={battery} />
         <ProgressBar dataWidth={showGpx ? 100 : lengthAccuracy}>
           accuracy
           <div />
         </ProgressBar>
+        <Battery dataWidth={battery} />
       </Legend>
       <Svg
         viewBox="0 0 420 267"
