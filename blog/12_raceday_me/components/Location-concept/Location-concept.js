@@ -69,7 +69,7 @@ const ProgressBar = styled.div`
   width: 100%;
   position: relative;
   z-index: 0;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   div {
     position: absolute;
@@ -97,8 +97,8 @@ const ProgressBar = styled.div`
 `;
 
 const Battery = styled.div`
-  width: 35px;
-  height: 16px;
+  width: 41px;
+  height: 21px;
   box-sizing: content-box;
   border: 3px #000 solid;
   position: relative;
@@ -112,7 +112,7 @@ const Battery = styled.div`
   animation-fill-mode: both;
   &:after {
     width: 5px;
-    height: 10px;
+    height: 13px;
     background-color: #000;
     border-radius: 0 2px 2px 0;
     position: absolute;
