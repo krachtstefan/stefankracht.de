@@ -79,13 +79,11 @@ input[type='range']::-webkit-slider-runnable-track {
   height: 8.4px;
   cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px $color-almost-black, 0px 0px 1px $color-almost-black;
   background: $color-yellow;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }
 input[type='range']::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px $color-almost-black, 0px 0px 1px $color-almost-black;
   border: 1px solid $color-almost-black;
   height: 36px;
   width: 16px;
@@ -103,13 +101,11 @@ input[type='range']::-moz-range-track {
   height: 8.4px;
   cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px $color-almost-black, 0px 0px 1px $color-almost-black;
   background: $color-yellow;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }
 input[type='range']::-moz-range-thumb {
-  box-shadow: 1px 1px 1px $color-almost-black, 0px 0px 1px $color-almost-black;
   border: 1px solid $color-almost-black;
   height: 36px;
   width: 16px;
@@ -131,16 +127,13 @@ input[type='range']::-ms-fill-lower {
   background: $color-yellow;
   border: 0.2px solid $color-almost-black;
   border-radius: 2.6px;
-  box-shadow: 1px 1px 1px $color-almost-black, 0px 0px 1px $color-almost-black;
 }
 input[type='range']::-ms-fill-upper {
   background: $color-yellow;
   border: 0.2px solid #010101;
   border-radius: 2.6px;
-  box-shadow: 1px 1px 1px $color-almost-black, 0px 0px 1px $color-almost-black;
 }
 input[type='range']::-ms-thumb {
-  box-shadow: 1px 1px 1px $color-almost-black, 0px 0px 1px $color-almost-black;
   border: 1px solid $color-almost-black;
   height: 36px;
   width: 16px;
