@@ -65,11 +65,19 @@ const Controls = styled.div`
 
 const ProgressBar = styled.div`
   border: 1px #000 solid;
-  padding: 1px;
+  padding: 0px 10px;
   width: 100%;
+  position: relative;
+  z-index: 0;
+  font-size: 16px;
+  color: #fff;
   div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
     transition: all 0.4s ease;
-    height: 10px;
     width: ${props => (props.dataWidth ? `${props.dataWidth}%` : '0%')};
     animation: percent 10s linear;
     animation-play-state: paused;
@@ -283,9 +291,9 @@ let LocationConceptTest = () => {
         </div>
 
         <div>
-          accuracy
           <br />
           <ProgressBar dataWidth={showGpx ? 100 : lengthAccuracy}>
+            accuracy
             <div />
           </ProgressBar>
         </div>
