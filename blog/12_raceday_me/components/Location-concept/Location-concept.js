@@ -50,17 +50,17 @@ const Interactive = styled.svg`
 `;
 
 const Controls = styled.div`
-  display: grid;
+  /* display: grid;
   grid-gap: 10px;
   align-items: center;
   justify-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr; */
 `;
 
 const ProgressBar = styled.div`
   border: 1px #000 solid;
   padding: 1px;
-  width: 300px;
+  width: 100%;
   div {
     transition: all 0.4s ease;
     height: 10px;
@@ -141,7 +141,6 @@ let LocationConceptTest = () => {
     [linkLength, setLinkLength] = useState(null),
     [chordsArr, setChordsArr] = useState([]),
     [showGpx, setShowGpx] = useState(false),
-    [showNonGpx, setShowNonGpx] = useState(true),
     [battery, setBattery] = useState(100),
     track = useRef(null),
     link = useRef(null);
@@ -170,17 +169,8 @@ let LocationConceptTest = () => {
     setBattery((accuracy / (maxAccuracy - minAccuracy)) * 100 * -1 + 100);
   }, [accuracy, maxAccuracy]);
 
-  const toggleGpxMode = () => {
-    toggleShowGpx();
-    toggleShowNonGpx();
-  };
-
   const toggleShowGpx = () => {
     setShowGpx(!showGpx);
-  };
-
-  const toggleShowNonGpx = () => {
-    setShowNonGpx(!showNonGpx);
   };
 
   useEffect(() => {
@@ -200,10 +190,7 @@ let LocationConceptTest = () => {
     setAccuracy(parseInt(e.target.value));
   };
 
-  let classNames = showGpx ? 'show-gpx' : null;
-  if (showNonGpx) {
-    classNames = `${classNames} show-non-gpx`;
-  }
+  let classNames = showGpx ? 'show-gpx' : 'show-non-gpx';
 
   return (
     <Wrapper>
@@ -256,47 +243,7 @@ let LocationConceptTest = () => {
       </Interactive>
       <Controls>
         <div>
-          <a
-            onClick={() => {
-              toggleShowNonGpx();
-            }}
-          >
-            {showNonGpx ? 'hide' : 'show'}
-          </a>
-        </div>
-        <div>
-          <a
-            onClick={() => {
-              toggleShowGpx();
-            }}
-          >
-            {showGpx ? 'hide' : 'show'}
-          </a>
-        </div>
-
-        <div>
-          <Battery dataWidth={battery} />
-        </div>
-        <div>
-          <Battery dataWidth={100} />
-        </div>
-
-        <div>
-          accuracy
-          <br />
-          <ProgressBar dataWidth={lengthAccuracy}>
-            <div />
-          </ProgressBar>
-        </div>
-        <div>
-          accuracy
-          <br />
-          <ProgressBar dataWidth={100}>
-            <div />
-          </ProgressBar>
-        </div>
-
-        <div>
+          Number of data points: {accuracy}
           <input
             type="range"
             min={minAccuracy}
@@ -305,7 +252,38 @@ let LocationConceptTest = () => {
             onChange={onSliderChange}
           />
         </div>
-        <div>{accuracy}</div>
+        <div>
+          <label className="toggle-label">
+            <div className="toggle">
+              <input
+                className="toggle-state"
+                type="checkbox"
+                onClick={() => {
+                  toggleShowGpx();
+                }}
+              />
+              <div className="toggle-inner">
+                <div className="indicator" />
+              </div>
+              <div className="active-bg" />
+            </div>
+            <div className="label-text">
+              {showGpx ? 'with gpx file' : 'without gpx file'}
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <Battery dataWidth={showGpx ? 100 : battery} />
+        </div>
+
+        <div>
+          accuracy
+          <br />
+          <ProgressBar dataWidth={showGpx ? 100 : lengthAccuracy}>
+            <div />
+          </ProgressBar>
+        </div>
       </Controls>
     </Wrapper>
   );
