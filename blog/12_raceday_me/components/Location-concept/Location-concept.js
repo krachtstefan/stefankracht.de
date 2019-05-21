@@ -7,6 +7,15 @@ const Wrapper = styled.div`
   padding: 20px;
   display: grid;
   grid-gap: 20px;
+  input[type='range'] {
+    width: 100px;
+    position: relative;
+    top: -4px;
+  }
+  .inline-toggle {
+    position: relative;
+    top: 4px;
+  }
 `;
 
 const Svg = styled.svg`
@@ -57,29 +66,12 @@ const Svg = styled.svg`
   }
 `;
 
-const Legend = styled.div`
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: minmax(160px, 1fr) auto;
-  justify-self: center;
-`;
-
-const Controls = styled.div`
-  /* display: grid;
-  grid-gap: 10px;
-  align-items: center;
-  justify-items: center;
-  grid-template-columns: 1fr; */
-`;
-
 const ProgressBar = styled.div`
-  border: 1px #000 solid;
+  display: inline;
   padding: 0px 10px;
-  width: 100%;
   position: relative;
   z-index: 0;
-  font-size: 14px;
-  color: #fff;
+  /* background: #d6d6d6; */
   div {
     position: absolute;
     top: 0;
@@ -106,12 +98,14 @@ const ProgressBar = styled.div`
 `;
 
 const Battery = styled.div`
+  display: inline-block;
+  position: relative;
+  top: 4px;
   width: 41px;
   height: 21px;
   box-sizing: content-box;
   border: 3px #000 solid;
   position: relative;
-  margin: 0 auto;
   transition: all 0.4s ease;
   animation: charge 10s linear;
   animation-play-state: paused;
@@ -217,13 +211,6 @@ let LocationConceptTest = () => {
 
   return (
     <Wrapper>
-      <Legend>
-        <ProgressBar dataWidth={showGpx ? 100 : lengthAccuracy}>
-          accuracy
-          <div />
-        </ProgressBar>
-        <Battery dataWidth={battery} />
-      </Legend>
       <Svg
         viewBox="0 0 420 267"
         version="1.1"
@@ -270,18 +257,23 @@ let LocationConceptTest = () => {
           })}
         </g>
       </Svg>
-
-      <div>Number of data points: {accuracy}</div>
-
-      <Legend>
+      <div>
+        The amount of data points{' '}
         <input
           type="range"
           min={minAccuracy}
           max={maxAccuracy}
           value={accuracy}
           onChange={onSliderChange}
-        />
-        <label className="toggle-label">
+        />{' '}
+        influences the{' '}
+        <ProgressBar dataWidth={showGpx ? 100 : lengthAccuracy}>
+          accuracy
+          <div />
+        </ProgressBar>{' '}
+        and <Battery dataWidth={battery} /> life,
+        <br />
+        <label className="toggle-label inline-toggle">
           <div className="toggle">
             <input
               className="toggle-state"
@@ -295,19 +287,10 @@ let LocationConceptTest = () => {
             </div>
             <div className="active-bg" />
           </div>
-          <div className="label-text">
-            {showGpx ? 'with gpx file' : 'without gpx file'}
-          </div>
-        </label>
-      </Legend>
-      <p>
-        Providing a gpx track enables to get best accurate length measurements
+        </label>{' '}
+        Providing a gpx file allows less data points and having a high accuracy
         and long battery life at the same time.
-      </p>
-      <p>
-        Without a gpx track accurate length measurements requires a lot of data
-        points which long battery life at the same time.
-      </p>
+      </div>
     </Wrapper>
   );
 };
