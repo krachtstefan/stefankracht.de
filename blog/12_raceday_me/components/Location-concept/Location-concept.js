@@ -271,38 +271,43 @@ let LocationConceptTest = () => {
         </g>
       </Svg>
 
-      <Controls>
-        <div>
-          Number of data points: {accuracy}
-          <input
-            type="range"
-            min={minAccuracy}
-            max={maxAccuracy}
-            value={accuracy}
-            onChange={onSliderChange}
-          />
-        </div>
-        <div>
-          <label className="toggle-label">
-            <div className="toggle">
-              <input
-                className="toggle-state"
-                type="checkbox"
-                onClick={() => {
-                  toggleShowGpx();
-                }}
-              />
-              <div className="toggle-inner">
-                <div className="indicator" />
-              </div>
-              <div className="active-bg" />
+      <div>Number of data points: {accuracy}</div>
+
+      <Legend>
+        <input
+          type="range"
+          min={minAccuracy}
+          max={maxAccuracy}
+          value={accuracy}
+          onChange={onSliderChange}
+        />
+        <label className="toggle-label">
+          <div className="toggle">
+            <input
+              className="toggle-state"
+              type="checkbox"
+              onClick={() => {
+                toggleShowGpx();
+              }}
+            />
+            <div className="toggle-inner">
+              <div className="indicator" />
             </div>
-            <div className="label-text">
-              {showGpx ? 'with gpx file' : 'without gpx file'}
-            </div>
-          </label>
-        </div>
-      </Controls>
+            <div className="active-bg" />
+          </div>
+          <div className="label-text">
+            {showGpx ? 'with gpx file' : 'without gpx file'}
+          </div>
+        </label>
+      </Legend>
+      <p>
+        Providing a gpx track enables to get best accurate length measurements
+        and long battery life at the same time.
+      </p>
+      <p>
+        Without a gpx track accurate length measurements requires a lot of data
+        points which long battery life at the same time.
+      </p>
     </Wrapper>
   );
 };
