@@ -210,7 +210,7 @@ let LocationConceptTest = () => {
   return (
     <Wrapper>
       <Svg
-        viewBox="0 1 420 269"
+        viewBox="0 -1 420 269"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         className={classNames}
