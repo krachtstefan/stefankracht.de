@@ -12,6 +12,12 @@ const Wrapper = styled.div`
   .inline-toggle {
     position: relative;
     top: 4px;
+    .toggle {
+      background: #f26662;
+    }
+    .active-bg {
+      background: #10cf6b;
+    }
   }
 
   .red {
