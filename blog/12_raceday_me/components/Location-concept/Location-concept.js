@@ -71,19 +71,19 @@ const ProgressBar = styled.div`
   z-index: 0;
   &:after {
     width: 100%;
-    height: 27px;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-color: #d6d6d6;
     content: '';
     position: absolute;
-    top: 2px;
-    left: 0;
     z-index: -2;
   }
   div {
     position: absolute;
-    top: 2px;
+    top: 0;
     left: 0;
-    height: 27px;
+    height: 100%;
     z-index: -1;
     transition: all 0.4s ease;
     width: ${props => (props.dataWidth ? `${props.dataWidth}%` : '0%')};
