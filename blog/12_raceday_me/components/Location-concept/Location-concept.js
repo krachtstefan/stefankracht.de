@@ -341,7 +341,7 @@ let LocationConceptTest = () => {
           </div>
         </label>{' '}
         <span className={showGpx ? 'green' : 'red'}>Providing a gpx file</span>{' '}
-        allows less data points and having a high accuracy and long battery life
+        allows fewer data points and having high accuracy and long battery life
         at the same time.
       </div>
     </Wrapper>
