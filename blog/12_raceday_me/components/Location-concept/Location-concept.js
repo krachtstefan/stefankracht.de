@@ -187,6 +187,9 @@ let LocationConceptTest = () => {
   }, [accuracy, maxAccuracy]);
 
   const toggleShowGpx = () => {
+    if (!showGpx) {
+      setAccuracy(20);
+    }
     setShowGpx(!showGpx);
   };
 
