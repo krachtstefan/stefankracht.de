@@ -160,7 +160,7 @@ const Battery = styled.div`
         background-color: #10cf6b;
       }
       0% {
-        width: 8%;
+        width: 12%;
       }
       100% {
         width: 112%;
