@@ -13,6 +13,15 @@ const Wrapper = styled.div`
     position: relative;
     top: 4px;
   }
+
+  .red {
+    transition: all 0.4s ease;
+    border-bottom: 4px dashed #f26662;
+  }
+  .green {
+    transition: all 0.4s ease;
+    border-bottom: 4px dashed #10cf6b;
+  }
 `;
 
 const Svg = styled.svg`
@@ -331,8 +340,9 @@ let LocationConceptTest = () => {
             <div className="active-bg" />
           </div>
         </label>{' '}
-        Providing a gpx file allows less data points and having a high accuracy
-        and long battery life at the same time.
+        <span className={showGpx ? 'green' : 'red'}>Providing a gpx file</span>{' '}
+        allows less data points and having a high accuracy and long battery life
+        at the same time.
       </div>
     </Wrapper>
   );
