@@ -21,10 +21,12 @@ const Wrapper = styled.div`
   }
 
   .red {
+    cursor: pointer;
     transition: all 0.4s ease;
     border-bottom: 4px dashed #f26662;
   }
   .green {
+    cursor: pointer;
     transition: all 0.4s ease;
     border-bottom: 4px dashed #10cf6b;
   }
@@ -336,6 +338,8 @@ let LocationConceptTest = () => {
             <input
               className="toggle-state"
               type="checkbox"
+              checked={showGpx}
+              readOnly={true}
               onClick={() => {
                 toggleShowGpx();
               }}
@@ -346,7 +350,14 @@ let LocationConceptTest = () => {
             <div className="active-bg" />
           </div>
         </label>{' '}
-        <span className={showGpx ? 'green' : 'red'}>Providing a gpx file</span>{' '}
+        <span
+          onClick={() => {
+            toggleShowGpx();
+          }}
+          className={showGpx ? 'green' : 'red'}
+        >
+          Providing a gpx file
+        </span>{' '}
         allows fewer data points and having high accuracy and long battery life
         at the same time.
       </div>
