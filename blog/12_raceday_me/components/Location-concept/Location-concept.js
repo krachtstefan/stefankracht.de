@@ -96,49 +96,95 @@ const Battery = styled.div`
   position: relative;
   top: 4px;
   width: 41px;
-  height: 19px;
+  height: 22px;
   margin-right: 5px;
   box-sizing: content-box;
-  border: 3px #000 solid;
   position: relative;
   transition: all 0.4s ease;
-  animation: charge 10s linear;
+  animation: batteryborder 10s linear;
   animation-play-state: paused;
   animation-delay: ${props =>
     props.dataWidth ? `calc( ${props.dataWidth * 0.01} * -10s)` : '0%'};
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  &:after {
-    width: 5px;
-    height: 13px;
-    background-color: #000;
-    border-radius: 0 2px 2px 0;
-    position: absolute;
-    content: '';
-    top: 3px;
-    right: -7px;
-  }
-
-  @keyframes charge {
-    0% {
-      box-shadow: inset 5px 0 0 var(--box-shadow-color);
-    }
-    100% {
-      box-shadow: inset 48px 0 0 var(--box-shadow-color);
-    }
+  border: 1px solid #10cf6b;
+  @keyframes batteryborder {
     0%,
     25% {
-      --box-shadow-color: #f26662;
+      border-color: #f26662;
     }
 
     25%,
     35% {
-      --box-shadow-color: #f9bf00;
+      border-color: #f9bf00;
     }
 
-    50%,
+    35%,
     100% {
-      --box-shadow-color: #10cf6b;
+      border-color: #10cf6b;
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    animation: batteryfill 10s linear;
+    animation-play-state: paused;
+    animation-delay: ${props =>
+      props.dataWidth ? `calc( ${props.dataWidth * 0.01} * -10s)` : '0%'};
+    animation-iteration-count: 1;
+    border: 1px solid white;
+    animation-fill-mode: both;
+    @keyframes batteryfill {
+      0%,
+      25% {
+        background-color: #f26662;
+      }
+      25%,
+      35% {
+        background-color: #f9bf00;
+      }
+      35%,
+      100% {
+        background-color: #10cf6b;
+      }
+      0% {
+        width: 8%;
+      }
+      100% {
+        width: 112%;
+      }
+    }
+  }
+  &:after {
+    width: 5px;
+    height: 13px;
+    border-radius: 0 2px 2px 0;
+    position: absolute;
+    content: '';
+    top: 4px;
+    right: -7px;
+    animation: batterytop 10s linear;
+    animation-play-state: paused;
+    animation-delay: ${props =>
+      props.dataWidth ? `calc( ${props.dataWidth * 0.01} * -10s)` : '0%'};
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    @keyframes batterytop {
+      0%,
+      25% {
+        background-color: #f26662;
+      }
+      25%,
+      35% {
+        background-color: #f9bf00;
+      }
+      35%,
+      100% {
+        background-color: #10cf6b;
+      }
     }
   }
 `;
@@ -255,7 +301,7 @@ let LocationConceptTest = () => {
           })}
         </g>
       </Svg>
-      <div>
+      <div className="paragraph">
         The amount of data points{' '}
         <input
           type="range"
@@ -269,8 +315,7 @@ let LocationConceptTest = () => {
           accuracy
           <div />
         </ProgressBar>{' '}
-        and <Battery dataWidth={battery} /> life,
-        <br />
+        and <Battery dataWidth={battery} /> life.{' '}
         <label className="toggle-label inline-toggle">
           <div className="toggle">
             <input
