@@ -103,6 +103,7 @@ const Battery = styled.div`
   top: 4px;
   width: 41px;
   height: 21px;
+  margin-right: 5px;
   box-sizing: content-box;
   border: 3px #000 solid;
   position: relative;
