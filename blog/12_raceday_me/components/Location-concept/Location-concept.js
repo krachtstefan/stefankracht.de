@@ -358,8 +358,8 @@ let LocationConceptTest = () => {
         >
           Providing a gpx file
         </span>{' '}
-        allows fewer data points and having high accuracy and long battery life
-        at the same time.
+        allows fewer data points while having high accuracy and long battery
+        life at the same time.
       </div>
     </Wrapper>
   );
