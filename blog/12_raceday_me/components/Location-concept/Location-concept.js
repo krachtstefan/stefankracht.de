@@ -71,29 +71,25 @@ const ProgressBar = styled.div`
   padding: 0px 10px;
   position: relative;
   z-index: 0;
-  /* background: #d6d6d6; */
+  &:after {
+    width: 100%;
+    height: 27px;
+    background-color: #d6d6d6;
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: -2;
+  }
   div {
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 0;
-    height: 100%;
+    height: 27px;
     z-index: -1;
     transition: all 0.4s ease;
     width: ${props => (props.dataWidth ? `${props.dataWidth}%` : '0%')};
-    animation: percent 10s linear;
-    animation-play-state: paused;
-    animation-delay: ${props =>
-      props.dataWidth ? `calc( ${props.dataWidth * 0.01} * -10s)` : '0%'};
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-    @keyframes percent {
-      0% {
-        background: #f26662;
-      }
-      100% {
-        background: #10cf6b;
-      }
-    }
+    background: #10cf6b;
   }
 `;
 
@@ -102,7 +98,7 @@ const Battery = styled.div`
   position: relative;
   top: 4px;
   width: 41px;
-  height: 21px;
+  height: 19px;
   margin-right: 5px;
   box-sizing: content-box;
   border: 3px #000 solid;
@@ -130,7 +126,7 @@ const Battery = styled.div`
       box-shadow: inset 5px 0 0 var(--box-shadow-color);
     }
     100% {
-      box-shadow: inset 37px 0 0 var(--box-shadow-color);
+      box-shadow: inset 48px 0 0 var(--box-shadow-color);
     }
     0%,
     25% {
