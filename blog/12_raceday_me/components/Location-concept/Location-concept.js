@@ -4,9 +4,6 @@ import styled from '@emotion/styled';
 import { useEffect, useLayoutEffect, useState, useRef } from 'react';
 
 const Wrapper = styled.div`
-  padding: 20px;
-  display: grid;
-  grid-gap: 20px;
   input[type='range'] {
     width: 100px;
     position: relative;
@@ -19,6 +16,7 @@ const Wrapper = styled.div`
 `;
 
 const Svg = styled.svg`
+  padding: 20px 20px 0 20px;
   width: 100%;
   path#run-track,
   path#link {
