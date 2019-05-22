@@ -1,0 +1,82 @@
+import LocationConcept from './components/location-concept';
+
+export const meta = {
+  id: 12,
+  title: 'Introducing Raceday.me',
+  url: 'raceday-me',
+  date: new Date('2018-05-15T00:00:00'),
+  description:
+    "Raceday.me is the the world's first personalized race day live tracking",
+  categories: ['raceday'],
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/raceday-teaser-1000.png'),
+      srcSet: `${require('./images/raceday-teaser-600.png')} 600w, ${require('./images/raceday-teaser-1000.png')} 1000w, ${require('./images/raceday-teaser-1800.png')} 1800w`,
+      alt: 'Running gear prepared for race day'
+    },
+    mockup: {
+      sizes: '100vw',
+      src: require('./images/raceday-mockup-1000.png'),
+      srcSet: `${require('./images/raceday-mockup-600.png')} 600w, ${require('./images/raceday-mockup-1000.png')} 1000w, ${require('./images/raceday-mockup-1400.png')} 1400w`,
+      alt:
+        'A notebook, iPhone and iPad showing the raceday.me website on screen'
+    },
+    screenshot: {
+      sizes: '100vw',
+      src: require('./images/raceday-screenshot-1000.png'),
+      srcSet: `${require('./images/raceday-screenshot-600.png')} 600w, ${require('./images/raceday-screenshot-1000.png')} 1000w, ${require('./images/raceday-screenshot-1400.png')} 1400w`,
+      alt: 'Screenshot of the raceday.me website'
+    },
+    app: {
+      sizes: '100vw',
+      src: require('./images/raceday-app-1000.png'),
+      srcSet: `${require('./images/raceday-app-600.png')} 600w, ${require('./images/raceday-app-1000.png')} 1000w, ${require('./images/raceday-app-1400.png')} 1400w`,
+      alt: 'Three images showing some in app screens'
+    }
+  }
+};
+
+Quite some time ago I wrote about [how I would like to change race day live tracking on running events](raceday-livetracking-for-runners) and make it more useable and accessible for spectators. It's been 16 months since this prototype and I have been so busy working on this that I never wrote about how it actually turned out.
+
+I finally released [raceday.me](https://raceday.me) a couple of months ago and this is a little article about the key features of the app and who it all works.
+
+<img {...meta.images.mockup} />
+
+## How do I use the app?
+
+Let's say you are a runner and attempt to run a marathon and want your friends and family to follow along at home or directly on site. Raceday.me got you covered.
+
+<img {...meta.images.app} />
+
+1. Just sign up on the website and create a new race event by uploading the track (more on that later) and setting your personal time goal.
+2. Share the generated link with your friends, family, followers, trainer and your dog. They can follow you along and don't even need to download an app to do so.
+3. Open the app just before the race and keep it running during the run to share your live progress with all the viewers. The app is designed to be very battery efficient. So don't worry about a draining battery.
+
+<img {...meta.images.screenshot} />
+
+The viewers can see the real-time position on the map which is predicted by past location data and recalculated every 20 seconds when new live information are available.
+
+There a couple of other configurable widgets to monitor the athlete's pace, progress and detailed splits. All designed to keep track of the race goal.
+
+## How does it work?
+
+I have to admit that uploading the race track in forehand seems a bit of a downside and may scare off some people to use it. But many races provide a GPX file on their website and tools like [gpsies.com](https://www.gpsies.com) help to find the track of most common races.
+
+Knowing the track allows some features that really stand out from other live tracking apps. It not only allows to predict future parts of the race based on past location data, but also needs fewer data points while still having accurate calculations.
+
+<LocationConcept />
+
+**This technology makes it possible to let the app work even with very little location updates from the athlete.** This comes with a lot of benefits:
+
+- Very accurate calculations and predictions
+- Long battery life even on 100-mile ultra races (twelve hour races have already been tested)
+- Handling bad GPS conditions with automagic location corrections based on the known race track
+
+## Pricing
+
+Raceday.me is free to use for everyone. There are [options to support the development of the app](https://raceday.me/premium) but the goal is to make it always accessible for everyone. I hope to find a sponsor or may sell licenses to race directors in the future to cover the development costs.
+
+## Feedback
+
+Feel free to [ping me on twitter](https://twitter.com/stefan_kracht) if you have any question or feedback. You can also follow the project on [Strava](https://www.strava.com/clubs/raceday), [Twitter](https://twitter.com/raceday_me), [Facebook](https://www.facebook.com/raceday.me/) or [Instagram](https://www.instagram.com/raceday.me/).
