@@ -10,7 +10,7 @@ export default withRouter(() => {
   return (
     <Layout
       title="Stefan Kracht"
-      description="Hello, my name is Stefan Kracht, I'm an developer and passionate runner living in hamburg."
+      description="Hello, my name is Stefan Kracht, I'm a developer and passionate runner living in hamburg."
     >
       <h1>Blog</h1>
       <Bloglist
