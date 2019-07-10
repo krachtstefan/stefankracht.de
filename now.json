@@ -28,6 +28,11 @@
       "src": "/news/(?<url>[^/]+)$",
       "status": 301,
       "headers": { "Location": "/p/$url" }
+    },
+    {
+      "src": "/news|/news/",
+      "status": 301,
+      "headers": { "Location": "/blog" }
     }
   ]
 }
