@@ -17,8 +17,9 @@ export default () => {
         <p>
           Stefan Kracht
           <br />
-          Hasencleverstraße 1<br />
-          22111 Hamburg
+          Gärtnerstraße 11
+          <br />
+          20253 Hamburg
         </p>
         <p>I assume no liability or responsibility to any linked websites.</p>
         <p>
