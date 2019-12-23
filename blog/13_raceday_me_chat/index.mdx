@@ -4,9 +4,16 @@ export const meta = {
   title: 'Meet Raceday.me Chat',
   url: 'raceday-me-chat',
   date: new Date('2019-12-23T00:00:00'),
-  description: '',
+  description: '...',
   categories: ['raceday'],
-  images: {}
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/raceday-chat-teaser-1000.png'),
+      srcSet: `${require('./images/raceday-chat-teaser-600.png')} 600w, ${require('./images/raceday-chat-teaser-1000.png')} 1000w, ${require('./images/raceday-chat-teaser-1400.png')} 1400w`,
+      alt: '...'
+    }
+  }
 };
 
 I've just released Raceday.me live chat, which is the biggest new feature release since the app launched earlier this year.
