@@ -12,6 +12,20 @@ export const meta = {
       src: require('./images/raceday-chat-teaser-1000.png'),
       srcSet: `${require('./images/raceday-chat-teaser-600.png')} 600w, ${require('./images/raceday-chat-teaser-1000.png')} 1000w, ${require('./images/raceday-chat-teaser-1400.png')} 1400w`,
       alt: '...'
+    },
+    conversation: {
+      sizes: '100vw',
+      width: '80%',
+      src: require('./images/raceday-chat-conversation-1000.png'),
+      srcSet: `${require('./images/raceday-chat-conversation-600.png')} 600w, ${require('./images/raceday-chat-conversation-1000.png')} 1000w, ${require('./images/raceday-chat-conversation-1400.png')} 1400w`,
+      alt: '...'
+    },
+    chatbot: {
+      sizes: '100vw',
+      width: '80%',
+      src: require('./images/raceday-chat-racebot-1000.png'),
+      srcSet: `${require('./images/raceday-chat-racebot-600.png')} 600w, ${require('./images/raceday-chat-racebot-1000.png')} 1000w, ${require('./images/raceday-chat-racebot-1400.png')} 1400w`,
+      alt: '...'
     }
   }
 };
@@ -48,7 +62,7 @@ Speaking of location, users near the race track are allowed to tag their message
 
 **the athlete**
 
-_image: an athlete posting the bib_
+<img {...meta.images.conversation} />
 
 The athlete might use the chat to post pictures before the race or inform the viewers with a short race recap from the finish area. Or remember an ultra race where the runner might need some supporting words during a walking pause or posts some updates from the aid station. It‘s also pretty handy if something unexpected happens, like a DNF or an injury.
 
