@@ -76,6 +76,46 @@ export default () => {
       </div>
       <div>
         <img
+          src={require('./../../assets/images/projects/linnr/linnr-logo.svg')}
+          width="80%"
+          alt="Linnr Logo"
+        />
+
+        <h1>LINNR - it's not snake!</h1>
+        <img
+          sizes="100vw"
+          src={require('./../../assets/images/projects/linnr/linnr-title-card.png')}
+          alt="Linnr Artwork by Christian Wischnewski"
+        />
+        <p>
+          <a href="https://linnr.de" target="_blank" rel="noopener">
+            Linnr
+          </a>{' '}
+          is a tribute game I made with{' '}
+          <a href="https://wischnik.de" target="_blank" rel="noopener">
+            Christian Wischnewski
+          </a>
+          . We both were so eager to participate in a game jam, that we started
+          this as an experiment to see how war we can go as game dev newbies. In
+          January 2020 we submitted it to the{' '}
+          <a
+            href="https://itch.io/jam/finally-finish-something-2020"
+            target="_blank"
+            rel="noopener"
+          >
+            Finally Finish Something 2020
+          </a>{' '}
+          jam and ranked place 56 of 293 - we even made place 18 in the visuals
+          category (thanks to christian). Go give it a try, I bet you can't beat
+          the{' '}
+          <a href="https://linnr.de/highscore" target="_blank" rel="noopener">
+            high score
+          </a>
+          !
+        </p>
+      </div>
+      <div>
+        <img
           src={require('./../../assets/images/projects/stickerlicious/stickerlicious-logo.svg')}
           width="80%"
           alt="stickerlicious logo"
