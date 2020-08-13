@@ -96,7 +96,7 @@ export default () => {
             Christian Wischnewski
           </a>
           . We both were so eager to participate in a game jam, that we started
-          this as an experiment to see how war we can go as game dev newbies. In
+          this as an experiment to see how far we can go as game dev newbies. In
           January 2020 we submitted it to the{' '}
           <a
             href="https://itch.io/jam/finally-finish-something-2020"
@@ -109,7 +109,7 @@ export default () => {
           category (thanks to christian). Go give it a try, I bet you can't beat
           the{' '}
           <a href="https://linnr.de/highscore" target="_blank" rel="noopener">
-            high score
+            highscore
           </a>
           !
         </p>
