@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { config } from './../../config';
-import { findPostbyId } from './../../lib/blog';
+import { config } from '../../config';
+import { findPostbyId } from '../../lib/blog';
 let racedayArticle = findPostbyId(12);
 let runverterArticle = findPostbyId(7);
 

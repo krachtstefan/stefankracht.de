@@ -1,12 +1,12 @@
 import '../../assets/styles/app.scss';
 
-import Footer from './footer';
+import Footer from './Footer';
 import Head from 'next/head';
-import Header from './header';
+import Header from './Header';
 import NProgress from 'nprogress';
 import PropTypes from 'prop-types';
 import Router from 'next/router';
-import { config } from './../../config';
+import { config } from '../../config';
 
 Router.onRouteChangeStart = (url) => {
   console.log(`Loading: ${url}`);

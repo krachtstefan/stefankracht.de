@@ -1,4 +1,4 @@
-import Layout from '../components/layout';
+import Layout from '../components/_layout';
 
 const About = () => (
   <Layout title="About" description="">

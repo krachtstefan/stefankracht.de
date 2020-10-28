@@ -1,4 +1,4 @@
-import ActiveLink from './../../components/misc/active-link';
+import ActiveLink from './../../components/misc/ActiveLink';
 import PropTypes from 'prop-types';
 
 const CategoryMenu = (props) => {

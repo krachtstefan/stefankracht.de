@@ -1,7 +1,7 @@
-import Bloglist from '../components/blog/list';
-import Layout from '../components/layout';
+import Bloglist from '../components/blog/List';
+import Layout from '../components/_layout';
 import Link from 'next/link';
-import ProjectTeaser from '../components/projects/teaser';
+import ProjectTeaser from '../components/projects/Teaser';
 import { config } from '../config';
 import { getPostsList } from '../lib/blog';
 import { withRouter } from 'next/router';

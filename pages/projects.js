@@ -1,5 +1,5 @@
-import Layout from '../components/layout';
-import ProjectList from '../components/projects/list';
+import Layout from '../components/_layout';
+import ProjectList from '../components/projects/List';
 
 const Projects = () => (
   <Layout

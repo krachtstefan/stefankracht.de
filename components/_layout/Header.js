@@ -1,11 +1,11 @@
-import ActiveLink from './../../components/misc/active-link';
+import ActiveLink from './../../components/misc/ActiveLink';
 import Link from 'next/link';
 import Logo from './../../assets/images/logo.svg';
 import React from 'react';
 import { config } from '../../config';
 import dynamic from 'next/dynamic';
 const LogoAnimation = dynamic(
-  () => import('../../components/misc/logo-animation'),
+  () => import('../../components/misc/LogoAnimation'),
   { ssr: false }
 );
 

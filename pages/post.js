@@ -1,6 +1,6 @@
-import Blogpost from '../components/blog/post';
+import Blogpost from '../components/blog/Post';
 import Error from 'next/error';
-import Layout from '../components/layout';
+import Layout from '../components/_layout';
 import Link from 'next/link';
 import { config } from './../config';
 import dynamic from 'next/dynamic';
@@ -8,7 +8,7 @@ import { findPostbyUrl } from '../lib/blog';
 import { withRouter } from 'next/router';
 
 const ScrollProgress = dynamic(
-  () => import('../components/misc/scroll-progress'),
+  () => import('../components/misc/ScrollProgress'),
   { ssr: false }
 );
 
