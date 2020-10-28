@@ -1,11 +1,11 @@
-import { useCallback } from 'react';
 import PropTypes from 'prop-types';
+import { useCallback } from 'react';
 
 const LogoAnimation = ({ selector = null }) => {
   const mouseMove = useCallback((e, element) => {
     let {
       width: elemenWidth,
-      height: elementHeigh
+      height: elementHeigh,
     } = element.getBoundingClientRect();
     let posX = (e.offsetX / elemenWidth - 0.5) / 0.5; // between -1 and 1
     let posY = (e.offsetY / elementHeigh - 0.5) / 0.5; // between -1 and 1
@@ -15,9 +15,9 @@ const LogoAnimation = ({ selector = null }) => {
     element.style.setProperty('--innerMoveY', `${posY * 10}px`);
   });
 
-  const init = useCallback(e => {
+  const init = useCallback((e) => {
     const element = document.querySelector(selector);
-    element.addEventListener('mousemove', e => {
+    element.addEventListener('mousemove', (e) => {
       mouseMove(e, element);
     });
   });
@@ -30,7 +30,7 @@ const LogoAnimation = ({ selector = null }) => {
 };
 
 LogoAnimation.propTypes = {
-  selector: PropTypes.string.isRequired
+  selector: PropTypes.string.isRequired,
 };
 
 export default LogoAnimation;

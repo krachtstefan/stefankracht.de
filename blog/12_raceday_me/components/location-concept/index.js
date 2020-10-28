@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 
 const LocationConcept = dynamic(() => import('./Location-concept'), {
-  ssr: false
+  ssr: false,
 });
 
 let LocationConceptWrapper = () => {

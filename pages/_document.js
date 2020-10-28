@@ -1,4 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document';
+
 import { config } from './../config/';
 
 export default class MyDocument extends Document {
@@ -15,7 +16,7 @@ export default class MyDocument extends Document {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '${config.googleAnalytics.trackingId}');
-      `
+      `,
     };
   }
 
@@ -33,9 +34,7 @@ export default class MyDocument extends Document {
             <>
               <script
                 async
-                src={`https://www.googletagmanager.com/gtag/js?id=${
-                  config.googleAnalytics.trackingId
-                }`}
+                src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalytics.trackingId}`}
               />
               {/* We call the function above to inject the contents of the script tag */}
               <script dangerouslySetInnerHTML={this.setGoogleTags()} />

@@ -1,10 +1,10 @@
-import { withRouter } from 'next/router';
-import { getPostsList } from '../lib/blog';
-import { config } from '../config';
-import Link from 'next/link';
-import Layout from '../components/layout';
-import ProjectTeaser from '../components/projects/teaser';
 import Bloglist from '../components/blog/list';
+import Layout from '../components/layout';
+import Link from 'next/link';
+import ProjectTeaser from '../components/projects/teaser';
+import { config } from '../config';
+import { getPostsList } from '../lib/blog';
+import { withRouter } from 'next/router';
 
 export default withRouter(() => {
   return (
@@ -15,8 +15,8 @@ export default withRouter(() => {
       <h1>Blog</h1>
       <Bloglist
         posts={getPostsList({ limit: config.blog.itemsPerPage })}
-        href={url => config.routing.blogPost.nextLink.href(url)}
-        as={url => config.routing.blogPost.nextLink.as(url)}
+        href={(url) => config.routing.blogPost.nextLink.href(url)}
+        as={(url) => config.routing.blogPost.nextLink.as(url)}
       />
       <p className="pagination">
         <Link

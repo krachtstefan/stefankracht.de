@@ -18,7 +18,7 @@ const requireMDXSync = (mdxSrc, filename) => {
     .sync(mdxSrc)
     .split('\n')
     .filter(
-      line =>
+      (line) =>
         !line.match(new RegExp('(require).*(.png|.jpg|.gif)')) && // line contains a require(...).jpg|.png|.gif
         !line.match(new RegExp('(^import).*(;+$)')) // line starts with import and ends with ;
     )
@@ -26,18 +26,18 @@ const requireMDXSync = (mdxSrc, filename) => {
   const babelOptions = babel.loadOptions({
     babelrc: false,
     presets: ['@babel/preset-react'],
-    plugins: ['@babel/plugin-transform-modules-commonjs']
+    plugins: ['@babel/plugin-transform-modules-commonjs'],
   });
   const transformed = babel.transformSync(jsx, babelOptions);
   return requireFromStringSync(transformed.code, filename);
 };
 
-const requireMDXFileSync = path => {
+const requireMDXFileSync = (path) => {
   const mdxSrc = fs.readFileSync(path, { encoding: 'utf-8' });
   return requireMDXSync(mdxSrc, path);
 };
 
-const readPostMetadata = postPath => {
+const readPostMetadata = (postPath) => {
   const mod = requireMDXFileSync(postPath);
   const { meta } = mod;
   return meta;
@@ -51,22 +51,22 @@ const generateRSS = () => {
     feed_url: `${baseUrl}/rss`,
     site_url: baseUrl,
     language: 'en',
-    ttl: '60'
+    ttl: '60',
   });
 
   let posts = (fs.readdirSync(path.resolve(__dirname, `${blogFolder}`)) || [])
-    .filter(folderNames => folderNames[0] !== '.') // remove hidden folders
-    .map(postFolder =>
+    .filter((folderNames) => folderNames[0] !== '.') // remove hidden folders
+    .map((postFolder) =>
       readPostMetadata(
         `${path.resolve(__dirname, `${blogFolder}`)}/${postFolder}/index.mdx`
       )
     );
-  posts.map(post => {
+  posts.map((post) => {
     feed.item({
       title: post.title,
       url: `${baseUrl}/p/${post.url}`,
       description: post.description,
-      date: post.date
+      date: post.date,
     });
   });
   let filepath = 'static/rss.xml';

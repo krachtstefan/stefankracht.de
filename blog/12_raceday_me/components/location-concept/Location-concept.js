@@ -1,7 +1,8 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+
 import styled from '@emotion/styled';
-import { useEffect, useLayoutEffect, useState, useRef } from 'react';
 
 const Wrapper = styled.div`
   input[type='range'] {
@@ -103,7 +104,7 @@ const ProgressBar = styled.div`
     height: 100%;
     z-index: -1;
     transition: all 0.4s ease;
-    width: ${props => (props.dataWidth ? `${props.dataWidth}%` : '0%')};
+    width: ${(props) => (props.dataWidth ? `${props.dataWidth}%` : '0%')};
     background: #10cf6b;
   }
 `;
@@ -120,7 +121,7 @@ const Battery = styled.div`
   transition: all 0.4s ease;
   animation: batteryborder 10s linear;
   animation-play-state: paused;
-  animation-delay: ${props =>
+  animation-delay: ${(props) =>
     props.dataWidth ? `calc( ${props.dataWidth * 0.01} * -10s)` : '0%'};
   animation-iteration-count: 1;
   animation-fill-mode: both;
@@ -149,7 +150,7 @@ const Battery = styled.div`
     box-sizing: border-box;
     animation: batteryfill 10s linear;
     animation-play-state: paused;
-    animation-delay: ${props =>
+    animation-delay: ${(props) =>
       props.dataWidth ? `calc( ${props.dataWidth * 0.01} * -10s)` : '0%'};
     animation-iteration-count: 1;
     border: 1px solid white;
@@ -185,7 +186,7 @@ const Battery = styled.div`
     right: -7px;
     animation: batterytop 10s linear;
     animation-play-state: paused;
-    animation-delay: ${props =>
+    animation-delay: ${(props) =>
       props.dataWidth ? `calc( ${props.dataWidth * 0.01} * -10s)` : '0%'};
     animation-iteration-count: 1;
     animation-fill-mode: both;
@@ -301,7 +302,7 @@ let LocationConceptTest = () => {
               ref={link}
               id="link"
               d={`M${chordsArr.map(
-                choordinate => `${choordinate.x},${choordinate.y}`
+                (choordinate) => `${choordinate.x},${choordinate.y}`
               )}`}
             />
           )}

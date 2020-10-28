@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-const Pagination = props => {
+const Pagination = (props) => {
   let { page, lastPage } = props;
   let nextPage = page < lastPage ? page + 1 : null;
   let prevPage = page > 0 ? page - 1 : null;
@@ -32,7 +32,7 @@ Pagination.propTypes = {
   page: PropTypes.number.isRequired,
   lastPage: PropTypes.number.isRequired,
   href: PropTypes.func.isRequired,
-  as: PropTypes.func.isRequired
+  as: PropTypes.func.isRequired,
 };
 
 export default Pagination;

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Updated = props => {
+const Updated = (props) => {
   return (
     <div className="update">
       <h3>updated in {props.in}</h3>
@@ -10,7 +10,7 @@ const Updated = props => {
 };
 
 Updated.propTypes = {
-  in: PropTypes.string.isRequired
+  in: PropTypes.string.isRequired,
 };
 
 export default Updated;

@@ -1,18 +1,18 @@
-import { withRouter } from 'next/router';
-import Error from 'next/error';
-import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-import { config } from './../config';
-import { findPostbyUrl } from '../lib/blog';
-import Layout from '../components/layout';
 import Blogpost from '../components/blog/post';
+import Error from 'next/error';
+import Layout from '../components/layout';
+import Link from 'next/link';
+import { config } from './../config';
+import dynamic from 'next/dynamic';
+import { findPostbyUrl } from '../lib/blog';
+import { withRouter } from 'next/router';
+
 const ScrollProgress = dynamic(
   () => import('../components/misc/scroll-progress'),
   { ssr: false }
 );
 
-export default withRouter(props => {
+export default withRouter((props) => {
   let post = findPostbyUrl(props.router.query.url);
   let blogCategory = post.categories[0];
   if (!post) return <Error statusCode={404} />;

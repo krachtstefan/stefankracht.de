@@ -1,7 +1,8 @@
-import { withRouter } from 'next/router';
+import React, { Children } from 'react';
+
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import React, { Children } from 'react';
+import { withRouter } from 'next/router';
 
 const ActiveLink = ({
   router,
@@ -24,7 +25,7 @@ const ActiveLink = ({
 
 ActiveLink.propTypes = {
   activeClassName: PropTypes.string,
-  highlightOn: PropTypes.func
+  highlightOn: PropTypes.func,
 };
 
 export default withRouter(ActiveLink);

@@ -1,30 +1,31 @@
-import Head from 'next/head';
-import PropTypes from 'prop-types';
-import NProgress from 'nprogress';
-import Router from 'next/router';
-import { config } from './../../config';
-import Header from './header';
-import Footer from './footer';
 import '../../assets/styles/app.scss';
 
-Router.onRouteChangeStart = url => {
+import Footer from './footer';
+import Head from 'next/head';
+import Header from './header';
+import NProgress from 'nprogress';
+import PropTypes from 'prop-types';
+import Router from 'next/router';
+import { config } from './../../config';
+
+Router.onRouteChangeStart = (url) => {
   console.log(`Loading: ${url}`);
   NProgress.configure({ showSpinner: false });
   NProgress.start();
 };
 
-Router.onRouteChangeComplete = url => {
+Router.onRouteChangeComplete = (url) => {
   trackPageView(url);
   NProgress.done();
 };
 
 Router.onRouteChangeError = () => NProgress.done();
 
-let trackPageView = url => {
+let trackPageView = (url) => {
   if (window.gtag) {
     try {
       window.gtag('config', config.googleAnalytics.trackingId, {
-        page_location: url
+        page_location: url,
       });
     } catch (error) {
       console.log(error);
@@ -75,7 +76,7 @@ const Layout = ({
 Layout.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.string
+  image: PropTypes.string,
 };
 
 export default Layout;

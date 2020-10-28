@@ -1,14 +1,13 @@
-import { withRouter } from 'next/router';
-import { getPostsList } from '../lib/blog';
-import { config } from '../config';
-import Error from 'next/error';
-
-import Layout from '../components/layout';
 import Bloglist from '../components/blog/list';
 import Blogpagination from '../components/blog/pagination';
 import CategoryMenu from '../components/blog/category-menu';
+import Error from 'next/error';
+import Layout from '../components/layout';
+import { config } from '../config';
+import { getPostsList } from '../lib/blog';
+import { withRouter } from 'next/router';
 
-export default withRouter(props => {
+export default withRouter((props) => {
   let { query } = props.router;
 
   let categoryMode = query.category ? true : false;
@@ -36,7 +35,7 @@ export default withRouter(props => {
     ? getPostsList({
         limit: itemsPerPage,
         offset,
-        category: query.category
+        category: query.category,
       })
     : getPostsList({ limit: itemsPerPage, offset });
 
@@ -52,17 +51,17 @@ export default withRouter(props => {
       <div className="blog-heading-container">
         <h1>Blog</h1>
         <CategoryMenu
-          href={category => {
+          href={(category) => {
             return category === 'all'
               ? config.routing.blogList.nextLink.href(0)
               : config.routing.blogCategory.nextLink.href(category, 0);
           }}
-          as={category => {
+          as={(category) => {
             return category === 'all'
               ? config.routing.blogList.nextLink.as(0)
               : config.routing.blogCategory.nextLink.as(category, 0);
           }}
-          highlightOn={category => {
+          highlightOn={(category) => {
             return category === 'all'
               ? () => !categoryMode
               : () => categoryMode && category === query.category;
@@ -74,23 +73,23 @@ export default withRouter(props => {
 
       <Bloglist
         posts={posts}
-        href={url => config.routing.blogPost.nextLink.href(url)}
-        as={url => config.routing.blogPost.nextLink.as(url)}
+        href={(url) => config.routing.blogPost.nextLink.href(url)}
+        as={(url) => config.routing.blogPost.nextLink.as(url)}
       />
       <Blogpagination
         page={page}
         lastPage={lastPage}
         href={
           categoryMode
-            ? page =>
+            ? (page) =>
                 config.routing.blogCategory.nextLink.href(query.category, page)
-            : page => config.routing.blogList.nextLink.href(page)
+            : (page) => config.routing.blogList.nextLink.href(page)
         }
         as={
           categoryMode
-            ? page =>
+            ? (page) =>
                 config.routing.blogCategory.nextLink.as(query.category, page)
-            : page => config.routing.blogList.nextLink.as(page)
+            : (page) => config.routing.blogList.nextLink.as(page)
         }
       />
     </Layout>

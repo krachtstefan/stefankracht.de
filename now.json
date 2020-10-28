@@ -1,38 +1,59 @@
 {
   "version": 2,
   "alias": "stefankracht.de",
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ],
   "routes": [
-    { "src": "/blog/(?<page>[\\d]+)$", "dest": "/blog?page=$page" },
+    {
+      "src": "/blog/(?<page>[\\d]+)$",
+      "dest": "/blog?page=$page"
+    },
     {
       "src": "/blog/(?<category>[^/]+)/?(?<page>\\d)?$",
       "dest": "/blog/?category=$category&page=$page"
     },
-    { "src": "/p/(?<url>[^/]+)$", "dest": "/post?url=$url" },
+    {
+      "src": "/p/(?<url>[^/]+)$",
+      "dest": "/post?url=$url"
+    },
     {
       "src": "/contact",
       "status": 301,
-      "headers": { "Location": "/about" }
+      "headers": {
+        "Location": "/about"
+      }
     },
     {
       "src": "/about-me|/about-me/",
       "status": 301,
-      "headers": { "Location": "/about" }
+      "headers": {
+        "Location": "/about"
+      }
     },
     {
       "src": "/site-search|/site-search/",
       "status": 301,
-      "headers": { "Location": "/" }
+      "headers": {
+        "Location": "/"
+      }
     },
     {
       "src": "/news/(?<url>[^/]+)$",
       "status": 301,
-      "headers": { "Location": "/p/$url" }
+      "headers": {
+        "Location": "/p/$url"
+      }
     },
     {
       "src": "/news|/news/",
       "status": 301,
-      "headers": { "Location": "/blog" }
+      "headers": {
+        "Location": "/blog"
+      }
     }
   ]
 }

@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
 import ActiveLink from './../../components/misc/active-link';
+import PropTypes from 'prop-types';
 
-const CategoryMenu = props => {
+const CategoryMenu = (props) => {
   let { categoryName, categories } = props;
   return (
     <nav
@@ -13,7 +13,7 @@ const CategoryMenu = props => {
         <li>
           <a href="#">{categoryName}</a>
           <ul>
-            {Object.keys(categories).map(category => {
+            {Object.keys(categories).map((category) => {
               return (
                 <li key={category}>
                   <ActiveLink
@@ -39,7 +39,7 @@ CategoryMenu.propTypes = {
   categoryName: PropTypes.string.isRequired,
   href: PropTypes.func.isRequired,
   as: PropTypes.func.isRequired,
-  highlightOn: PropTypes.func.isRequired
+  highlightOn: PropTypes.func.isRequired,
 };
 
 export default CategoryMenu;

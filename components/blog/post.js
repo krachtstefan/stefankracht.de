@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import { config } from './../../config';
 
-const Blogpost = props => (
+const Blogpost = (props) => (
   <div className="content-container">
     <h1>{props.post.title}</h1>
     <img {...props.post.images.teaser} />
@@ -10,7 +10,7 @@ const Blogpost = props => (
     <p className="blog-date">
       written on {new Intl.DateTimeFormat('en-US').format(props.post.date)} in{' '}
       {props.post.categories
-        .map(category => (
+        .map((category) => (
           <Link
             as={config.routing.blogCategory.nextLink.as(category)}
             href={config.routing.blogCategory.nextLink.href(category)}
@@ -24,7 +24,7 @@ const Blogpost = props => (
 );
 
 Blogpost.propTypes = {
-  post: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired,
 };
 
 export default Blogpost;

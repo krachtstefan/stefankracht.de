@@ -1,5 +1,5 @@
-import { useCallback } from 'react';
 import PropTypes from 'prop-types';
+import { useCallback } from 'react';
 
 const ScrollProgress = ({ selector = null }) => {
   const root = document.body.style;
@@ -28,7 +28,7 @@ const ScrollProgress = ({ selector = null }) => {
 };
 
 ScrollProgress.propTypes = {
-  selector: PropTypes.string
+  selector: PropTypes.string,
 };
 
 export default ScrollProgress;

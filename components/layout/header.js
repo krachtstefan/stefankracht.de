@@ -1,13 +1,13 @@
+import ActiveLink from './../../components/misc/active-link';
 import Link from 'next/link';
-import React from 'react';
-import dynamic from 'next/dynamic';
 import Logo from './../../assets/images/logo.svg';
+import React from 'react';
+import { config } from '../../config';
+import dynamic from 'next/dynamic';
 const LogoAnimation = dynamic(
   () => import('../../components/misc/logo-animation'),
   { ssr: false }
 );
-import ActiveLink from './../../components/misc/active-link';
-import { config } from '../../config';
 
 const Header = () => {
   return (
@@ -23,7 +23,7 @@ const Header = () => {
           activeClassName="active"
           href={config.routing.blogList.nextLink.href(0)}
           as={config.routing.blogList.nextLink.as(0)}
-          highlightOn={router =>
+          highlightOn={(router) =>
             router.pathname === config.routing.blogList.nextLink.href(0) ||
             router.pathname === '/post'
           }
