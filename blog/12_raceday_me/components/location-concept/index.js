@@ -6,8 +6,6 @@ const LocationConcept = dynamic(() => import('./Location-concept'), {
   ssr: false,
 });
 
-let LocationConceptWrapper = () => {
-  return <LocationConcept />;
-};
+let LocationConceptWrapper = () => <LocationConcept />;
 
 export default LocationConceptWrapper;

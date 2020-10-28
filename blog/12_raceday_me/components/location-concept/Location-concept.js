@@ -306,17 +306,15 @@ let LocationConceptTest = () => {
               )}`}
             />
           )}
-          {chordsArr.map((choordinate, index) => {
-            return (
-              <circle
-                className="choordinate"
-                key={index}
-                r="3"
-                cx={choordinate.x}
-                cy={choordinate.y}
-              />
-            );
-          })}
+          {chordsArr.map((choordinate, index) => (
+            <circle
+              className="choordinate"
+              key={index}
+              r="3"
+              cx={choordinate.x}
+              cy={choordinate.y}
+            />
+          ))}
         </g>
       </Svg>
       <div className="paragraph">
