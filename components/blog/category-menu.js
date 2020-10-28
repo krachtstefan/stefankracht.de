@@ -13,20 +13,18 @@ const CategoryMenu = (props) => {
         <li>
           <a href="#">{categoryName}</a>
           <ul>
-            {Object.keys(categories).map((category) => {
-              return (
-                <li key={category}>
-                  <ActiveLink
-                    activeClassName="active"
-                    href={props.href(category)}
-                    as={props.as(category)}
-                    highlightOn={props.highlightOn(category)}
-                  >
-                    <a>{categories[category]}</a>
-                  </ActiveLink>
-                </li>
-              );
-            })}
+            {Object.keys(categories).map((category) => (
+              <li key={category}>
+                <ActiveLink
+                  activeClassName="active"
+                  href={props.href(category)}
+                  as={props.as(category)}
+                  highlightOn={props.highlightOn(category)}
+                >
+                  <a>{categories[category]}</a>
+                </ActiveLink>
+              </li>
+            ))}
           </ul>
         </li>
       </ul>

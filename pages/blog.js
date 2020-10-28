@@ -7,7 +7,7 @@ import { config } from '../config';
 import { getPostsList } from '../lib/blog';
 import { withRouter } from 'next/router';
 
-export default withRouter((props) => {
+const Blog = (props) => {
   let { query } = props.router;
 
   let categoryMode = query.category ? true : false;
@@ -94,4 +94,6 @@ export default withRouter((props) => {
       />
     </Layout>
   );
-});
+};
+
+export default withRouter(Blog);

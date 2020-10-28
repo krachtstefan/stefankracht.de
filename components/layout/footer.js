@@ -1,4 +1,4 @@
-export default () => (
+const Footer = () => (
   <footer>
     <p>
       You can find me on{' '}
@@ -45,3 +45,5 @@ export default () => (
     />
   </footer>
 );
+
+export default Footer;

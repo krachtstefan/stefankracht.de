@@ -12,7 +12,7 @@ const ScrollProgress = dynamic(
   { ssr: false }
 );
 
-export default withRouter((props) => {
+const Post = (props) => {
   let post = findPostbyUrl(props.router.query.url);
   let blogCategory = post.categories[0];
   if (!post) return <Error statusCode={404} />;
@@ -40,4 +40,6 @@ export default withRouter((props) => {
       </p>
     </Layout>
   );
-});
+};
+
+export default withRouter(Post);

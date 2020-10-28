@@ -6,7 +6,7 @@ import { config } from '../config';
 import { getPostsList } from '../lib/blog';
 import { withRouter } from 'next/router';
 
-export default withRouter(() => {
+const Pages = () => {
   return (
     <Layout
       title="Stefan Kracht"
@@ -35,4 +35,6 @@ export default withRouter(() => {
       </p>
     </Layout>
   );
-});
+};
+
+export default withRouter(Pages);

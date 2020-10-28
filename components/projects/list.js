@@ -4,7 +4,7 @@ import { findPostbyId } from './../../lib/blog';
 let racedayArticle = findPostbyId(12);
 let runverterArticle = findPostbyId(7);
 
-export default () => {
+const List = () => {
   return (
     <div className="project-list">
       <div>
@@ -174,3 +174,5 @@ export default () => {
     </div>
   );
 };
+
+export default List;
