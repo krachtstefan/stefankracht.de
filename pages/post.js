@@ -1,6 +1,6 @@
 import Blogpost from '../components/blog/Post';
 import Error from 'next/error';
-import Layout from '../components/_layout';
+import Layout from '../components/Layout';
 import Link from 'next/link';
 import { config } from './../config';
 import dynamic from 'next/dynamic';

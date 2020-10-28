@@ -1,5 +1,5 @@
 import Bloglist from '../components/blog/List';
-import Layout from '../components/_layout';
+import Layout from '../components/Layout';
 import Link from 'next/link';
 import ProjectTeaser from '../components/projects/Teaser';
 import { config } from '../config';

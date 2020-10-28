@@ -2,7 +2,7 @@ import Bloglist from '../components/blog/List';
 import Blogpagination from '../components/blog/Pagination';
 import CategoryMenu from '../components/blog/CategoryMenu';
 import Error from 'next/error';
-import Layout from '../components/_layout';
+import Layout from '../components/Layout';
 import { config } from '../config';
 import { getPostsList } from '../lib/blog';
 import { withRouter } from 'next/router';

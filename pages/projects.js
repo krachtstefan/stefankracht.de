@@ -1,4 +1,4 @@
-import Layout from '../components/_layout';
+import Layout from '../components/Layout';
 import ProjectList from '../components/projects/List';
 
 const Projects = () => (
