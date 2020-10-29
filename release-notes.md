@@ -5,6 +5,7 @@
 - fix small typo
 - minor code refactoring
 - switch from `now` cli to `vercel` deploy
+- remove old redirects
 
 ## v1.1.4
 
