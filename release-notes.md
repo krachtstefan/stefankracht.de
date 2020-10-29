@@ -1,5 +1,11 @@
 # release notes
 
+## v1.1.5
+
+- fix small typo
+- minor code refactoring
+- switch from `now` cli to `vercel` deploy
+
 ## v1.1.4
 
 - add linnr
