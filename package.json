@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run clear:babel-cache && node ./rss/generate && node server.js",
+    "dev": "npm run clear:babel-cache && node server.js",
     "rss-generate": "node ./rss/generate",
     "build": "next build",
     "deploy": "node ./rss/generate && now --prod",
