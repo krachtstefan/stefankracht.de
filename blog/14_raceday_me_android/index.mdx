@@ -1,0 +1,33 @@
+import YouTube from 'react-youtube';
+import { TwitterTweetEmbed } from 'react-twitter-embed';
+
+export const meta = {
+  id: 14,
+  title: 'Raceday.me - now available for android',
+  url: 'raceday-me-for-android',
+  date: new Date('2020-10-08T08:00:00'),
+  description: 'Raceday.me now with race live chat',
+  categories: ['raceday'],
+  images: {
+    teaser: {
+      sizes: '100vw',
+      src: require('./images/raceday-android-teaser-1000.png'),
+      srcSet: `${require('./images/raceday-android-teaser-600.png')} 600w, ${require('./images/raceday-android-teaser-1000.png')} 1000w, ${require('./images/raceday-android-teaser-1800.png')} 1800w`,
+      alt: 'Raceday.me for android',
+    },
+  },
+};
+
+[I launched raceday.me](raceday-me) early last year. A personalized live tracking app for running events. It was well received within the running community and has easily become my most sucessful side project. However, there was one request that has haunted me since then:
+
+> Will there be an android app?
+
+<TwitterTweetEmbed tweetId={'1117804752618782722'} />
+
+As most iPhone user, I had exactly zero experiences with the android ecosystem. And starting to design a product, when you have no idea how this product is expected to look and feel like, is not an easy task. So, it took me some time - and a second phone - to finally start this project.
+
+After 10 months of spare time development I'm proud to finally release [raceday.me for android](https://play.google.com/store/apps/details?id=me.raceday.app) today!
+
+<YouTube videoId={'hAVxJ1JcpK8'} />
+
+<!-- - A big thanks to all the beta testers -->
