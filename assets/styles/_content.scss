@@ -72,7 +72,7 @@ main {
     h4,
     iframe,
     .paragraph,
-    twitter-widget {
+    .twitter-tweet {
       margin: var(--element-space) auto 0 auto;
       max-width: $max-container-width;
       @media only screen and (max-width: $breakpoint-phone + 130) {
