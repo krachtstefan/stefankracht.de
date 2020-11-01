@@ -74,7 +74,7 @@ main {
     iframe.youtube,
     iframe.model-3d,
     .twitter-tweet {
-      margin: var(--element-space) auto 0 auto;
+      margin: var(--element-space) auto 0 auto !important;
       max-width: $max-container-width;
       @media only screen and (max-width: $breakpoint-phone + 130) {
         &:not(img) {
