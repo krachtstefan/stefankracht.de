@@ -70,8 +70,9 @@ main {
     h2,
     h3,
     h4,
-    iframe,
     .paragraph,
+    iframe.youtube,
+    iframe.model-3d,
     .twitter-tweet {
       margin: var(--element-space) auto 0 auto;
       max-width: $max-container-width;
