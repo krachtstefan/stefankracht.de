@@ -14,8 +14,8 @@ const ScrollProgress = dynamic(
 
 const Post = (props) => {
   let post = findPostbyUrl(props.router.query.url);
-  let blogCategory = post.categories[0];
   if (!post) return <Error statusCode={404} />;
+  let blogCategory = post.categories[0];
   return (
     <Layout
       title={post.title}
