@@ -1,5 +1,12 @@
 # release notes
 
+## v1.1.6
+
+- update twitter widget styling
+- better 404 handling on blog post page
+- add raceday.me android blog post
+- generate new rss feed
+
 ## v1.1.5
 
 - fix small typo
